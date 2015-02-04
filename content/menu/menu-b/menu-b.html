@@ -43,15 +43,30 @@
 
     #discountContainer {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: bottom;
         text-align: center;
-        width: 100px;
-        font-size: 30px;
+        width: 350px;
     }
 
-    #discount {
+    #discountContainer > p {
+        text-align: right;
+        transition: opacity 1s;
+    }
+
+    #discount1 {
+        margin-bottom: 0px;
+        opacity: 1;
         color: #DC524F;
-        font-size: 50px;
+    }
+
+    #discount2 {
+        margin-bottom: 20px;
+        opacity: 0.2;
+    }
+
+    #discount3 {
+        margin-bottom: 30px;
+        opacity: 0.2;
     }
 
 </style>
@@ -163,11 +178,11 @@
 	</div> 
     <div id="orderSliderContainer">
         <div id="discountContainer">
-            <p>Скидка</p>
-            <p id="discount">2</p>
-            <p>%</p>
+            <p id="discount3"><strong>Скидка 5%</strong></p>
+            <p id="discount2"><strong>Бесплатная доставка</strong></p>
+            <p id="discount1"><strong>Внимание, Внимание! Акция - сенсация!<br></strong>Подбор оборудования, помощь в настройке, реализация любых алгоритмов управления при помощи скриптов - <strong>БЕСПЛАТНО</strong></p>
         </div>
-        <input id="order" data-slider-id="orderSlider" type="text" data-slider-min="100" data-slider-max="20000" data-slider-step="1" data-slider-value="5000" data-slider-orientation="vertical"/>
+        <input id="order" data-slider-id="orderSlider" type="text" data-slider-min="0" data-slider-max="60000" data-slider-step="1000" data-slider-value="0" data-slider-orientation="vertical"/>
     </div>
 </div>
 
@@ -204,6 +219,9 @@
     }
     $('.flexslider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
 
+    /********
+    Discount slider
+    ********/
     // Instantiate a slider
     var mySlider = $("#order").slider({
         reversed: true,
@@ -215,7 +233,15 @@
     });
 
     function updateDiscount(evt) {
-        $('#discount').text(evt.value % 20);
+        if (evt.value >= 20000)
+            $('#discount2').css('opacity', '1');
+        else 
+            $('#discount2').css('opacity', '0.2');
+
+        if (evt.value >= 50000)
+            $('#discount3').css('opacity', '1');
+        else 
+            $('#discount3').css('opacity', '0.2');
     }
     mySlider.on("slide", updateDiscount);
 </script>
