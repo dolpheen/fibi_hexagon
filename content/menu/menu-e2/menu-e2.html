@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="content/menu/menu-e2/css/typed.css"> 
+<div id="info-title" >
+    Техническая поддержка
+</div>
+<div id="info-description">
+    Расскажем, настроим, напишем
+</div>
+
+<div id="info-content" >
+<code id="code" style="white-space:pre"></code>
+</div>
+
+<script src="content/menu/menu-e2/js/typed.js" type="text/javascript"></script>
+<script>
+    $(function(){
+        var code = 'local val = fibaro:getValue(_SENSOR_ID, "value")\n'+
+        'local armed = fibaro:getValue(_SENSOR_ID, "armed")\n'+
+        'local t = os.date("*t")\n'+
+        'fibaro:debug("val:" .. val .. " || armed: " .. armed)\n'+
+        'if ( (val == "1") and (armed == "0") then\n'+
+        '    fibaro:debug("OK")\n'+
+        '    fibaro:call(_DEVICE_ID, "turnOn")\n'+
+        'end';
+        $("#code").typed({
+            strings: [code],
+            contentType: 'html',
+            typeSpeed: 0
+        });
+    });
+</script>

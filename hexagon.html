@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset=utf-8>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Hello world!</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="css/main.css">	
+	<link rel="stylesheet" type="text/css" href="css/hexagon.css">
+	<link rel="stylesheet" type="text/css" href="css/hexagon-info.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider-custom.css">
+    <link rel="stylesheet" type="text/css" href="css/typed.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css"> 
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/normalize/3.0.2/normalize.min.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+<div class="page-wrapper">
+<div  id="backgroundg-hexagon" ></div>
+<div  id="backgroundg-hexagon-2"></div>
+<section  class="header">
+	
+	<!-- <div  id="backgroundg-z-wave-logos" ></div> -->
+	<div id="company-logo" ></div>
+	<div id="contact-info">
+		<div  id="header-phone">+7(499)588-09-24</div> 
+		<div style='clear:both' id="header-time">пн-сб 10-19</div> 
+	</div>
+	<!-- <div id='delivery-logo' ></div>
+	<div id='payment-logos' ></div> -->
+	<!-- <div id='service-logo' ></div> -->
+</section>	
+
+
+<!-- SVG Definitions -->
+<section>
+<svg height='0'>
+	<defs>
+		<pattern id="remote-control" patternUnits="userSpaceOnUse" width="145" height="145">
+			<image xlink:href="media/remote-control.jpg" x="0" y="0" width="145" height="145" />
+		</pattern>
+		<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+			<feGaussianBlur stdDeviation="1.5 1.5" result="shadow"/>
+			<feOffset dx="2.5" dy="2.5"/>
+		</filter>
+		<filter id="no-shadow" x="-20%" y="-20%" width="140%" height="140%">
+			<feGaussianBlur stdDeviation="1 1" result="shadow"/>
+			<feOffset dx="1" dy="1"/>
+		</filter>
+		<filter id="innerShadow" x="-10%" y="-10%" width="140%" height="140%">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="0.4" result="blur"/>
+			<feOffset in="blur" dx="0.6" dy="0.6"/>
+		</filter>
+		<filter id="innerShadow2" x="-10%" y="-10%" width="140%" height="140%">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur"/>
+			<feOffset in="blur" dx="1" dy="1"/>
+		</filter>
+	</defs>
+	<symbol id='menu-hexagon'>
+	<!--		<polygon points="77,8 137,41 137,111 77,144 17,111 17,41" />	-->
+		<polygon points="77,10.04 135.2,42.05 135.2,109.95 77,141.96 18.8,109.95 18.8,42.05 "/>
+	</symbol>
+	<symbol id='menu-hexagon-img'>
+		<polygon points="77,8 137,41 137,111 77,144 17,111 17,41" fill='url(#remote-control)' />	
+	</symbol>	
+
+	<!-- House -->
+	<symbol id="house" class="hexagon-svg-icon" style="stroke:black;">
+		<polygon points="93.717,47.366 59.603,47.125 47.205,66.197 47.205,68.381 76.239,74.627 91.347,49.561 107.835,69.118 112.008,69.081 "/>
+		<path d="M77.282,76.41l-28.507-6.283l0.007,24.656 l16.671,7.134V86.13l8.313,2.469v16.874l3.968,1.7v0.026l28.417-12.155V71.169v-0.514v-1.207L91.475,52.07L77.282,76.41z"/>
+		<polygon points="94.77,85.473 102.188,83.183 102.188,89.313 94.77,91.908 "/>
+		<polygon points="94.776,75.936 102.184,74.112 102.184,80.242 94.776,82.37 "/>
+		<polygon points="91.63,82.789 83.092,85.242 83.092,78.325 91.63,76.22 "/>
+		<polygon points="91.63,92.907 83.09,95.895 83.09,88.974 91.63,86.34 "/>
+		<polygon points="73.46,85.677 65.146,83.305 65.146,76.895 73.46,78.938 "/>
+		<polygon points="59.981,91.24 52.92,88.782 52.92,82.861 59.981,85.038 "/>
+		<polygon points="59.998,82.222 52.903,80.197 52.903,74.26 59.998,76.005 "/>
+	</symbol>
+    <symbol id="" class="hexagon-svg-icon">
+    <path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M112.4,78.1c6.8,1.8,16.2,0.5,22.8,0.5
+	c-4,0-7.7-1.4-11.3-2.7c1.9,0.6,3.8,1.7,5.8,2.2c1.5,0.4,3.3,0.1,4.7,1c-1.5,1.1-4.3,0.5-6,1c-1.9,0.5-3.7,1.5-5.5,2"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M98.2,105.9c0.2,2.7,3.8,6.4,4.9,9.3
+	c1.1,2.9,2.5,5.7,3.6,8.6c-0.1-4-0.3-7.9-0.2-11.8c-0.9,3-1.9,9.3,0.1,12c-1.3-1.6-2.1-3.5-3.2-5.1c-1.7-2.3-2.8-2.6-5.2-3.8"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M45.7,124.4c2.5-1,4.1-5.3,6.2-7.1
+	c2.5-2.2,4.4-4.1,6.3-6.9c-1.9,2.5-4.6,5.3-6.8,7.4c-1.1,1.1-2.3,1.8-3.3,2.9c-0.9,1.1-1.4,2.7-2.6,3.5c2.2-3.6,3.7-7.3,4.5-11.3
+	c-0.7,2-1.8,3.8-2.5,5.6c-0.7,1.8-0.5,4.4-1.7,6c1.4-0.9,2.6-2.4,4-3.2c1.8-1,4.7-1.1,6.7-1.8"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M42.7,78.9c-3.9-1.7-8.8-1-13-0.8
+	c-3.8,0.2-7.7,0-11.5,0c2.3-1.9,8.1-3.9,11.5-4.5c-2.2,0.3-4.1,1.7-6.2,2.6c-2,0.8-4.4,1-6.1,2.3c1.9,0.9,4.6,0.6,6.6,1.1
+	c1.6-0.1,5.7,2.3,8,3"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M44.9,28.6c0,2.4,1.9,5.6,2.7,7.9
+	c1,2.4,2.1,5,2.5,7.6c0-3.2-0.5-5.3-2-7.9c-1.5-2.4-2.7-5-3-7.7c-0.1,0-0.6,0-0.7,0c-0.9,3.2-0.5,6.7-0.2,10c1-3-0.2-7,0.5-10.2
+	c1.4,2.9,3.7,5.2,6,7.7"/>
+<path style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M109.7,28.1c-2.4,1.4-5.5,5.4-7.6,7.4
+	c-2,1.9-3.9,3.9-5.7,5.8c2.2-2.7,4.7-5.5,7.4-7.8c1.8-1.5,4.3-2.6,5-4.9c-3.1,2.3-8.4,3.9-12.1,4.2c4.8-0.1,9-1.5,12.9-4
+	c-0.4,3.9-3.1,7.2-3.7,11"/>
+    </symbol>
+
+	<!-- Bulb -->
+	<symbol id="bulb" class="hexagon-svg-icon">
+		<path d="M83.156,66.242c0.156-3.396,3.485-6.242,5.605-8.564c2.757-3.019,5.219-7.089,5.171-11.385l0,0 c0-9.127-7.499-16.513-16.764-16.513c-9.453,
+			0-17.1,7.301-17.1,16.428l0,0c0,4.16,2.039,7.982,4.569,10.853 c2.233,2.533,5.993,5.519,6.161,9.181"/>
+		<line x1="70.378" y1="69.386" x2="83.622" y2="68.548"/>
+		<line x1="70.544" y1="72.904" x2="83.79" y2="72.064"/>
+		<line x1="70.544" y1="76.207" x2="83.79" y2="75.369"/>
+		<path d="M80.277,78.941c0,1.843-1.5,3.333-3.353,3.333c-1.794,0-3.248-1.49-3.248-3.333"/>
+		<path d="M75.376,66.327c0.021-6.036-7.649-17.477-7.649-17.477l-0.071,0.078c0.25,2.515,3.094,4.206,5.309,3.19 c2.135-0.978,2.919-4.161,1.332-6.003l0.034-0.089c-2.638,
+			2.251-0.66,6.623,2.651,6.637c3.227,0.014,5.284-4.171,2.835-6.506 l0.072-0.039c-1.478,1.802-0.832,4.896,1.164,5.938c2.145,1.12,4.99-0.554,5.308-3.063l-0.036-0.229c0,0-7.67,11.442-7.647,17.477"/>
+	</symbol>
+
+	<!-- Radio -->
+	<symbol id="radio" class="hexagon-svg-icon">
+		<path d="M56.784,82.649c-2.344,1.666-5.597,1.119-7.265-1.226c-1.668-2.343-1.12-5.597,1.224-7.265 c2.345-1.668,5.597-1.12,7.266,1.225C59.675,77.728,59.128,80.979,56.784,82.649z"/>
+		<path d="M69.934,67.293c-3.124-4.39-7.609-7.234-12.469-8.37l-2.44,6.165c3.569,0.92,6.848,3.057,9.157,6.301 c2.166,3.043,3.131,6.574,2.993,10.036l6.624-0.015C74.212,76.57,72.974,71.564,69.934,67.293z"/>
+		<path d="M83.799,58.36c-5.493-7.718-13.291-12.463-20.788-13.452l-2.887,7.297c6.256,0.15,13.052,3.889,17.693,10.411 c4.298,6.037,5.734,13.042,4.41,18.778l7.66-0.017C91.036,74.184,89.038,65.725,83.799,58.36z"/>
+		<path d="M97.052,48.78c-7.219-10.143-17.628-16.46-28.332-18.298l-2.734,6.914c8.67,0.817,18.037,6.433,24.647,15.722 c6.561,9.218,8.816,19.817,6.832,28.246l7.626-0.015C106.798,70.685,104.226,58.862,97.052,48.78z"/>
+	</symbol>
+
+	<!-- Cart -->
+	<symbol id="cart" class="hexagon-svg-icon">
+		<polyline points="101.999,41.29 94.432,41.29 85.944,73.856 58.653,73.856 52.001,49.545 91.908,49.775 "/>
+		<line fill="none" x1="62.436" y1="49.66" x2="65.188" y2="73.856"/>
+		<line fill="none" x1="72.412" y1="49.66" x2="72.412" y2="73.741"/>
+		<line fill="none" x1="82.504" y1="49.775" x2="78.949" y2="73.856"/>
+		<line fill="none" x1="54.297" y1="57.572" x2="90.073" y2="57.572"/>
+		<line fill="none" x1="56.474" y1="65.943" x2="87.779" y2="65.943"/>
+		<circle cx="62.207" cy="81.196" r="4.7"/>
+		<circle cx="82.275" cy="81.196" r="4.701"/>
+	</symbol>
+
+	<!-- Wrench -->
+	<symbol id="wrench" class="hexagon-svg-icon">
+		<path d="M90.827,65.871l-0.59-0.058c-1.071,0-2.085,0.22-3.033,0.568L69.199,48.378c0.35-0.948,0.569-1.962,0.569-3.033
+			l-0.059-0.591c-0.311-4.565-4.07-8.182-8.713-8.182c-1.351,0-2.617,0.328-3.762,0.877l5.829,5.828
+			c0.306,0.306,0.517,0.668,0.656,1.05c0.384,1.037,0.176,2.248-0.656,3.085c-0.569,0.567-1.319,0.856-2.067,0.856
+			c-0.347,0-0.688-0.077-1.016-0.2c-0.383-0.146-0.745-0.352-1.053-0.659l-5.828-5.825c-0.546,1.143-0.876,2.409-0.876,3.76
+			c0,4.644,3.615,8.405,8.181,8.713l0.592,0.06c1.069,0,2.083-0.219,3.031-0.568l18.005,18.004c-0.35,0.947-0.569,1.962-0.569,3.032
+			l0.06,0.591c0.31,4.564,4.07,8.183,8.712,8.183c1.353,0,2.619-0.33,3.761-0.878l-5.828-5.828c-0.305-0.308-0.517-0.67-0.658-1.051
+			c-0.383-1.037-0.177-2.249,0.658-3.084c0.57-0.571,1.321-0.857,2.067-0.857c0.347,0,0.689,0.075,1.015,0.198
+			c0.382,0.145,0.748,0.35,1.053,0.658l5.828,5.829c0.549-1.146,0.877-2.409,0.877-3.762C99.009,69.943,95.391,66.181,90.827,65.871z"/>
+		<path d="M53.464,75.917c-1.713,1.711-1.713,4.486,0,6.199c0.857,0.858,1.98,1.284,3.103,1.284c1.123,0,2.246-0.426,3.103-1.284 L74.07,67.713l-6.205-6.197L53.464,75.917z"/>
+		<polygon points="89.456,49.227 95.722,45.982 99.009,39.635 95.948,36.573 89.6,39.861 86.356,46.124 78.721,53.764 81.819,56.862"/>
+	</symbol>
+
+	<!-- Team -->
+	<symbol id="team" class="hexagon-svg-icon">
+		<path d="M80.959,68.858c-5.488-2.294-7.242-4.229-7.242-8.372c0-2.486,1.676-1.675,2.411-6.229c0.306-1.89,1.786-0.031,2.069-4.345
+			c0-1.72-0.808-2.146-0.808-2.146s0.411-2.543,0.57-4.502c0.198-2.439-1.229-8.741-8.846-8.741s-9.045,6.302-8.846,8.741
+			c0.16,1.959,0.569,4.502,0.569,4.502s-0.807,0.427-0.807,2.146c0.284,4.313,1.764,2.455,2.069,4.345
+			c0.735,4.555,2.411,3.742,2.411,6.229c0,4.143-1.755,6.078-7.242,8.372c-1.673,0.699-4.678,1.781-4.678,4.388v10.108H91.14
+			c0,0,0-5.979,0-7.579C91.142,73.399,86.464,71.16,80.959,68.858z"/>
+		<path d="M108.434,83.354c0,0-0.109-10.507-0.751-11.596c-0.956-1.621-3.18-2.736-7.308-4.462c-4.115-1.72-5.431-3.171-5.431-6.279
+			c0-1.866,1.256-1.256,1.809-4.671c0.229-1.418,1.338-0.023,1.552-3.259c0-1.29-0.606-1.61-0.606-1.61s0.307-1.907,0.427-3.376
+			c0.151-1.83-0.921-6.557-6.634-6.557c-5.714,0-6.783,4.727-6.633,6.557c0.12,1.469,0.427,3.376,0.427,3.376s-0.605,0.32-0.605,1.61
+			c0.213,3.235,1.321,1.841,1.551,3.259c0.553,3.415,1.81,2.805,1.81,4.671c0,2.114-0.611,3.461-2.296,4.648
+			c8.992,4.5,10.197,5.417,10.197,9.44v8.248H108.434z"/>
+	</symbol>
+
+	<!-- Gears -->
+	<symbol id="gears" class="hexagon-svg-icon">
+		<path d="M98.298,64.392c-0.284-0.979-0.682-1.923-1.182-2.808l1.427-1.8c0.466-0.589,0.414-1.427-0.11-1.957l-2.458-2.459
+			c-0.531-0.529-1.369-0.575-1.959-0.109l-1.786,1.415c-0.921-0.53-1.899-0.944-2.919-1.234l-0.269-2.302
+			c-0.087-0.745-0.715-1.306-1.462-1.306h-3.477c-0.746,0-1.375,0.561-1.463,1.306l-0.256,2.219c-1.095,0.285-2.145,0.711-3.129,1.265
+			l-1.729-1.369c-0.589-0.466-1.428-0.413-1.958,0.111l-2.458,2.458c-0.529,0.529-0.577,1.37-0.11,1.958l1.345,1.706
+			c-0.559,0.966-0.996,1.997-1.287,3.076L70.985,64.8c-0.745,0.087-1.306,0.716-1.306,1.463v3.477c0,0.746,0.561,1.375,1.306,1.462
+			l2.045,0.238c0.279,1.066,0.699,2.087,1.235,3.041l-1.26,1.592c-0.465,0.588-0.413,1.427,0.111,1.956l2.452,2.453
+			c0.53,0.528,1.369,0.576,1.958,0.11l1.543-1.224c1.003,0.589,2.074,1.036,3.197,1.34l0.233,1.997
+			c0.088,0.746,0.717,1.308,1.463,1.308h3.477c0.745,0,1.374-0.562,1.462-1.308l0.233-1.997c1.153-0.308,2.255-0.773,3.28-1.387
+			l1.601,1.271c0.589,0.466,1.428,0.413,1.958-0.11l2.458-2.459c0.53-0.529,0.576-1.369,0.111-1.957l-1.34-1.694
+			c0.536-0.968,0.943-1.999,1.213-3.07l2.142-0.246c0.745-0.087,1.305-0.716,1.305-1.461v-3.478c0-0.745-0.56-1.376-1.305-1.462
+			L98.298,64.392z M85.7,73.8c-3.169,0-5.75-2.581-5.75-5.75c0-3.17,2.581-5.75,5.75-5.75c3.168,0,5.749,2.58,5.749,5.75
+			C91.449,71.219,88.869,73.8,85.7,73.8z"/>
+		<path d="M49.921,62.836l1.834,1.549c0.565,0.478,1.398,0.454,1.935-0.053l1.015-0.949c0.855,0.414,1.765,0.706,2.701,0.874
+			l0.286,1.397c0.146,0.723,0.815,1.224,1.55,1.165l2.393-0.203c0.733-0.064,1.312-0.664,1.335-1.404l0.045-1.422
+			c0.92-0.332,1.79-0.786,2.581-1.355l1.212,0.802c0.617,0.408,1.438,0.292,1.916-0.273l1.55-1.846
+			c0.478-0.565,0.454-1.399-0.053-1.935l-1.061-1.13c0.367-0.827,0.63-1.695,0.78-2.587l1.515-0.309
+			c0.723-0.146,1.224-0.815,1.165-1.549l-0.204-2.395c-0.063-0.734-0.664-1.311-1.404-1.333l-1.637-0.054
+			c-0.297-0.78-0.687-1.519-1.158-2.212l0.915-1.381c0.407-0.618,0.291-1.44-0.274-1.916l-1.835-1.55
+			c-0.565-0.479-1.398-0.454-1.935,0.052l-1.199,1.124c-0.786-0.367-1.613-0.641-2.465-0.803l-0.332-1.644
+			c-0.146-0.722-0.815-1.223-1.549-1.165l-2.394,0.205c-0.734,0.063-1.312,0.664-1.334,1.402l-0.053,1.607
+			c-0.874,0.309-1.7,0.729-2.463,1.246l-1.324-0.873c-0.616-0.408-1.438-0.292-1.916,0.274L48.51,46.03
+			c-0.478,0.566-0.454,1.398,0.052,1.935l1.066,1.131c-0.391,0.827-0.675,1.699-0.839,2.598l-1.456,0.297
+			c-0.722,0.146-1.224,0.815-1.164,1.55l0.203,2.395c0.064,0.733,0.665,1.311,1.404,1.333l1.461,0.046
+			c0.303,0.851,0.711,1.654,1.218,2.399l-0.799,1.199C49.24,61.531,49.356,62.359,49.921,62.836z M58.943,48.997
+			c2.587-0.222,4.87,1.706,5.086,4.292c0.222,2.586-1.706,4.87-4.292,5.086c-2.587,0.221-4.87-1.707-5.086-4.293
+			C54.431,51.496,56.357,49.212,58.943,48.997z"/>
+		<path d="M89.923,41.854c0.734-0.075,1.298-0.692,1.304-1.433l0.017-1.473c0.012-0.74-0.536-1.369-1.27-1.461l-1.084-0.14
+			c-0.18-0.659-0.437-1.288-0.769-1.882l0.698-0.861c0.466-0.577,0.431-1.404-0.088-1.934l-1.03-1.055
+			c-0.519-0.529-1.345-0.589-1.935-0.134L84.9,32.151c-0.611-0.363-1.259-0.648-1.934-0.846l-0.116-1.118
+			c-0.076-0.733-0.694-1.298-1.434-1.305l-1.474-0.018c-0.739-0.012-1.369,0.536-1.463,1.27l-0.133,1.06
+			c-0.734,0.181-1.433,0.454-2.098,0.816l-0.814-0.658c-0.576-0.467-1.405-0.431-1.935,0.087l-1.054,1.032
+			c-0.53,0.52-0.589,1.345-0.135,1.934l0.624,0.81c-0.386,0.641-0.683,1.323-0.886,2.039l-0.967,0.099
+			c-0.734,0.076-1.299,0.692-1.306,1.433l-0.017,1.474c-0.011,0.74,0.537,1.369,1.271,1.462l0.943,0.122
+			c0.18,0.711,0.449,1.397,0.8,2.039l-0.591,0.722c-0.465,0.576-0.431,1.404,0.088,1.934l1.031,1.053
+			c0.519,0.529,1.347,0.589,1.936,0.134l0.705-0.541c0.663,0.401,1.374,0.71,2.119,0.92l0.094,0.914
+			c0.075,0.733,0.692,1.299,1.433,1.305l1.473,0.018c0.741,0.011,1.37-0.536,1.463-1.27l0.116-0.909
+			c0.771-0.198,1.509-0.5,2.196-0.897l0.729,0.595c0.574,0.467,1.403,0.431,1.934-0.087l1.06-1.037
+			c0.531-0.518,0.589-1.346,0.135-1.934l-0.624-0.803c0.361-0.642,0.646-1.323,0.832-2.04L89.923,41.854z M80.411,43.52
+			c-2.114-0.023-3.808-1.765-3.785-3.88c0.022-2.114,1.765-3.809,3.879-3.785c2.114,0.023,3.81,1.765,3.786,3.879
+			C84.266,41.848,82.525,43.542,80.411,43.52z"/>
+	</symbol>
+</svg>
+</section>	
+
+<section class="menu-container">
+	<!-- Row 0 -->
+	<div class="hexagon-row">
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-container'>
+		        	<g class='menu-item-container'>
+		        		<g id='menu-item-text-a2' class='menu-item-text' >
+		        			<text class='shadow' x="75" y="80">Визуализация</text>
+		        			<text x="75" y="80" style="fill: white">Визуализация</text>
+		        		</g>
+		        	</g>
+		        </g>
+	    	</svg>
+		</div>
+		<div id='menu-item-a3b1' class="menu-item hexagon transparent">
+			<svg class='svg-menu-item'>
+				<use xlink:href="#menu-hexagon" />
+				<g class='menu-item-container'>
+					<g id='menu-item-text-a3' class='menu-item-text' style='display:none'>
+						<text class='shadow' x="75" y="80">FAQ</text>
+						<text x="75" y="80" style="fill: white">FAQ</text>
+					</g>
+					<g id='menu-item-text-b1' class='menu-item-text' style='display:none'>
+						<text class='shadow' x="75" y="80">Оплата</text>
+						<text x="75" y="80" style="fill: white">Оплата</text>
+					</g>
+				</g>
+			</svg>
+		</div>
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-container'>
+		        	<g id='menu-item-text-b2' class='menu-item-text' >
+		        		<text class='shadow' x="75" y="80">Доставка</text>
+		        		<text x="75" y="80" style="fill: white">Доставка</text>
+		        	</g>	
+		        </g>
+	    	</svg>
+		</div>
+	</div>
+
+	<!-- Row 1 -->
+	<div class="hexagon-row even">
+		<div id='menu-item-f3a1' class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-container'>
+		        	<g id='menu-item-text-a1' class='menu-item-text' >
+		        		<text class='shadow' x="75" y="80">Платформа</text>
+		        		<text x="75" y="80" style="fill: white">Платформа</text>
+		        	</g>
+		        	<g id='menu-item-text-f3' class='menu-item-text' >
+		        		<text class='shadow' x="75" y="80">О нас</text>
+		        		<text x="75" y="80" style="fill: white">О нас</text>
+		        	</g>   
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-a">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+			<use xlink:href="#radio"/>	
+		        <g class='menu-item-container'>
+			        <g id='menu-item-text-a' class='menu-item-text' >
+			        	<text x="70" y="105" style="fill: white">Технология</text>
+			        </g>
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-b">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+			<use xlink:href="#cart"/>	
+		        <g class='menu-item-container'>
+			        <g id='menu-item-text-b' class='menu-item-text' >
+			        	<text x="75" y="105" style="fill: white">Магазин</text>
+			        </g>
+		        </g>
+	    	</svg>
+		</div>
+		<div  id='menu-item-b3c1' class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-container'>
+			        <g id='menu-item-text-b3' class='menu-item-text' >
+			        	<text class='shadow' x="75" y="80">Гарантия</text>
+			        	<text x="75" y="80" style="fill: white">Гарантия</text>
+			        </g>
+			        <g id='menu-item-text-c1' class='menu-item-text' >
+			        	<text class='shadow' x="75" y="80">Контроллеры</text>
+			        	<text x="75" y="80" style="fill: white">Контроллеры</text>
+			        </g>
+		        </g>
+	    	</svg>
+		</div>
+	</div>
+
+
+	<!-- Row 2 -->
+	<div class="hexagon-row">
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-text' >
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Контакты</text>
+		        	<text x="75" y="80" style="fill: white">Контакты</text>
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-f">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+			<use xlink:href="#team"/>	
+		        <g class='menu-item-text' >
+		        	<text x="70" y="105" style="fill: white">Компания</text>
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-g">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#house" />
+                <g id="arrows" class="hexagon-svg-icon">
+                    <path id="arrow1" d="M112.4,78.1c6.8,1.8,16.2,0.5,22.8,0.5
+                        c-4,0-7.7-1.4-11.3-2.7c1.9,0.6,3.8,1.7,5.8,2.2c1.5,0.4,3.3,0.1,4.7,1c-1.5,1.1-4.3,0.5-6,1c-1.9,0.5-3.7,1.5-5.5,2"/>
+                    <path id="arrow2" d="M98.2,105.9c0.2,2.7,3.8,6.4,4.9,9.3
+                        c1.1,2.9,2.5,5.7,3.6,8.6c-0.1-4-0.3-7.9-0.2-11.8c-0.9,3-1.9,9.3,0.1,12c-1.3-1.6-2.1-3.5-3.2-5.1c-1.7-2.3-2.8-2.6-5.2-3.8"/>
+                    <path id="arrow3" d="M45.7,124.4c2.5-1,4.1-5.3,6.2-7.1
+                        c2.5-2.2,4.4-4.1,6.3-6.9c-1.9,2.5-4.6,5.3-6.8,7.4c-1.1,1.1-2.3,1.8-3.3,2.9c-0.9,1.1-1.4,2.7-2.6,3.5c2.2-3.6,3.7-7.3,4.5-11.3
+                        c-0.7,2-1.8,3.8-2.5,5.6c-0.7,1.8-0.5,4.4-1.7,6c1.4-0.9,2.6-2.4,4-3.2c1.8-1,4.7-1.1,6.7-1.8"/>
+                    <path id="arrow4" d="M42.7,78.9c-3.9-1.7-8.8-1-13-0.8
+                        c-3.8,0.2-7.7,0-11.5,0c2.3-1.9,8.1-3.9,11.5-4.5c-2.2,0.3-4.1,1.7-6.2,2.6c-2,0.8-4.4,1-6.1,2.3c1.9,0.9,4.6,0.6,6.6,1.1
+                        c1.6-0.1,5.7,2.3,8,3"/>
+                    <path id="arrow5" d="M44.9,28.6c0,2.4,1.9,5.6,2.7,7.9
+                        c1,2.4,2.1,5,2.5,7.6c0-3.2-0.5-5.3-2-7.9c-1.5-2.4-2.7-5-3-7.7c-0.1,0-0.6,0-0.7,0c-0.9,3.2-0.5,6.7-0.2,10c1-3-0.2-7,0.5-10.2
+                        c1.4,2.9,3.7,5.2,6,7.7"/>
+                    <path id="arrow6" d="M109.7,28.1c-2.4,1.4-5.5,5.4-7.6,7.4
+                        c-2,1.9-3.9,3.9-5.7,5.8c2.2-2.7,4.7-5.5,7.4-7.8c1.8-1.5,4.3-2.6,5-4.9c-3.1,2.3-8.4,3.9-12.1,4.2c4.8-0.1,9-1.5,12.9-4
+                        c-0.4,3.9-3.1,7.2-3.7,11"/>
+                </g>
+
+	    	</svg>
+		</div>
+
+		<!-- <polygon points="77,8 137,41 137,111 77,144 17,111 17,41"   fill="url(#img1)"/> -->
+
+		<div class="menu-item hexagon menu-c">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+			<use xlink:href="#gears"/>	
+		        <g id='menu-item-text-c' class='menu-item-text' >
+		        	<text x="75" y="105" style="fill: white">Оборудование</text>
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-text' >
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Управление</text>
+		        	<text x="75" y="80" style="fill: white">Управление</text>
+		        	<!--<text style="filter: url(#shadow); fill: black" x="75" y="100">эл.приборами</text>
+		        	<text x="75" y="100" style="fill: white">эл.приборами</text>-->
+		        </g>
+	    	</svg>
+		</div>
+	</div>
+
+	<!-- Row 3 -->
+	<div class="hexagon-row even">
+		<div id='menu-item-e3f1' class="menu-item hexagon transparent">
+	    	<svg  class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g id='menu-item-text-e3' class='menu-item-text' >
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Установка</text>
+		        	<text x="75" y="80" style="fill: white">Установка</text>
+		        </g>
+		        <g id='menu-item-text-f1' class='menu-item-text' >
+					<text style="filter: url(#shadow); fill: black" x="75" y="80">Реквизиты</text>
+		        	<text x="75" y="80" style="fill: white">Реквизиты</text>
+				</g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-e">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+			<use xlink:href="#wrench"/>	
+		        <g id='menu-item-text-e' class='menu-item-text' >
+		        	<text x="75" y="105" style="fill: white">Услуги</text>
+		        </g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon menu-d">
+			<svg class='svg-menu-item'>
+				<use xlink:href="#menu-hexagon" />
+				<use xlink:href="#bulb"/>	
+				<g id='menu-item-text-d' class='menu-item-text' >
+					<text x="75" y="105" style="fill: white">Решения</text>
+				</g>
+			</svg>
+		</div>
+		<div  id='menu-item-c3d1' class="menu-item hexagon transparent">
+			<svg class='svg-menu-item'>
+				<use xlink:href="#menu-hexagon" />
+				<g id='menu-item-text-c3' class='menu-item-text' >
+					<text class='shadow' x="75" y="80">Датчики</text>
+					<text x="75" y="80" style="fill: white">Датчики</text>
+				</g>
+				<g id='menu-item-text-d1' class='menu-item-text' >
+					<text class='shadow' x="75" y="80">Освещение</text>
+					<text x="75" y="80" style="fill: white">Освещение</text>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<!-- Row 4 -->
+	<div class="hexagon-row">
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g  class='menu-item-text' >
+					<text style="filter: url(#shadow); fill: black" x="75" y="80">Техническая</text>
+		        	<text x="75" y="80" style="fill: white">Техническая</text>
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">поддержка</text>
+		        	<text x="75" y="100" style="fill: white">поддержка</text>
+				</g>
+	    	</svg>
+		</div>
+		<div id='menu-item-d3e1' class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g id='menu-item-text-d3' class='menu-item-text' >
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Управление</text>
+		        	<text x="75" y="80" style="fill: white">Управление</text>
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">системами</text>
+		        	<text x="75" y="100" style="fill: white">системами</text>
+		        </g>
+		        <g id='menu-item-text-e1' class='menu-item-text' >
+					<text style="filter: url(#shadow); fill: black" x="75" y="80">Разработка</text>
+		        	<text x="75" y="80" style="fill: white">Разработка</text>
+				</g>
+	    	</svg>
+		</div>
+		<div class="menu-item hexagon transparent">
+	    	<svg class='svg-menu-item'>
+		        <use xlink:href="#menu-hexagon" />
+		        <g class='menu-item-text' >
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Климат</text>
+		        	<text x="75" y="80" style="fill: white">Климат</text>
+		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">контроль</text>
+		        	<text x="75" y="100" style="fill: white">контроль</text>
+		        </g>
+	    	</svg>
+		</div>
+	</div>
+	
+</section>
+
+<!-- Inofrmation section on the right -->
+<section id="info-section">
+	<div id="info-title" >
+   		Оборудование и услуги для систем умного дома 
+	</div>
+	<div id="info-description">
+		С помощью автоматического резервирования и восстановления данных, Home Center 2 защищает важные данные. 
+	</div>
+	<div id="info-content" >
+		<div class='info-item'>
+			<div class='text-block'>
+				<div><b>Контроллер Fibaro HCL</b></div> 
+				«мозг» вашей домашней системы автоматизации ghjgh jhgз ации. ываыа ываыаыва ыаывааываывав ывавыаыв.
+			</div>
+			<div class="hexagon-info">
+		    	<svg width="120px" height="120px">
+		        <defs>
+		            <pattern id="img2" patternUnits="userSpaceOnUse" width="120" height="120">
+		                <image xlink:href="media/FIB_FGHCL-180x180.jpg" x="0" y="0" width="120" height="120" />
+		            </pattern>
+		        </defs>
+		        <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+		        <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img1)"/> -->
+		    	</svg>
+			</div>
+		</div>
+		<div class='info-item even'>
+			<div class='text-block'>
+				<div><b>Контроллер Fibaro HCL</b></div> 
+				«мозг» вашей домашней системы автоматизации ghjgh jhgз ации. ываыа ываыаыва ыаывааываывав ывавыаыв.
+			</div>
+			<div class="hexagon-info">
+		    	<svg width="120px" height="120px">
+		        
+		        <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+		        <!-- <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img1)"/> -->
+		    	</svg>
+			</div>
+		</div>
+		<div class='info-item'>
+			<div class='text-block'>
+				<div><b>Контроллер Fibaro HCL</b></div> 
+				«мозг» вашей домашней системы автоматизации ghjgh jhgз ации. ываыа ываыаыва ыаывааываывав ывавыаыв.
+			</div>
+			<div class="hexagon-info">
+		    	<svg width="120px" height="120px">
+		        
+		        <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+		        <!-- <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img1)"/> -->
+		    	</svg>
+			</div>
+		</div>
+		<div class='info-item even'>
+			<div class='text-block'>
+				<div><b>Контроллер Fibaro HCL</b></div> 
+				«мозг» вашей домашней системы автоматизации ghjgh jhgз ации. ываыа ываыаыва ыаывааываывав ывавыаыв.
+			</div>
+			<div class="hexagon-info">
+		    	<svg width="120px" height="120px">
+		        
+		        <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+		        <!-- <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img1)"/> -->
+		    	</svg>
+			</div>
+		</div>
+		<!-- <div style="height:90px">
+			<div id="five-one" style="position:absolute; margin-left:285px;" class="hexagon-shadow two">
+			  <div class="face1"></div>
+			  <div class="face2"></div>
+			</div>
+			<div id="five-one"  style="position:absolute; margin-left:285px;" class="hexagon-small">
+			  <div class="face1"></div>
+			  <div class="face2"></div>
+			</div> 
+		</div> -->
+	</div>
+</section>
+
+<!-- <section id="popup-section">
+ 	<img src="media/FIB_FGHCL-705x540.jpg">
+</section> -->
+
+<section style='clear:both; display:none' id ="partners-sections">
+	ggffdgdfg
+	dfgdfgdfg
+	dgdfgfdgdfgdfgdfg
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</section>
+
+
+<section id="typing-line">
+    <span></span>
+</section>
+</div>
+
+<!-- Scripts Loading -->
+<script type="text/javascript" src="lib/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="lib/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="lib/typed.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/phoebe-logic-main.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/vivus/0.1.2/vivus.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru&region=RU&key=AIzaSyCxDVeeQSBF6MowjTdfH4eRsPOO05NeS-4"></script>
+
+</body>
+</html>
+
+

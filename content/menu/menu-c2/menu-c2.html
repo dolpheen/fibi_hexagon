@@ -1,0 +1,269 @@
+<style>
+    .iridium {
+        clear: both;
+    }
+    .iridium > a {
+        text-decoration: none;
+    }
+    
+    /* overlay at start */
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* overlay animate in */
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
+    }
+
+    /* overlay animate out */
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
+    }
+
+    /* content at start */
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* content animate it */
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
+
+    /* content animate out */
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+        -webkit-backface-visibility: hidden;
+        /* ideally, transition speed should match zoom duration */
+        -webkit-transition: all 0.3s ease-out; 
+        -moz-transition: all 0.3s ease-out; 
+        -o-transition: all 0.3s ease-out; 
+        transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+    }
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container, 
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+        opacity: 0;
+    }
+
+</style>
+
+<div id="info-title" >
+   Управление
+</div>
+<div id="info-description">
+    Управление системами вашего дома.
+</div>
+
+<div id="info-content" >
+    
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b></b></div> 
+                <div class='description'>
+                <p>С помощью технологии Z-Wave вы можете управлять</p>
+                    <ul>
+                        <li><b>Освещением</b> - включать/выключать, регулировать яркость и цвет</li>
+                        <li><b>Электроприборами</b> - включать/выключать, следить за электропотреблением</li>
+                        <li><b>Кондиционерами и теплыми полами</b> - регулировать температуру</li>
+                        <li><b>Дополнительным оборудованием</b> - жалюзи, воротами и многим другим</li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img2" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="media/fibi_symbol.jpg" x="10" y="-5" width="95" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+                                
+                                </svg>
+                </a>
+            </div>
+    </div>
+    <br/>
+    <div class='info-item even'>
+            <div class='text-block'>
+                <div class='title'><b>Пульты</b></div> 
+                 <div class='description'>Свобода управления с помощью пультов и выключателей на батарейках</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.fibi-logic.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img5" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/zipato_logo.jpg" x="14" y="-5" width="85" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-c2/images/control1.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/control1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/control2.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/control2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/control3.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/control3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b>Освещение</b></div> 
+                <div class='description'>Управление любыми световыми источниками - лампами накаливания, люминесцентными, галогеновыми и светодиодными лампами.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.fibi-logic.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img3" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-c2/images/light_icon.jpg" x="12" y="0" width="90" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-c2/images/light3.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/light3_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/light1.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/light1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/light2.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/light2_thumb.jpg"></img>
+                </a>
+                
+            </div>
+    </div>
+    <br/>
+    <div class='info-item even'>
+            <div class='text-block'>
+                <div class='title'><b>Управление электроприборами</b></div> 
+                <div class='description'>Включение/выключение любого оборудования подключенного в розетку, контроль энергопотребления.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img6" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/zwaveme_logo.jpg" x="13" y="-5" width="88" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img6)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-c2/images/appliance1.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/appliance1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/appliance2.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/appliance2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/appliance3.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/appliance3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b>Оборудование для климат-контроля</b></div> 
+                <div class='description'>Управление кондиционерами, теплыми полами, радиаторами отопления и нагревателями.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.fibi-logic.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img4" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-c2/images/climate_icon.jpg" x="12" y="-5" width="90" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+           <div class="iridium">
+                <a href="content/menu/menu-c2/images/climate1.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/climate1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/climate2.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/climate2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/climate3.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/climate3_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-c2/images/climate4.jpg">
+                    <img height="70px" src="content/menu/menu-c2/images/climate4_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/> 
+
+
+    
+   
+    
+
+</div>
+
+<script>
+    $('.iridium').magnificPopup({
+        delegate: 'a',
+        type:'image',
+        gallery: {
+            enabled:true
+        },
+        mainClass: 'mfp-with-zoom',
+        //removalDelay: 300
+  zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+
+          duration: 300, // duration of the effect, in milliseconds
+              easing: 'ease-in-out', // CSS transition easing function 
+
+                  // The "opener" function should return the element from which popup will be zoomed in
+                      // and to which popup will be scaled down
+                          // By defailt it looks for an image tag:
+                              opener: function(openerElement) {
+                                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                                          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                                                return openerElement.is('img') ? openerElement : openerElement.find('img');
+                                                    }
+                                                      }
+
+    });
+</script>

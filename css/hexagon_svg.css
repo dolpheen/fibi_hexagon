@@ -1,0 +1,51 @@
+
+.hexagon {
+    float: left;
+    margin-left: -21px;
+    margin-bottom: -43px;
+    cursor: pointer;
+    /*margin-top: -20px;*/
+    /*margin-top: */
+}
+
+
+.hexagon-row {
+    clear: left;
+}
+
+.hexagon-row.even {
+    margin-left: 62px;
+}
+
+.hexagon.transparent{
+  visibility: hidden;
+}
+
+.hexagon.menu-a {
+  fill: #ff0066;  
+}
+
+.hexagon.menu-b {
+  fill: #2a8fbd;  
+}
+
+.hexagon.menu-c {
+  fill: #7fac1b;  
+}
+
+.hexagon.menu-d {
+  fill: #520039;  
+}
+
+.hexagon.menu-e {
+  fill: #44aa55;  
+}
+
+.hexagon.menu-f {
+  fill: #fbb829;  
+}
+
+
+.hexagon.menu-g {
+}
+

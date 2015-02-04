@@ -1,0 +1,297 @@
+<style>
+    .iridium > a {
+        text-decoration: none;
+    }
+    
+    /* overlay at start */
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* overlay animate in */
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
+    }
+
+    /* overlay animate out */
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
+    }
+
+    /* content at start */
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* content animate it */
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
+
+    /* content animate out */
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+        -webkit-backface-visibility: hidden;
+        /* ideally, transition speed should match zoom duration */
+        -webkit-transition: all 0.3s ease-out; 
+        -moz-transition: all 0.3s ease-out; 
+        -o-transition: all 0.3s ease-out; 
+        transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+    }
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container, 
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+        opacity: 0;
+    }
+
+</style>
+
+<div id="info-title" >
+    Визуализация
+</div>
+<div id="info-description">
+    Большой выбор интерфейсов и систем визуализации
+</div>
+
+<div id="info-content" >
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b>Fibaro</b></div> 
+                <div class='description'>Платформа визуализации и управления системами домашней автоматизации.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.fibi-logic.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img3" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/fibaro_logo.jpg" x="12" y="-5" width="90" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/fibaro1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/fibaro1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/fibaro2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/fibaro2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/fibaro3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/fibaro3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+     <div class='info-item even'>
+            <div class='text-block'>
+                <div class='title'><b>Vera</b></div> 
+                <div class='description'>Cистема домашней автоматизации построенная на основе ОС mios.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img4" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/vera_logo.jpg" x="13" y="-5" width="88" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/vera1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/vera1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/vera2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/vera2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/vera3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/vera3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b>RaZberry</b></div> 
+                <div class='description'>Cистема домашней автоматизации на основе популярной платформы Rasberry Pi. Подробнее...</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img6" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/zwaveme_logo.jpg" x="13" y="-5" width="88" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img6)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/zway1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zway1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/zway2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zway2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/zway3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zway3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+   
+    <div class='info-item even'>
+            <div class='text-block'>
+                <div class='title'><b>Zipato</b></div> 
+                 <div class='description'>Платформа домашней автоматизации с поддержкой разнообразных протоколов и систем.</div>
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.fibi-logic.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img5" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/zipato_logo.jpg" x="14" y="-5" width="85" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/zipato1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zipato1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/zipato2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zipato2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/zipato3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/zipato3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+
+    <div class='info-item'>
+            <div class='text-block'>
+                <div class='title'><b>iRidium mobile</b></div> 
+                <div class='description'>Программная платформа управления системами автоматизации, аудио/видео оборудованием.</div> 
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img2" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="content/menu/menu-a2/images/iridiummobile_logo.jpg" x="10" y="-5" width="95" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
+                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/iridium1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/iridium1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/iridium2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/iridium2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/iridium3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/iridium3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+    <div class='info-item even'>
+            <div class='text-block'>
+                <div class='title'><b>Разработка интерфейса под заказ</b></div> 
+                <div class='description'>Наши инженеры разработают систему визуализации по вашему заданию на платформе iRidium, OpenHab, HTML5 и др.</div> 
+            </div>
+            <div class="hexagon-info">
+                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
+                                <defs>
+                                    <pattern id="img7" patternUnits="userSpaceOnUse" width="120" height="120">
+                                        <image xlink:href="media/fibi_symbol.jpg" x="10" y="-5" width="95" height="120" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img7)"/>
+                                
+                                </svg>
+                </a>
+            </div>
+            <div class="iridium">
+                <a href="content/menu/menu-a2/images/develop1.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/develop1_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/develop2.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/develop2_thumb.jpg"></img>
+                </a>
+                <a href="content/menu/menu-a2/images/develop3.jpg">
+                    <img height="70px" src="content/menu/menu-a2/images/develop3_thumb.jpg"></img>
+                </a>
+            </div>
+    </div>
+    <br/>
+    
+    
+    
+    
+
+    
+</div>
+
+<script>
+    $('.iridium').magnificPopup({
+        delegate: 'a',
+        type:'image',
+        gallery: {
+            enabled:true
+        },
+        mainClass: 'mfp-with-zoom',
+        //removalDelay: 300
+  zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+
+          duration: 300, // duration of the effect, in milliseconds
+              easing: 'ease-in-out', // CSS transition easing function 
+
+                  // The "opener" function should return the element from which popup will be zoomed in
+                      // and to which popup will be scaled down
+                          // By defailt it looks for an image tag:
+                              opener: function(openerElement) {
+                                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                                          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                                                return openerElement.is('img') ? openerElement : openerElement.find('img');
+                                                    }
+                                                      }
+
+    });
+</script>

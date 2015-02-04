@@ -1,0 +1,43 @@
+.flexslider {
+    border: 0px;
+}
+
+.slides {
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.slider-description,
+.slider-price {
+}
+
+.slider-description {
+	position: absolute;
+	padding: 10px;
+    margin: 0px;
+    width: 100%;
+	background-color: rgba(0, 0, 0, 0.35);
+	color: white;
+}
+
+.slider-price {
+	position: absolute;
+    margin: 10px;
+	bottom: 0px;
+	right: 0px;
+    width: 80px;
+    height: 90px;
+    background-image: url("../media/price_bg.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-price > * {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    text-align: center;
+    height: 40%;
+    color: white;
+}

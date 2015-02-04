@@ -1,0 +1,221 @@
+<link rel="stylesheet" type="text/css" href="content/menu/menu-b/css/bootstrap-slider.min.css"> 
+<style>
+    .svg-outline {
+        position: absolute;
+        width: 100%;
+        fill: none;
+        stroke-width: 2;
+        stroke: black;
+        animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    .slides img,
+    .slides svg,
+    .show-after-outline{
+        opacity: 0;
+    }
+
+    @keyframes outline-hide {
+        from { filter: blur(0px);  opacity: 1; }
+        to   { filter: blur(20px); opacity: 0; }
+    }
+
+    @-webkit-keyframes outline-hide {
+        from { -webkit-filter: blur(0px);  opacity: 1; }
+        to   { -webkit-filter: blur(20px); opacity: 0; }
+    }
+
+    /******************
+    slider
+    ******************/
+
+    #orderSlider .slider-selection {
+        background: #BABABA;
+    }
+
+    #orderSlider .tooltip {
+        font-size: 20px;
+    }
+
+    #discountContainer {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 100px;
+        font-size: 30px;
+    }
+
+    #discount {
+        color: #DC524F;
+        font-size: 50px;
+    }
+
+</style>
+<div id="info-title" >
+	Магазин
+</div>
+<div id="info-description">
+	Интернет-магазин Z-Wave устройств для Вашего дома	
+</div>
+
+<div id="info-content">
+	<div class="flexslider">
+		<ul class="slides">
+			<li>
+                <a href="http://www.fibi-logic.ru/shop" target="_blank">
+                    <h2 class="slider-description show-after-outline">HCL</h2>
+                    <div class="slider-price show-after-outline">
+                        <h2>20000 Rub</h2>
+                    </div>
+                    <svg id="hclite" class="svg-outline" viewBox="0 0 500 300">
+                        <line y2="65.59" x2="433.32" y1="159.84" x1="242.15"/>
+                        <path d="M 438.03,66.56 247.44,27.34 49.83,76.74 C 44.02,76.74 38.15,85.63 38.15,94.43 L 44.33,150.32"/>
+                        <path d="M 38.93,101.46 C 38.93,93.84 41.70,89.59 46.66,89.59 L 245.44,161.02 C 249.53,161.02 257.79,174.74 257.79,181.55 L 256.12,246.64 C 256.12,253.20 250.15,257.621 241.28,257.62"/>
+                        <path d="M 265.46,261.99 439.37,153.34 C 441.58,153.34 447.38,144.53 447.38,141.16 L 452.72,84.08 C 452.72,77.30 443.71,66.56 438.03,66.56"/>
+                        <path d="M 265.30,261.99 C 258.70,263.54 252.39,262.96 247.10,260.32 L 247.27,260.49 57.01,169.20 C 52.81,169.20 44.33,156.58 44.33,150.32"/>
+                        <path d="M 41.24,107.11 55.68,112.71 57.84,147.17 45.49,141.99 z"/>
+                        <line y2="109.28" x2="124.60" y1="41.82" x1="317.81"/>
+                        <path d="M 351.76,48.80 322.88,65.59 V 65.89 C 319.81,80.24 314.97,86.48 300.28,90.50 286.96,94.14 273.19,97.28 259.62,99.77 V 100.10 L 193.53,133.48"/>
+                    </svg>
+                    <img class="show-after-outline" src="content/menu/menu-b/images/hcl.png"/>
+                </a>
+			</li>
+			<li>
+                <a href="http://www.fibi-logic.ru/shop" target="_blank">
+                    <h2 class="slider-description show-after-outline">HC2</h2>
+                    <div class="slider-price show-after-outline">
+                        <h2>10000 Rub</h2>
+                    </div>
+                    <svg id="hc2" class="svg-outline" viewBox="0 0 500 300">
+                        <line y2="191.18" x2="457.05" y1="191.18" x1="37.22"/>
+                        <line y2="85.06" x2="413.14" y1="84.73" x1="81.13"/>
+                        <line y2="111.67" x2="459.71" y1="85.06" x1="413.14"/>
+                        <line y2="111.67" x2="34.22" y1="84.73" x1="81.13"/>
+                        <path d="M 34.22,111.67 C 32.38,111.67 30.90,130.79 30.90,154.42 30.90,176.39 33.44,191.18 37.22,191.18"/>
+                        <path d="M 459.71,111.67 C 461.8,111.67 463.2,127.21 463.2,150.29 463.2,176.55 461,191.18 457.05,191.18"/>
+                        <line y2="111.67" x2="459.71" y1="111.67" x1="34.22"/>
+                    </svg>
+                    <img class="show-after-outline" src="content/menu/menu-b/images/hc2.png"/>
+                </a>
+			</li>
+			<li>
+                <a href="http://www.fibi-logic.ru/shop" target="_blank">
+                    <h2 class="slider-description show-after-outline">Plug</h2>
+                    <div class="slider-price show-after-outline">
+                        <h2>8000 Rub</h2>
+                    </div>
+                    <svg id="wall-plug" class="svg-outline" viewBox="0 0 500 300">
+                        <path d="M 184.00,267.46 C 134.88,267.46 85.27,208.30 85.27,149.73 85.27,97.55 120.06,55.33 163.05,55.33 212.52,55.33 262.49,112.91 262.49,169.93 262.48,232.55 234.39,267.46 184,267.46 z"/>
+                        <path d="M 179.64,253.16 C 137.15,253.16 94.25,200.96 94.25,149.27 94.25,103.23 124.34,65.97 161.52,65.97 204.31,65.97 247.52,116.78 247.52,167.10 247.52,222.36 223.23,253.16 179.64,253.16 z"/>
+                        <path d="M 225.37,235.98 C 183.78,235.98 141.79,186.65 141.79,137.79"/>
+                        <path d="M 141.79,137.79 C 141.79,103.03 159.13,67.93 176.29,67.93"/>
+                        <line y2="117.66" x2="143.65" y1="131.24" x1="95.83"/>
+                        <line y2="152.65" x2="143.06" y1="166.72" x1="95.83"/>
+                        <path d="M 187,140.12 C 187.01,133.5 181.63,126.82 176.29,126.82 171.2,126.82 166.06,132.33 166.06,137.79 166.06,146.67 170.88,152.65 178,152.65 183.8,152.65 187,148.16 187,140.1 z"/>
+                        <path d="M 216.18,261.59 C 239.99,248.94 263.8,236.29 287.62,223.63 313.52,209.87 326.32,175.14 326.32,146.10 326.32,87.48 281.17,40 225.37,40 L 159,55.33"/>
+                        <path d="M 249.85,43.17 291.08,31.39 V 37.05 L 304.43,34.72 C 323.70,34.72 362.56,70.50 362.56,88.25 V 122.83 H 371.87 V 134.46 L 362.56,144.11 C 362.56,166.11 362.77,174.38 350.93,192.65 L 304.43,209.98"/>
+                        <line y2="135.42" x2="325.82" y1="122.83" x1="362.56"/>
+                        <line y2="156.21" x2="325.82" y1="144.11" x1="362.56"/>
+                        <line y2="46.56" x2="260.34" y1="37.05" x1="291.08"/>
+                        <path d="M 362.56,104.54 383.51,98.56 C 389.57,98.56 394.48,103.02 394.48,108.53 394.48,115.72 390.53,117.20 384.86,118.91 380.53,120.22 376.2,121.52 371.87,122.83"/>
+                        <path d="M 244.00,141.67 C 242.09,141.67 240.54,146.58 240.54,152.65 240.54,158.76 243.63,163.71 247.45,163.71"/>
+                    </svg>
+                    <img class="show-after-outline" src="content/menu/menu-b/images/wall-plug2.png"/>
+                </a>
+			</li>
+			<li>
+                <a href="http://www.fibi-logic.ru/shop" target="_blank">
+                    <h2 class="slider-description show-after-outline">Edge</h2>
+                    <div class="slider-price show-after-outline">
+                        <h2>8000 Rub</h2>
+                    </div>
+                    <svg id="edge" class="svg-outline" viewBox="0 0 500 300">
+                        <path d="M61.9,83.5c28,24.2,55.5,48.9,80.7,76.1	c12.4,13.5,24.8,26.9,36.5,41c10.6,12.8,21.2,28,38.9,30.2c16.5,2,34.8-5.8,50.1-10.7c18.3-6,36.6-11.9,54.9-18
+                            c16.9-5.6,33.5-12,49.9-19.1c9.6-4.1,19.2-8.2,28.8-12.4c6.6-2.9,17.7-8,17.7-16.3c0-10.2-7.5-14.9-14.4-21.5
+                            c-5.5-5.3-11-10.6-16.6-15.8c-13.2-12.1-26.2-24.4-39.9-35.9c-15.1-12.6-29.8-25.8-45.5-37.6c-7.5-5.7-14.9-11.6-22.7-17
+                            c-7.7-5.3-15-12.1-24.7-13.3c-16.8-2.2-33.9,3.3-50.1,7.8c-19.1,5.3-38.2,10.4-57.2,16.3c-16.7,5.2-33.2,11-49.5,17
+                            c-9.4,3.5-18.8,6.8-28,10.9C65,67.7,52.7,77.4,61.9,83.5L61.9,83.5z"/>
+                        <path d="M58.8,79.8c1.9,11,3.8,21.9,5.7,32.9c0.8,4.4,1.6,8.7,2.5,13.1 c1.3,6.4,3.9,8.8,8.3,13.7c13.7,15.5,29.9,29.5,45.1,43.7c15.8,14.8,30.5,30.7,44.9,46.9c6.7,7.6,13.8,14.9,20.3,22.7
+                            c6.9,8.2,13.6,16.8,22.7,22.6c17.9,11.4,42.4-1.5,60.2-7.7c19.4-6.8,39-13.2,58.2-20.6c20.2-7.9,40.6-15.5,60.2-24.7 c8.2-3.8,22.1-7.7,24.5-18.1c2.5-10.6,4.9-21.1,6.2-31.9c0.8-6.5,
+                            1.6-12.8,1.6-19.4"/>
+                        <path d="M60.7,90.6c16,16.6,34.6,30.3,50.9,46.5	c17.7,17.7,35.3,35.3,51.5,54.3c8.6,10,17.2,20.1,25.7,30.2c8.5,10.1,13.9,16.7,27,20.2c11.6,3.1,23.9-2.4,34.9-5.7
+                            c10.6-3.2,21.2-6.6,31.7-9.9c24.2-7.7,48.3-15.6,71.9-25c11.2-4.4,22.3-8.9,33.3-13.9c10.8-4.9,23.1-8.3,30.5-17.9"/>
+                        <line x1="301.1" y1="109.9" x2="316" y2="103.3"/>
+                        <line x1="311.6" y1="118.8" x2="329.9" y2="110.8"/>
+                        <line x1="321.6" y1="127.8" x2="333.8" y2="121.9"/>
+                        <line x1="331.9" y1="137.4" x2="351.3" y2="129.6"/>
+                        <line x1="341.6" y1="146.1" x2="360" y2="138.6"/>
+                        <path d="M210.7,175.8c6.5,2.4,13,4.9,19.5,7.3c-0.7-4.6-1.3-9.1-2-13.7"/>
+                        <path d="M252.8,174c-4.8,1.8-11.1,4.6-15.3,0.2 c-10.8-3.8,5.3-15.3,11.2-4.7c-3.5,1.2-7,2.4-10.5,3.7"/>
+                        <path d="M258.5,172.5c-3.8-3.3-7.6-6.7-11.3-10c1.9-0.9,3.8-1.8,5.7-2.7"/>
+                        <path d="M256,159.2c11.3-4.9,14.3-2.4,23.3,5.3c-3.2,1.6-10.7,6.6-14.7,4	c-7.1-4.6,3-7.9,6.5-9.3"/>
+                        <path d="M211.4,172.5c3.5-4.2,6.3-4.1,11.5-4.8"/>
+                        <path d="M207,170.8c4.9-5.2,7.6-5.7,14.8-5.7"/>
+                    </svg>
+                    <img class="show-after-outline" src="content/menu/menu-b/images/edge.png"/>
+                </a>
+			</li>
+		</ul>
+	</div> 
+    <div id="orderSliderContainer">
+        <div id="discountContainer">
+            <p>Скидка</p>
+            <p id="discount">2</p>
+            <p>%</p>
+        </div>
+        <input id="order" data-slider-id="orderSlider" type="text" data-slider-min="100" data-slider-max="20000" data-slider-step="1" data-slider-value="5000" data-slider-orientation="vertical"/>
+    </div>
+</div>
+
+<script type="text/javascript" src="content/menu/menu-b/js/bootstrap-slider.min.js"></script>
+<script>
+    function iterNodeList(ns, f) {
+        for (var i=0; i < ns.length; i++) 
+            f(ns[i]);
+    }
+
+    function draw_outline(evt) {
+
+        function show_image() {
+            window.setTimeout(function(){
+                iterNodeList(ns, function(n) { $(n).fadeTo(1000, 1); });
+                svg.style.animationName = "outline-hide";
+                svg.style.webkitAnimationName = "outline-hide";
+            }, 500);
+        }
+
+        var slide_elm = evt.container[0].children[evt.animatingTo];
+        var svg = slide_elm.querySelector('.svg-outline');
+        var ns  = slide_elm.querySelectorAll('.show-after-outline');
+
+        iterNodeList(ns, function(n) { n.style.opacity = 0; });
+        svg.style.opacity = 1;
+        svg.style.animationName = "";
+        svg.style.webkitAnimationName = "";
+
+        var outline = new Vivus(svg, {start: 'manual', type: 'oneByOne', duration: 50}, show_image);
+        window.setTimeout(function() {
+            outline.play();
+        }, 600);
+    }
+    $('.flexslider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
+
+    // Instantiate a slider
+    var mySlider = $("#order").slider({
+        reversed: true,
+        tooltip: 'always',
+        selection: 'after',
+        formatter: function(value) {
+            return 'Заказ: ' + value + 'руб.';
+        }
+    });
+
+    function updateDiscount(evt) {
+        $('#discount').text(evt.value % 20);
+    }
+    mySlider.on("slide", updateDiscount);
+</script>

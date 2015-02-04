@@ -1,0 +1,73 @@
+.hexagon-info-img {
+  position: absolute;
+  right: 5px;
+  width: 100px; 
+  height: 58px;
+  background-image: url(../media/FIB_FGHCL-180x180.jpg );
+  background-size: auto 115px;
+  background-position: center;
+  box-shadow: 0 0 6px #333333;
+
+}
+
+.hexagon-info-img .hex-info-top,
+.hexagon-info-img .hex-info-bottom {
+  position: absolute;
+  z-index: 1;
+  width: 71px;
+  height: 71px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.6) rotate(-45deg);
+  -ms-transform: scaleY(0.6) rotate(-45deg);
+  transform: scaleY(0.6) rotate(-45deg);
+  background: inherit;
+  left: 15px;
+  box-shadow: 0 0 6px #333333;
+}
+
+/*counter transform the bg image on the caps*/
+.hexagon-info-img .hex-info-top:after,
+.hexagon-info-img .hex-info-bottom:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 58px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7) translateY(-29px);
+  -ms-transform:      rotate(45deg) scaleY(1.7) translateY(-29px);
+  transform:          rotate(45deg) scaleY(1.7) translateY(-29px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexagon-info-img .hex-info-top {
+  top: -35px;
+}
+
+.hexagon-info-img .hex-info-top:after {
+  background-position: center top;
+}
+
+.hexagon-info-img .hex-info-bottom {
+  bottom: -35px;
+}
+
+.hexagon-info-img .hex-info-bottom:after {
+  background-position: center bottom;
+}
+
+.hexagon-info-img:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100px;
+  height: 58px;
+  z-index: 2;
+  background: inherit;
+}
+
+.info-item.even .hexagon-info-img{
+  right: 35px;
+}

@@ -1,0 +1,350 @@
+<style>
+    .z-wave-info {
+        margin-bottom: 10px;
+    }
+
+    .z-wave-info > a {
+        text-decoration: none;
+
+    }
+    
+    /* overlay at start */
+    .mfp-fade.mfp-bg {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* overlay animate in */
+    .mfp-fade.mfp-bg.mfp-ready {
+        opacity: 0.8;
+    }
+
+    /* overlay animate out */
+    .mfp-fade.mfp-bg.mfp-removing {
+        opacity: 0;
+    }
+
+    /* content at start */
+    .mfp-fade.mfp-wrap .mfp-content {
+        opacity: 0;
+        -webkit-transition: all 0.15s ease-out;
+        -moz-transition: all 0.15s ease-out;
+        transition: all 0.15s ease-out;
+    }
+
+    /* content animate it */
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+        opacity: 1;
+    }
+
+    /* content animate out */
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+        opacity: 0;
+    }
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+    opacity: 0;
+        -webkit-backface-visibility: hidden;
+        /* ideally, transition speed should match zoom duration */
+        -webkit-transition: all 0.3s ease-out; 
+        -moz-transition: all 0.3s ease-out; 
+        -o-transition: all 0.3s ease-out; 
+        transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+    }
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container, 
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+        opacity: 0;
+    }
+</style>
+
+<div id="info-title" >
+    FAQ
+</div>
+<div id="info-description">
+    Вопросы и ответы по технологии
+</div>
+
+<div id="info-content" >
+    <div class="z-wave-info">
+        <a href="content/menu/menu-a3/images/z-wave-info1.jpg">
+            <img height="70px" src="content/menu/menu-a3/images/z-wave-info1_thumb.jpg"></img>
+        </a>
+        <a href="content/menu/menu-a3/images/z-wave-info2.jpg">
+            <img height="70px" src="content/menu/menu-a3/images/z-wave-info2_thumb.jpg"></img>
+        </a>
+        <a href="content/menu/menu-a3/images/z-wave-info3.jpg">
+            <img height="70px" src="content/menu/menu-a3/images/z-wave-info3_thumb.jpg"></img>
+        </a>
+    </div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading1">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        Что такое Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                <div class="panel-body">
+                Z-Wave — это технология домашней автоматизации, позволяющая быстро и просто превратить жильё в умный дом. Использование радио-технологий в Z-Wave, позволяет создавать системы автоматизации не только на этапе ремонта в доме, но и после, когда прокладывать дополнительные провода уже невозможно.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading2">
+                <h4 class="panel-title">
+                   <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      Какие устройства могут работать в сети Z-Wave?
+                    </a>
+                </h4>
+            </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                На данный момент линейка устройств Z-Wave включает в себя устройства управления светом, шторами, отоплением и кондиционированием, электроприборами, счётчики электроэнергии и различные датчики. С каждым месяцем появляются новые устройств с поддержкой технологии Z-Wave.
+            </div>
+        </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading9">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                          Совместимы ли устройства Z-Wave разных производителей?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                <div class="panel-body">
+                Да, условие совместимости — одно из главных преимуществ технологии Z-Wave. Перед выходом в продажу все устройства проходят сертификацию Z-Wave в одном их трёх центров сертификации, где проверяют устройство на совместимость. Более 150 производителей по всем миру выбрали Z-Wave в качестве основного протокола для своих продуктов. И все они совместимы друг с другом в пределах одного региона (одного диапазона частот).
+                </div>
+            </div>
+        </div>
+         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading8">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                          Какое количество устройств может содержать сеть Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                <div class="panel-body">
+                Максимальное количество устройств для одной сети Z-Wave составляет 232. Для примера, дом площадью 400 м2 обычно содержит около 100 устройств.
+                </div>
+            </div>
+        </div>
+         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading6">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                          Для каких типов зданий подходит Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                <div class="panel-body">
+                Z-Wave имеет систему маршрутизации управляющих сообщений, что позволяет обходить препятствия и передавать сигнал за пределы прямой видимости устройства. Однако не следует забывать, что технология Z-Wave создавалась для небольших домов площадью до 500 м2 и высотой не более 5 этажей, а также небольших офисов. Для автоматизации больших объектов потребуется делить их на несколько сетей, что существенно усложнит настройку.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading4">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                          Возможно ли самостоятельно автоматизировать свой дом или нужно приглашать специалистов?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="panel-body">
+                Технология Z-Wave разрабатывалась в формате сделай сам (DIY). Большинство устройства даже не требуют монтажа, а их настройка с помощью роутера или ПК не требует специальной подготовки. Устройства, устанавливаемые в подрозетники и подключаемые к сети 220 Вольт, монтируются не сложней, чем обычный выключатель. Любой электрик способен их установить.
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading5">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                          Нужен ли для автоматизации на базе Z-Wave центральный контроллер?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                <div class="panel-body">
+                Не обязательно. Сетевая инфраструктура Z-Wave имеет ячеистую топологию (т.е. каждый с каждым), и устройства сети могут общаться непосредственно друг с другом. Однако для создания сложных и интеллектуальных сценариев желательно иметь в сети хотя бы одно устройство с функционалом полноценного компьютера. Обычно таким устройством является роутер или ПК. Оно собирает данные со всех устройств, принимает решения и посылает команды управления.
+                </div>
+            </div>
+        </div>
+        
+       
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading3">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          Нужна ли для Z-Wave специальная проводка?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body">
+                Нет, Z-Wave не требуется отдельная проводка, так как для передачи управляющих сигналов используется радиоканал.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading7">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                          Какова дальность работы сети Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                <div class="panel-body">
+                Расстояние между двумя устройствами может быть от 10 до 30 метров в зависимости от типов устройств. Но благодаря ячеистой структуре сети (mesh-network) и наличию маршрутизации (routing), команды Z-Wave можно передавать значительно дальше через другие устройства — на расстояние до 120 метров.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading14">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                          Будет ли сеть Wi-Fi мешать работе сети Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
+                <div class="panel-body">
+                Нет, Z-Wave использует для работы отличные от Wi-Fi радиочастоты.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading10">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                          Какие радиочастоты использует Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                <div class="panel-body">
+                В разных регионах используются разные частоты, что связано с особенностью государственного частотного регулирования. Вот исчерпывающий список частот, используемых для Z-Wave:
+                <ul>
+                    <li>869.0 МГц (Россия)</li>
+                    <li>868.42 МГц (страны CEPT, Китай, Сингапур, ЮАР, ОАЭ)</li>
+                    <li>908.42 МГц (США, Канада, Мексика)</li>
+                    <li>921.42 МГц (Австралия, Бразилия, Новая Зеландия)</li>
+                    <li>868.1 МГц (Малайзия)</li>
+                    <li>865.2 МГц (Индия)</li>
+                    <li>919.82 МГц (Гонконг)</li>
+                    <li>951-956 и 922-926 МГц (Япония)</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading11">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                          Не будет ли Z-Wave сеть соседа мешать моей сети Z-Wave?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                <div class="panel-body">
+                Нет, не будет. Каждая сеть Z-Wave имеет свой уникальный идентификатор, что позволяет устройствам сети видеть только своих. Каждое устройство имеет встроенное ограничение на время пребывания в эфире, что препятствует захвату эфира, не давая устройству мешать устройствам своей и соседней сетей.
+                </div>
+            </div>
+        </div>    
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading12">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                          Как связать устройства в одну сеть?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                <div class="panel-body">
+                В Z-Wave этот процесс называется включением в сеть. Для включения требуется нажать специальные кнопки на устройствах, что делает процесс создания сети безопасным.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading13">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                          Что делать, если, выключатель и диммер находятся далеко друг от друга?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
+                <div class="panel-body">
+                Не обязательно, чтобы между устройствами была прямая видимость. Главное, чтобы между ними были другие устройства, способные выступать в качестве ретрансляторов сигнала. Такими устройствами являются все, постоянно питающиеся от 220/230 Вольт.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading15">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                          Полезные ссылки
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="http://z-wave.com/">Сайт владельца технологии Z-Wave</a></li>
+                        <li><a href="http://z-wave.com/">Сайт владельца технологии Z-Wave</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.z-wave-info').magnificPopup({
+        delegate: 'a',
+        type:'image',
+        gallery: {
+            enabled:true
+        },
+        mainClass: 'mfp-with-zoom',
+        //removalDelay: 300
+  zoom: {
+      enabled: true, // By default it's false, so don't forget to enable it
+
+          duration: 300, // duration of the effect, in milliseconds
+              easing: 'ease-in-out', // CSS transition easing function 
+
+                  // The "opener" function should return the element from which popup will be zoomed in
+                      // and to which popup will be scaled down
+                          // By defailt it looks for an image tag:
+                              opener: function(openerElement) {
+                                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                                          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                                                return openerElement.is('img') ? openerElement : openerElement.find('img');
+                                                    }
+                                                      }
+
+    });
+</script>

@@ -1,0 +1,77 @@
+<style>
+    #map-canvas {
+        height: 300px;
+        box-shadow: 0px 0px 10px 0px #323232;
+        border: 5px solid white;
+        margin: 15px;
+    }
+</style>
+<div id="info-title" >
+    Контакты
+</div>
+<div id="info-description">
+    Наши сотрудники всегда готовы проконсультировать Вас или помочь с решением проблемы.
+</div>
+
+<div id="info-content" >
+    <ul>
+        <li>
+            <h4>По вопросам продаж</h4>
+            <a title="sale@phoebe-logic.ru" href="mailto:sale@phoebe-logic.ru?subject=Вопрос по продаже">sale@phoebe-logic.ru</a>
+        </li>
+        <li>
+            <h4>По техническим вопросам</h4>
+            <a title="support@phoebe-logic.ru" href="mailto:support@phoebe-logic.ru?subject=Технический вопрос">support@phoebe-logic.ru</a>
+        </li>
+        <li>
+            <h4>Задайте любой вопрос</h4>
+            <a title="info@phoebe-logic.ru" href="mailto:info@phoebe-logic.ru?subject=Вопрос на свободную тему">info@phoebe-logic.ru</a>
+        </li>
+    </ul>
+
+    <h3>Наши координаты</h3>
+    <p>
+    ООО «Фиби Лоджик»<br>
+    141730, Московская обл., г.Лобня, ул. Фестивальная д.8, корп.2<br>
+    Время работы: пн-сб, 10.00 — 19.00<br>
+    Просим позвонить заранее перед визитом.
+    </p>
+    <div id="map-canvas"></div>
+</div>
+
+<script type="text/javascript">
+    function initialize() {
+        var location = { lat: 56.005797, lng: 37.481491 };
+        var center = { lat: 55.9, lng: 37.664464 };
+        var mapOptions = {
+            center: center,
+            zoom: 9 
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                title: 'ООО "ФибиЛоджик"'
+        });
+
+        var contentString = 'ООО «Фиби Лоджик»<br>'+
+            '141730, Московская обл., г.Лобня,<br>' +
+            'ул. Фестивальная д.8, корп.2<br>'+
+            'Время работы: пн-сб, 10.00 — 19.00<br>'+
+            'Просим позвонить заранее перед визитом.';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 300
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+
+
+    }
+    initialize();
+</script>
+

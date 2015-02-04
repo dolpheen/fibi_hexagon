@@ -1,0 +1,155 @@
+.hexagon-shadow {
+  width: 86px;
+  height: 50px;
+
+  /*background-image: url('../media/flood_image_13-80x80.jpg ');*/
+  /*background-color: #222222;*/
+  /*background-position: center center;*/
+  z-index: 1;
+
+  /* Text styling */
+  line-height: 70px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #fff;
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+
+  transition: color 500ms ease, text-shadow 600ms ease;
+
+  margin-left: 3px;
+  margin-top: 27px;
+  /*opacity: 0.8;*/
+  box-shadow: 0 0 2px 1px #888888;
+}
+
+.hexagon-shadow:hover {
+  color: #fff;
+  text-shadow: 0 0 30px white;
+  /*font-size: 12px;*/
+}
+
+
+
+.hexagon-shadow .face1,
+.hexagon-shadow .face2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: inherit;
+  z-index: -1;
+  /* Keeps borders smooth in webkit */
+  backface-visibility: hidden;
+  box-shadow: 0 0 2px 1px #888888;
+ 
+}
+
+.hexagon-shadow .face1:before,
+.hexagon-shadow .face2:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: inherit;
+
+}
+
+.hexagon-shadow .face1 { 
+  -webkit-transform: rotate(60deg); 
+  transform: rotate(60deg); 
+
+}
+
+.hexagon-shadow .face1:before {
+  left: 0;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: rotate(-60deg) translate(-50px, 0);
+  transform: rotate(-60deg) translate(-50px, 0);
+
+
+}
+
+.hexagon-shadow .face2 { 
+  -webkit-transform: rotate(-60deg); 
+  transform: rotate(-60deg); 
+}
+
+.hexagon-shadow .face2:before {
+  right: 0;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: rotate(60deg) translate(50px, 0);
+  transform: rotate(60deg) translate(50px, 0);
+}
+
+.hexagon-shadow.one {
+  background-color: #ff0066;  
+  /*background-color: #169B3B;  */
+}
+
+.hexagon-shadow.one:hover {
+  background-color: #fe4365;
+  /*background-color: #56DB7B;*/
+}
+
+.hexagon-shadow.two {
+  background-color: #2a8fbd;
+  /*background-color: #036564;*/
+  /*background-color: #add8c7;*/
+  /*background-color: #29AABD;  */
+}
+
+.hexagon-shadow.three {
+ /* background-color: #ff6600;  */
+  background-color: #fbb829;  
+}
+
+.hexagon-shadow.four {
+  background-image: url('../media/remote-control-small.jpg');
+  /*background-color: #df4f3f;  */
+  /*background-color: #0c1a37;*/
+}
+
+.hexagon-shadow.five {
+  background-color: #7fac1b;  
+}
+
+.hexagon-shadow.six {
+  background-color: #44aa55;
+  /*background-color: #77cca4;*/
+  /*background-color: #7fff24;*/
+  /*background-color: #c3ff68;  */
+}
+
+.hexagon-shadow.seven {
+  background-color: #520039;
+  /*background-color: #556270; */ 
+
+}
+
+.hexagon-shadow.transparent {
+  opacity: 0.0;
+}
+
+.hexagon-shadow.semitransparent {
+  opacity: 0.6;
+}
+
+.hexagon-shadow.visible {
+  opacity: 1.0;
+}
+
+.hexagon-shadow-row {
+  clear: left;
+}
+
+.hexagon-shadow-row.even {
+    margin-left: 45px;
+}
