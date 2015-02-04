@@ -1,2 +1,6 @@
 # fibi_hexagon
-Fibilogic new site!
+<<<<<<< HEAD
+=======
+Fibilogic new site hi there!
+another hi!
+>>>>>>> c788f519c21d4f07e358cd95b1443983b7a57b8c
