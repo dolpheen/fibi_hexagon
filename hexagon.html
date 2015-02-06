@@ -30,8 +30,11 @@
 </head>
 <body>
 <div class="page-wrapper">
+
 <div  id="backgroundg-hexagon" ></div>
 <div  id="backgroundg-hexagon-2"></div>
+<div  id="backgroundg-fabric"></div>
+
 <section  class="header">
 	
 	<!-- <div  id="backgroundg-z-wave-logos" ></div> -->
@@ -70,9 +73,8 @@
 			<feOffset in="blur" dx="1" dy="1"/>
 		</filter>
 	</defs>
-	<symbol id='menu-hexagon'>
-	<!--		<polygon points="77,8 137,41 137,111 77,144 17,111 17,41" />	-->
-		<polygon points="77,10.04 135.2,42.05 135.2,109.95 77,141.96 18.8,109.95 18.8,42.05 "/>
+	<symbol id='menu-hexagon'  >
+		<polygon points="77,10.04 135.2,42.05 135.2,109.95 77,141.96 18.8,109.95 18.8,42.05 " transform='scale(0.9)'/>
 	</symbol>
 	<symbol id='menu-hexagon-img'>
 		<polygon points="77,8 137,41 137,111 77,144 17,111 17,41" fill='url(#remote-control)' />	
@@ -225,12 +227,12 @@
 		</div>
 		<div class="menu-item hexagon transparent">
 	    	<svg class='svg-menu-item'>
-		        <use xlink:href="#menu-hexagon" />
+		        <use xlink:href="#menu-hexagon"/>
 		        <g class='menu-item-container'>
 		        	<g class='menu-item-container'>
 		        		<g id='menu-item-text-a2' class='menu-item-text' >
-		        			<text class='shadow' x="75" y="80">Визуализация</text>
-		        			<text x="75" y="80" style="fill: white">Визуализация</text>
+		        			<text class='shadow' x="69" y="75">Интерфейс</text>
+		        			<text x="69" y="75" style="fill: white">Интерфейс</text>
 		        		</g>
 		        	</g>
 		        </g>
@@ -241,12 +243,12 @@
 				<use xlink:href="#menu-hexagon" />
 				<g class='menu-item-container'>
 					<g id='menu-item-text-a3' class='menu-item-text' style='display:none'>
-						<text class='shadow' x="75" y="80">FAQ</text>
-						<text x="75" y="80" style="fill: white">FAQ</text>
+						<text class='shadow' x="69" y="75">FAQ</text>
+						<text x="69" y="75" style="fill: white">FAQ</text>
 					</g>
 					<g id='menu-item-text-b1' class='menu-item-text' style='display:none'>
-						<text class='shadow' x="75" y="80">Оплата</text>
-						<text x="75" y="80" style="fill: white">Оплата</text>
+						<text class='shadow' x="69" y="75">Оплата</text>
+						<text x="69" y="75" style="fill: white">Оплата</text>
 					</g>
 				</g>
 			</svg>
@@ -256,8 +258,8 @@
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-container'>
 		        	<g id='menu-item-text-b2' class='menu-item-text' >
-		        		<text class='shadow' x="75" y="80">Доставка</text>
-		        		<text x="75" y="80" style="fill: white">Доставка</text>
+		        		<text class='shadow' x="69" y="75">Доставка</text>
+		        		<text x="69" y="75" style="fill: white">Доставка</text>
 		        	</g>	
 		        </g>
 	    	</svg>
@@ -271,12 +273,12 @@
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-container'>
 		        	<g id='menu-item-text-a1' class='menu-item-text' >
-		        		<text class='shadow' x="75" y="80">Платформа</text>
-		        		<text x="75" y="80" style="fill: white">Платформа</text>
+		        		<text class='shadow' x="69" y="75">Платформа</text>
+		        		<text x="69" y="75" style="fill: white">Платформа</text>
 		        	</g>
 		        	<g id='menu-item-text-f3' class='menu-item-text' >
-		        		<text class='shadow' x="75" y="80">О нас</text>
-		        		<text x="75" y="80" style="fill: white">О нас</text>
+		        		<text class='shadow' x="69" y="75">О нас</text>
+		        		<text x="69" y="75" style="fill: white">О нас</text>
 		        	</g>   
 		        </g>
 	    	</svg>
@@ -284,10 +286,10 @@
 		<div class="menu-item hexagon menu-a">
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
-			<use xlink:href="#radio"/>	
+			<use xlink:href="#radio" x='10' y='17' transform='scale(0.8)'/>	
 		        <g class='menu-item-container'>
 			        <g id='menu-item-text-a' class='menu-item-text' >
-			        	<text x="70" y="105" style="fill: white">Технология</text>
+			        	<text x="69" y="98" style="fill: white">Технология</text>
 			        </g>
 		        </g>
 	    	</svg>
@@ -295,10 +297,10 @@
 		<div class="menu-item hexagon menu-b">
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
-			<use xlink:href="#cart"/>	
+			<use xlink:href="#cart" x='-5' y='-5' transform='scale(1.0)'/>	
 		        <g class='menu-item-container'>
 			        <g id='menu-item-text-b' class='menu-item-text' >
-			        	<text x="75" y="105" style="fill: white">Магазин</text>
+			        	<text x="70" y="98" style="fill: white">Магазин</text>
 			        </g>
 		        </g>
 	    	</svg>
@@ -308,12 +310,12 @@
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-container'>
 			        <g id='menu-item-text-b3' class='menu-item-text' >
-			        	<text class='shadow' x="75" y="80">Гарантия</text>
-			        	<text x="75" y="80" style="fill: white">Гарантия</text>
+			        	<text class='shadow' x="69" y="75">Гарантия</text>
+			        	<text x="69" y="75" style="fill: white">Гарантия</text>
 			        </g>
 			        <g id='menu-item-text-c1' class='menu-item-text' >
-			        	<text class='shadow' x="75" y="80">Контроллеры</text>
-			        	<text x="75" y="80" style="fill: white">Контроллеры</text>
+			        	<text class='shadow' x="69" y="75">Контроллер</text>
+			        	<text x="69" y="75" style="fill: white">Контроллер</text>
 			        </g>
 		        </g>
 	    	</svg>
@@ -327,17 +329,17 @@
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-text' >
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Контакты</text>
-		        	<text x="75" y="80" style="fill: white">Контакты</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="75">Контакты</text>
+		        	<text x="69" y="75" style="fill: white">Контакты</text>
 		        </g>
 	    	</svg>
 		</div>
 		<div class="menu-item hexagon menu-f">
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
-			<use xlink:href="#team"/>	
+			<use xlink:href="#team" x='-5' y='5' transform='scale(0.9)'/>	
 		        <g class='menu-item-text' >
-		        	<text x="70" y="105" style="fill: white">Компания</text>
+		        	<text x="70" y="98" style="fill: white">Компания</text>
 		        </g>
 	    	</svg>
 		</div>
@@ -371,9 +373,9 @@
 		<div class="menu-item hexagon menu-c">
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
-			<use xlink:href="#gears"/>	
+			<use xlink:href="#gears" x='0' y='5' transform='scale(0.9)'/>	
 		        <g id='menu-item-text-c' class='menu-item-text' >
-		        	<text x="75" y="105" style="fill: white">Оборудование</text>
+		        	<text x="70" y="98" style="fill: white">Устройства</text>
 		        </g>
 	    	</svg>
 		</div>
@@ -381,8 +383,8 @@
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-text' >
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Управление</text>
-		        	<text x="75" y="80" style="fill: white">Управление</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="75">Управление</text>
+		        	<text x="69" y="75" style="fill: white">Управление</text>
 		        	<!--<text style="filter: url(#shadow); fill: black" x="75" y="100">эл.приборами</text>
 		        	<text x="75" y="100" style="fill: white">эл.приборами</text>-->
 		        </g>
@@ -396,30 +398,30 @@
 	    	<svg  class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g id='menu-item-text-e3' class='menu-item-text' >
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Установка</text>
-		        	<text x="75" y="80" style="fill: white">Установка</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="75">Установка</text>
+		        	<text x="69" y="75" style="fill: white">Установка</text>
 		        </g>
 		        <g id='menu-item-text-f1' class='menu-item-text' >
-					<text style="filter: url(#shadow); fill: black" x="75" y="80">Реквизиты</text>
-		        	<text x="75" y="80" style="fill: white">Реквизиты</text>
+					<text style="filter: url(#shadow); fill: black" x="69" y="75">Реквизиты</text>
+		        	<text x="69" y="75" style="fill: white">Реквизиты</text>
 				</g>
 	    	</svg>
 		</div>
 		<div class="menu-item hexagon menu-e">
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
-			<use xlink:href="#wrench"/>	
+				<use xlink:href="#wrench" x='0' y='3' transform='scale(0.9)'/>	
 		        <g id='menu-item-text-e' class='menu-item-text' >
-		        	<text x="75" y="105" style="fill: white">Услуги</text>
+		        	<text x="70" y="98" style="fill: white">Услуги</text>
 		        </g>
 	    	</svg>
 		</div>
 		<div class="menu-item hexagon menu-d">
 			<svg class='svg-menu-item'>
 				<use xlink:href="#menu-hexagon" />
-				<use xlink:href="#bulb"/>	
+				<use xlink:href="#bulb" x='0' y='5' transform='scale(0.9)'/>	
 				<g id='menu-item-text-d' class='menu-item-text' >
-					<text x="75" y="105" style="fill: white">Решения</text>
+					<text x="70" y="98" style="fill: white">Решения</text>
 				</g>
 			</svg>
 		</div>
@@ -427,12 +429,12 @@
 			<svg class='svg-menu-item'>
 				<use xlink:href="#menu-hexagon" />
 				<g id='menu-item-text-c3' class='menu-item-text' >
-					<text class='shadow' x="75" y="80">Датчики</text>
-					<text x="75" y="80" style="fill: white">Датчики</text>
+					<text class='shadow' x="69" y="75">Датчики</text>
+					<text x="69" y="75" style="fill: white">Датчики</text>
 				</g>
 				<g id='menu-item-text-d1' class='menu-item-text' >
-					<text class='shadow' x="75" y="80">Освещение</text>
-					<text x="75" y="80" style="fill: white">Освещение</text>
+					<text class='shadow' x="69" y="75">Освещение</text>
+					<text x="69" y="75" style="fill: white">Освещение</text>
 				</g>
 			</svg>
 		</div>
@@ -449,10 +451,10 @@
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g  class='menu-item-text' >
-					<text style="filter: url(#shadow); fill: black" x="75" y="80">Техническая</text>
-		        	<text x="75" y="80" style="fill: white">Техническая</text>
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">поддержка</text>
-		        	<text x="75" y="100" style="fill: white">поддержка</text>
+					<text style="filter: url(#shadow); fill: black" x="69" y="65">Техническая</text>
+		        	<text x="69" y="65" style="fill: white">Техническая</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="81">поддержка</text>
+		        	<text x="69" y="81" style="fill: white">поддержка</text>
 				</g>
 	    	</svg>
 		</div>
@@ -460,14 +462,14 @@
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g id='menu-item-text-d3' class='menu-item-text' >
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Управление</text>
-		        	<text x="75" y="80" style="fill: white">Управление</text>
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">системами</text>
-		        	<text x="75" y="100" style="fill: white">системами</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="65">Управление</text>
+		        	<text x="69" y="65" style="fill: white">Управление</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="81">системами</text>
+		        	<text x="69" y="81" style="fill: white">системами</text>
 		        </g>
 		        <g id='menu-item-text-e1' class='menu-item-text' >
-					<text style="filter: url(#shadow); fill: black" x="75" y="80">Разработка</text>
-		        	<text x="75" y="80" style="fill: white">Разработка</text>
+					<text style="filter: url(#shadow); fill: black" x="69" y="75">Разработка</text>
+		        	<text x="69" y="75" style="fill: white">Разработка</text>
 				</g>
 	    	</svg>
 		</div>
@@ -475,10 +477,10 @@
 	    	<svg class='svg-menu-item'>
 		        <use xlink:href="#menu-hexagon" />
 		        <g class='menu-item-text' >
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="80">Климат</text>
-		        	<text x="75" y="80" style="fill: white">Климат</text>
-		        	<text style="filter: url(#shadow); fill: black" x="75" y="100">контроль</text>
-		        	<text x="75" y="100" style="fill: white">контроль</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="65">Климат</text>
+		        	<text x="69" y="65" style="fill: white">Климат</text>
+		        	<text style="filter: url(#shadow); fill: black" x="69" y="81">контроль</text>
+		        	<text x="69" y="81" style="fill: white">контроль</text>
 		        </g>
 	    	</svg>
 		</div>
