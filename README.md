@@ -1,3 +1,1 @@
-# fibi_hexagon
-Fibilogic new site hi there!
-Development!
+Fibilogic new site!
