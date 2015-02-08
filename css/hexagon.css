@@ -1,8 +1,8 @@
 
 .hexagon {
     float: left;
-    margin-left: -37px;
-    margin-bottom: -57px;
+    margin-left: -41px;
+    margin-bottom: -61px;
     cursor: pointer;
     /*margin-top: -20px;*/
     /*margin-top: */
@@ -28,7 +28,7 @@
 }
 
 .hexagon-row.even {
-    margin-left: 54px;
+    margin-left: 52px;
 }
 
 .hexagon.transparent{
