@@ -51,6 +51,57 @@
     }
 
     /******************
+    Megaphone text 
+    ******************/
+    #megaphone {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #megaphone > img {
+        float: left;
+    }
+
+    #megaphone > div {
+        margin-left: 150px;
+        color: #4285F4;
+    }
+
+    #megaphone > div > p {
+        margin: 3px;
+        transform-origin: top left;
+    }
+
+    #megaphone > div > p:nth-child(1) {
+        transform: rotate(-10deg);
+    }
+
+    #megaphone > div > p:nth-child(2) {
+        transform: rotate(-6deg);
+        margin-left: 7px;
+    }
+
+    #megaphone > div > p:nth-child(3) {
+        transform: rotate(-2deg);
+        margin-left: 10px;
+    }
+
+    #megaphone > div > p:nth-child(4) {
+        transform: rotate(2deg);
+        margin-left: 10px;
+    }
+
+    #megaphone > div > p:nth-child(5) {
+        transform: rotate(6deg);
+        margin-left: 7px;
+    }
+
+    #megaphone > div > p:nth-child(6) {
+        transform: rotate(10deg);
+    }
+               
+
+    /******************
     slider
     ******************/
 
@@ -200,11 +251,22 @@
 			</li>
 		</ul>
 	</div> 
+    <div id="megaphone">
+        <img src="content/menu/menu-b/images/megaphone2-128.png"/>
+        <div>
+            <p><strong>Внимание, Внимание!</strong></p>
+            <p><strong>Акция - сенсация!</strong></p>
+            <p><strong>Подберём оборудование.</strong></p> 
+            <p><strong>Поможем настроить.</strong></p> 
+            <p><strong>Напишем скрипты.</strong></p> 
+            <p style="letter-spacing: 7px;"><strong>БЕСПЛАТНО!</strong></p>
+        </div>
+    </div>
     <div id="orderSliderContainer">
         <div id="discountContainer">
             <p id="discount3"><strong>Скидка 5%</strong></p>
             <p id="discount2"><strong>Бесплатная доставка</strong></p>
-            <p id="discount1"><strong>Внимание, Внимание! Акция - сенсация!<br></strong>Подбор оборудования, помощь в настройке, реализация любых алгоритмов управления при помощи скриптов - <strong>БЕСПЛАТНО</strong></p>
+            <p id="discount1"><strong>Запасные батарейки</strong></p>
         </div>
         <input id="order" data-slider-id="orderSlider" type="text" data-slider-min="0" data-slider-max="60000" data-slider-step="1000" data-slider-value="0" data-slider-orientation="vertical"/>
     </div>
