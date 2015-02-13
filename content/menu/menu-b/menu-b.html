@@ -53,9 +53,12 @@
     /******************
     Megaphone text 
     ******************/
-    #megaphone {
-        margin-top: 40px;
-        margin-bottom: 40px;
+    #megaphone:after {
+        content: "."; 
+        visibility: hidden; 
+        display: block; 
+        height: 0; 
+        clear: both;
     }
 
     #megaphone > img {
@@ -63,40 +66,58 @@
     }
 
     #megaphone > div {
-        margin-left: 150px;
-        color: #4285F4;
+        float: left;
+        margin-left: 20px;
+        color: #5AC1EE;
     }
 
-    #megaphone > div > p {
+    #megaphone > div:first-of-type  {
+        padding-bottom: 40px;
+    }
+
+    #megaphone > [id^="desc"] {
+        color: rgba(0, 158, 230, 1);
+        opacity: 0;
+        height: 0px;
+        transition: opacity 0.5s;
+        position: relative;
+        top: 50px;
+    }
+
+    #mp-text > p:hover {
+        color: rgba(0, 158, 230, 1)
+    }
+
+    #mp-text > p {
         margin: 3px;
         transform-origin: top left;
     }
 
-    #megaphone > div > p:nth-child(1) {
+    #mp-text > p:nth-child(1) {
         transform: rotate(-10deg);
     }
 
-    #megaphone > div > p:nth-child(2) {
+    #mp-text > p:nth-child(2) {
         transform: rotate(-6deg);
         margin-left: 7px;
     }
 
-    #megaphone > div > p:nth-child(3) {
+    #mp-text > p:nth-child(3) {
         transform: rotate(-2deg);
         margin-left: 10px;
     }
 
-    #megaphone > div > p:nth-child(4) {
+    #mp-text > p:nth-child(4) {
         transform: rotate(2deg);
         margin-left: 10px;
     }
 
-    #megaphone > div > p:nth-child(5) {
+    #mp-text > p:nth-child(5) {
         transform: rotate(6deg);
         margin-left: 7px;
     }
 
-    #megaphone > div > p:nth-child(6) {
+    #mp-text > p:nth-child(6) {
         transform: rotate(10deg);
     }
                
@@ -252,14 +273,33 @@
 		</ul>
 	</div> 
     <div id="megaphone">
-        <img src="content/menu/menu-b/images/megaphone2-128.png"/>
-        <div>
-            <p><strong>Внимание, Внимание!</strong></p>
-            <p><strong>Акция - сенсация!</strong></p>
-            <p><strong>Подберём оборудование.</strong></p> 
-            <p><strong>Поможем настроить.</strong></p> 
-            <p><strong>Напишем скрипты.</strong></p> 
-            <p style="letter-spacing: 7px;"><strong>БЕСПЛАТНО!</strong></p>
+        <img src="content/menu/menu-b/images/megaphone3-128.png"/>
+        <div id="mp-text">
+            <p data-id="desc1"><strong>Внимание, Внимание!</strong></p>
+            <p data-id="desc2"><strong>Акция - сенсация!</strong></p>
+            <p data-id="desc3"><strong>Подберём оборудование.</strong></p> 
+            <p data-id="desc4"><strong>Поможем настроить.</strong></p> 
+            <p data-id="desc5"><strong>Напишем скрипты.</strong></p> 
+            <p data-id="desc6"><strong style="letter-spacing: 7px;">БЕСПЛАТНО!</strong></p>
+        </div>
+        <div id="desc1" style="opacity:1;">
+            Уникальное предложение<br>
+            Только у нас
+        </div>
+        <div id="desc2">
+            Не тратьте свое время
+        </div>
+        <div id="desc3">
+            Ваши задачи
+        </div>
+        <div id="desc4">
+            Параменры
+        </div>
+        <div id="desc5">
+            На языке LUA
+        </div>
+        <div id="desc6">
+            При любой покупке
         </div>
     </div>
     <div id="orderSliderContainer">
@@ -274,6 +314,27 @@
 
 <script type="text/javascript" src="content/menu/menu-b/js/bootstrap-slider.min.js"></script>
 <script>
+    /************
+    Megaphone
+    ************/
+    var descs = $('[id^="desc"]');
+
+    function showOnlyOneDescription(evt) {
+        var descId = evt.currentTarget.dataset.id;
+
+        descs.each(function(idx, elem) { 
+            if (elem.id != descId)
+                elem.style.opacity = '0';
+            else
+                elem.style.opacity = '1';
+        });
+    }
+
+    $('[data-id^="desc"]').mouseenter(showOnlyOneDescription);
+
+    /*************
+        Product slider
+    *************/
     function iterNodeList(ns, f) {
         for (var i=0; i < ns.length; i++) 
             f(ns[i]);
