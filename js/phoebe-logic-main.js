@@ -1,3 +1,10 @@
+/* 
+    Phoebe-logic global object 
+    properties:
+    selectedMenu
+*/
+var phoebeLogic = {};
+
 var menu_table = new Array(5);
 for( var i = 0; i < 5; i++) menu_table[i] = new Array(5);
 
@@ -74,7 +81,10 @@ $('.menu-item').click( function () {
         function onHideOrDataReady(){
             if (!ajaxData || !hideReady) return;
 
-            $('#info-section').html(ajaxData);
+            $('#info-section').html(ajaxData).ready(function(evt) { 
+                var menuColor = $('.hexagon.menu-' + phoebeLogic.selectedMenu[0]).css('fill');
+                $('#info-title').css('background-color', menuColor); 
+            });
             elem.style.animationName = 'info-show'; 
             elem.style.webkitAnimationName="info-show";
             elem.opacity = "1";
@@ -101,6 +111,7 @@ $('.menu-item').click( function () {
         elem.addEventListener('webkitAnimationEnd', onHideReady); 
 
 		//if(selectedMenu.length == 1){
+            phoebeLogic.selectedMenu = selectedMenu.toLowerCase();
 			$.getJSON( 'content/menu/menu-' + selectedMenu.toLowerCase() + '.json', function ( data ) {
 					//alert(data);
 					/*$('#info-title').html(data.title);*/
