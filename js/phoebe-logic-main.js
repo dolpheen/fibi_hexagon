@@ -1,10 +1,3 @@
-/* 
-    Phoebe-logic global object 
-    properties:
-    selectedMenu
-*/
-var phoebeLogic = {};
-
 var menu_table = new Array(5);
 for( var i = 0; i < 5; i++) menu_table[i] = new Array(5);
 
@@ -37,9 +30,15 @@ var selectedMenu = null;
 var selectedMainMenu = null;
 
 /*
-		Selection of menu item
-		After execution selectedMainMenu contains main menu letter, selectedMenu contains submenu letters
+    Load info section at startup
+*/
+$(document).ready(function() {
+    loadMenuContent('g');
+});
 
+/*
+    Selection of menu item
+    After execution selectedMainMenu contains main menu letter, selectedMenu contains submenu letters
 */
 $('.menu-item').click( function () {
 	// Get menu type description from array
@@ -69,7 +68,16 @@ $('.menu-item').click( function () {
 				}
 		}	else selectedMenu = selectedMenu.substr(selectedMenu.indexOf(selectedMainMenu), 2);
 
-		// Load menu content
+        loadMenuContent(selectedMenu.toLowerCase());
+	}
+});
+
+/* 
+    Load menu content to #info-section and chenge color of #info-title
+    params: 
+        menu - menu designation
+*/
+function loadMenuContent(menu) {
         var hideReady;
         var ajaxData;
         var preloaderHtml = '<div class="sk-spinner sk-spinner-three-bounce"> \
@@ -82,7 +90,7 @@ $('.menu-item').click( function () {
             if (!ajaxData || !hideReady) return;
 
             $('#info-section').html(ajaxData).ready(function(evt) { 
-                var menuColor = $('.hexagon.menu-' + phoebeLogic.selectedMenu[0]).css('fill');
+                var menuColor = $('.hexagon.menu-' + menu[0]).css('fill');
                 $('#info-title').css('background-color', menuColor); 
             });
             elem.style.animationName = 'info-show'; 
@@ -91,7 +99,6 @@ $('.menu-item').click( function () {
         }
         
         function onHideReady(evt) {
-            //if (evt.target != elem) return; 
             hideReady = true; 
             $('#info-section').html(preloaderHtml);
             elem.opacity = "1";
@@ -111,8 +118,7 @@ $('.menu-item').click( function () {
         elem.addEventListener('webkitAnimationEnd', onHideReady); 
 
 		//if(selectedMenu.length == 1){
-            phoebeLogic.selectedMenu = selectedMenu.toLowerCase();
-			$.getJSON( 'content/menu/menu-' + selectedMenu.toLowerCase() + '.json', function ( data ) {
+			$.getJSON( 'content/menu/menu-' + menu + '.json', function ( data ) {
 					//alert(data);
 					/*$('#info-title').html(data.title);*/
 					$.get(data.content, function ( data ) {
@@ -121,8 +127,8 @@ $('.menu-item').click( function () {
 					});
 			});
 		//}
-	}
-});
+
+}
 
 function getHexMenuContent(selMenu, item){
 	selMenu = selMenu.toLowerCase();
@@ -184,6 +190,9 @@ function showMenuItem (raw, col, menuItem){
 	}
 }
 
+/*
+    Set up creeping line at the bottom
+*/
 $(function(){
     var hours = (new Date()).getHours();
     var greeting = "";
@@ -238,6 +247,9 @@ $(function(){
     window.setTimeout(show_typed_string, 3000);
 });
 
+/*
+    Set up menu arrows animation
+*/
 (function() {
     var arrows = document.querySelectorAll("#arrows > path");
 
