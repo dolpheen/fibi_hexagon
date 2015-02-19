@@ -1,3 +1,15 @@
+<style>
+    .flexslider {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #slider {
+        margin-bottom: 5px;
+    }
+</style>
+
 <div id="info-title" >
     Решения
 </div>
@@ -6,52 +18,79 @@
 </div>
 
 <div id="info-content" >
-    <img src="content/menu/menu-d/images/solutions_controlhouse.png"/>
-	<div style="float:left; position:relative; overflow:visible; width:80%; margin-top:26px; padding-top: 5px;  box-shadow: 1px -1px 4px -1px #888888; ">
-		<div><b>Контроллер Fibaro HCL</b></div> 
-		«мозг» вашей домашней системы автоматизации ghjgh jhgз ации. ываыа ываыаыва ыаывааываывав ывавыаыв.
-	</div>
-	<div style="height:90px">
-		<div id="five-one" style="position:absolute; margin-left:285px;" class="hexagon-shadow two">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div>
-		<div id="five-one"  style="position:absolute; margin-left:285px;" class="hexagon-small">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div> 
-	</div>
 
-	
-	<div style="float:left; width:80%; margin-top:26px; padding-top: 5px; box-shadow: 1px -1px 4px -1px #888888;">
-		<div><b>Контроллер Fibaro HCL</b></div> 
-		«мозг» вашей домашней системы автоматизации. 
-	</div>
-	<div style="height:90px">
-		<div id="five-one" style="position:absolute; margin-left:250px;" class="hexagon-shadow two">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div>
-		<div id="five-one"  style="position:absolute; margin-left:250px;" class="hexagon-small">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div> 
-	</div>
-
-	<div style="float:left; width:80%; margin-top:26px; padding-top: 5px; box-shadow: 1px -1px 4px -1px #888888;">
-		<div><b>Контроллер Fibaro HCL</b></div> 
-		«мозг» вашей домашней системы автоматизации. 
-	</div>
-	<div style="height:90px">
-		<div id="five-one" style="position:absolute; margin-left:285px;" class="hexagon-shadow two">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div>
-		<div id="five-one"  style="position:absolute; margin-left:285px;" class="hexagon-small">
-		  <div class="face1"></div>
-		  <div class="face2"></div>
-		</div> 
-	</div>
-
-	
+    <div id="slider" class="flexslider">
+        <ul class="slides">
+            <li data-thumb="./content/menu/menu-d/images/hc2_thumb.png">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/dKKoxlGsnak?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li data-thumb="./content/menu/menu-d/images/plug_thumb.png">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/82C_yJwLZks?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li data-thumb="./content/menu/menu-d/images/flood_thumb.png">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/qGeQ81i1U0E?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li data-thumb="./content/menu/menu-d/images/motion_thumb.png">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/ck27jTsmHo4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li data-thumb="./content/menu/menu-d/images/smoke_thumb.png">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/Cb64bsZVLiw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+            </li>
+        </ul>
+    </div>
+    <div id="carousel" class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="./content/menu/menu-d/images/hc2_thumb.png"/>
+            </li>
+            <li>
+                <img src="./content/menu/menu-d/images/plug_thumb.png"/>
+            </li>
+            <li>
+                <img src="./content/menu/menu-d/images/flood_thumb.png"/>
+            </li>
+            <li>
+                <img src="./content/menu/menu-d/images/motion_thumb.png"/>
+            </li>
+            <li>
+                <img src="./content/menu/menu-d/images/smoke_thumb.png"/>
+            </li>
+        </ul>
+    </div>
 </div>
+
+<script src="./content/menu/menu-d/js/jquery.fitvids.js"></script>
+<script>
+    // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+    /*
+    $(".flexslider")
+        .fitVids()
+        .flexslider({
+            animation: "slide",
+            useCSS: false,
+            animationLoop: false,
+            smoothHeight: true,
+            controlNav: "thumbnails",
+        });
+    */
+
+    $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        asNavFor: '#slider'
+    });
+
+    $('#slider')
+        .fitVids()
+        .flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#carousel"
+        });
+</script>
