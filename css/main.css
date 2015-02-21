@@ -197,12 +197,8 @@ body {
 
 /* H E X G O N    M A I N    M E N U */
 .menu-container {
-  position: relative;
-  top: 300%;
-  float: left;
   margin-top: 70px;
-  width: 40%;
-  min-width: 540px;
+  width: 540px;
   background-repeat: no-repeat;
   opacity: 0.99;
   /*background-image: url("../media/transparent-fabric.png");*/
@@ -211,9 +207,10 @@ body {
 
 /* R I G H T - S I D E    I N F O    S E C T I O N */
 #info-section {
-  position: relative;
- /* width: 36%;*/
-  /*top: -30px;*/
+  position: absolute;
+  width: 760px;
+  top: 0px;
+  right: 0px;
   font-size: 13px;
   /*font-family: 'Oswald', sans-serif;*/
   letter-spacing: 1px;
@@ -346,9 +343,8 @@ body {
 }
 
 .page-wrapper {
-  width: 90%;
-  min-width: 960px;
-  max-width: 1300px;
+  position: relative;
+  width: 1300px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 8px;
