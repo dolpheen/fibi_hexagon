@@ -5,6 +5,7 @@ body {
   color: rgb(91,91,91);
   /*background-color: #f7fdfa;*/
   /*background-color: #f5f3e5;*/
+  background: url('/images/body.jpg') repeat scroll 0% 0% #F0EFE7;
 }
 
 /* H E A D E R    S E T T I N G S */
@@ -222,10 +223,12 @@ body {
   /*border: solid 1px #520039;*/
   /*box-shadow: 0 0 3px #050505;*/
   overflow: hidden;
-  padding-bottom: 20px;
   /*padding-left: 13px;*/
   /*opacity: 0.6;*/
-  
+  background-color: #FCFCFA;
+  border: 1px solid #E2E0D8;
+  border-radius: 5px;
+  padding: 0px 22px;
 }
 
 #info-section {
@@ -253,8 +256,10 @@ body {
 	to   {opacity: 0; }
 }
 
-#info-section #info-title {
-  position: relative;
+#info-title {
+  position: absolute;
+  width: 100%;
+  left: 0px;
   /*margin-bottom: 10px;*/
   /*font-family: 'Oswald', sans-serif;*/
   font-size: 18px;
@@ -274,6 +279,7 @@ body {
 
 #info-description {
   margin-bottom: 30px;
+  margin-top: 40px;
   font-size: 14px;
   color: #3a9fcd;
   letter-spacing: 1px;
