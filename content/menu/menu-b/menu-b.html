@@ -162,6 +162,52 @@
         opacity: 0.2;
     }
 
+
+    /******************
+    logo marquee
+    ******************/
+    #logo-marquee {
+        background-image: url('/content/menu/menu-b/images/logos.png');
+        height: 123px;
+        width: 100%;
+        animation-duration: 80s;
+        animation-delay: 1s;
+        animation-name: shift-left;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+        -webkit-animation-duration: 80s;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-name: shift-left;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite; 
+        position: relative;
+    }
+
+    #logo-marquee::before {
+        content:'';
+        height: 123px;
+        position:absolute;
+        box-shadow: 0px 0px 20px 20px white;
+    }
+
+    #logo-marquee::after {
+        content:'';
+        height: 123px;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 0px 10px 20px white;
+    }
+
+    @keyframes shift-left {
+        from {background-position: 0px;}
+        to {background-position: -1805px;}
+    }
+
+    @-webkit-keyframes shift-left {
+        from {background-position: 0px;}
+        to {background-position: -1805px;}
+    }
+
 </style>
 <div id="info-title" >
 	Магазин
@@ -302,13 +348,23 @@
             При любой покупке
         </div>
     </div>
-    <div id="orderSliderContainer">
+    <div id="orderSliderContainer" style="display:none;">
         <div id="discountContainer">
             <p id="discount3"><strong>Скидка 5%</strong></p>
             <p id="discount2"><strong>Бесплатная доставка</strong></p>
             <p id="discount1"><strong>Запасные батарейки</strong></p>
         </div>
         <input id="order" data-slider-id="orderSlider" type="text" data-slider-min="0" data-slider-max="60000" data-slider-step="1000" data-slider-value="0" data-slider-orientation="vertical"/>
+    </div>
+
+    <div id="logo-marquee">
+        <!--
+        <img src="content/menu/menu-b/images/logo/Danfoss logo.png"/>
+        <img src="content/menu/menu-b/images/logo/Duewi logo.png"/>
+        <img src="content/menu/menu-b/images/logo/Eurotronic logo.png"/>
+        <img src="content/menu/menu-b/images/logo/Fibaro logo.png"/>
+        <img src="content/menu/menu-b/images/logo/Remotec logo.png"/>
+        -->
     </div>
 </div>
 
