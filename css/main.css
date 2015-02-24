@@ -6,6 +6,11 @@ body {
   /*background-color: #f7fdfa;*/
   /*background-color: #f5f3e5;*/
   background: url('/media/body.jpg') repeat scroll 0% 0% #F0EFE7;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 /* H E A D E R    S E T T I N G S */
@@ -197,6 +202,8 @@ body {
 
 /* H E X G O N    M A I N    M E N U */
 .menu-container {
+  display: inline-block;
+  vertical-align: top;
   margin-top: 70px;
   width: 540px;
   background-repeat: no-repeat;
@@ -207,10 +214,10 @@ body {
 
 /* R I G H T - S I D E    I N F O    S E C T I O N */
 #info-section {
-  position: absolute;
+  display: inline-block;
+  position: relative;
   width: 760px;
-  top: 0px;
-  right: 0px;
+  white-space: normal;
   font-size: 13px;
   /*font-family: 'Oswald', sans-serif;*/
   letter-spacing: 1px;
@@ -344,11 +351,38 @@ body {
 .page-wrapper {
   position: relative;
   width: 1300px;
+  white-space: nowrap;
   margin-left: auto;
   margin-right: auto;
   padding-left: 8px;
   padding-right: 8px;
+  min-height: 100%;
 }
+
+/*
+ * FOOTER
+ */
+
+.page-wrapper {
+  margin-bottom: -30px;
+}
+
+.page-wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer,
+.page-wrapper:after {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #aaa;  
+}
+
 
 /*************/
 /* Preloader */
