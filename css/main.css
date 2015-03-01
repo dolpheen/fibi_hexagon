@@ -364,7 +364,7 @@ html {
  */
 
 .page-wrapper {
-  margin-bottom: -229px;
+  margin-bottom: -139px;
 }
 
 .page-wrapper:after {
@@ -374,51 +374,48 @@ html {
 
 footer,
 .page-wrapper:after {
-  height: 229px;
+  height: 139px;
   line-height: 30px;
-}
-
-
-/*
- * FOOTER SCROLLER
- */
-
-#scroller {
-  width: 100%;
-  overflow: hidden;
-}
-
-#actor {
-  width: 3306px;
-  white-space: nowrap;
-  font-size: 0px;
-  animation: 80s linear 0s normal none infinite Scrolling;
-  -webkit-animation: 80s linear 0s normal none infinite Scrolling;
-}
-
-#actor > img {
-  width: 1653px;
-  margin-left: -2px;
-}
-
-@keyframes Scrolling {
-  0%   { margin: 0px; }
-  100% { margin-left: -1653px; }
-}
-
-@-webkit-keyframes Scrolling {
-  0%   { margin: 0px; }
-  100% { margin-left: -1653px; }
 }
 
 #footer-info {
   background-color: #D9E2ED;
   text-align: center;
+  margin-top: -15px;
 }
 
 #footer-info > i {
   margin-left: 20px;  
 }
+
+/*
+ * FOOTER SCROLLER
+ */
+#scroller {
+  background-image: url('/media/footer-scroller.svg');
+  height: 124px;
+  width: 100%;
+  animation-duration: 120s;
+  animation-delay: 1s; 
+  animation-name: shift-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  -webkit-animation-duration: 120s;
+  -webkit-animation-delay: 1s; 
+  -webkit-animation-name: shift-left;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; 
+} 
+
+@keyframes shift-left {
+  from {background-position: 0px;}
+  to {background-position: -2306px;}
+}   
+
+@-webkit-keyframes shift-left {
+  from {background-position: 0px;}
+  to {background-position: -2306px;}
+}  
 
 /*************/
 /* Preloader */
