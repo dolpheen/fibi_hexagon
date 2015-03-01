@@ -364,7 +364,7 @@ html {
  */
 
 .page-wrapper {
-  margin-bottom: -30px;
+  margin-bottom: -229px;
 }
 
 .page-wrapper:after {
@@ -374,15 +374,51 @@ html {
 
 footer,
 .page-wrapper:after {
-  height: 30px;
+  height: 229px;
   line-height: 30px;
-  padding-left: 20px;
 }
 
-footer {
-  background-color: #aaa;  
+
+/*
+ * FOOTER SCROLLER
+ */
+
+#scroller {
+  width: 100%;
+  overflow: hidden;
 }
 
+#actor {
+  width: 3306px;
+  white-space: nowrap;
+  font-size: 0px;
+  animation: 80s linear 0s normal none infinite Scrolling;
+  -webkit-animation: 80s linear 0s normal none infinite Scrolling;
+}
+
+#actor > img {
+  width: 1653px;
+  margin-left: -2px;
+}
+
+@keyframes Scrolling {
+  0%   { margin: 0px; }
+  100% { margin-left: -1653px; }
+}
+
+@-webkit-keyframes Scrolling {
+  0%   { margin: 0px; }
+  100% { margin-left: -1653px; }
+}
+
+#footer-info {
+  background-color: #D9E2ED;
+  text-align: center;
+}
+
+#footer-info > i {
+  margin-left: 20px;  
+}
 
 /*************/
 /* Preloader */
