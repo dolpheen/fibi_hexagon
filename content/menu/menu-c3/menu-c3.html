@@ -1,4 +1,28 @@
 <style type="text/css">
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
 </style>
 <div style="height: 0px;">
     <svg>
@@ -35,15 +59,12 @@
             <div class='description'>
                 Мультисенсор — датчик движения, температуры, освещенности, акселерометр. Для использования в домашней сети умного дома Z-Wave.           
             </div>
-            <span>Цена: 4500 <i class="fa fa-rub"></i></span>
-            <a href="fibi-logic.ru/shop"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
+            <a href="http://fibi-logic.ru/shop" target="_blank"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
         </div>
-        <div class="hexagon-info">
-            <a target="_blank" href="http://www.fibi-logic.ru/shop/">
-                <svg width="120px" height="120px">
-                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img1)"/>
-                </svg>
-            </a>
+        <div id="multisensor" class="hexagon-info">
+            <svg width="120px" height="120px">
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img1)"/>
+            </svg>
         </div>
     </div>
 
@@ -53,30 +74,27 @@
             <div class='description'>
                 Многофункциональный датчик протечки воды, защитит вас и ваш дом. 
             </div>
-            <a href="fibi-logic.ru/shop"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
+            <a href="http://fibi-logic.ru/shop" target="_blank"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
         </div>
-        <div class="hexagon-info">
-            <a target="_blank" href="http://www.fibi-logic.ru/shop/">
-                <svg width="120px" height="120px">
-                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
-                </svg>
-            </a>
+        <div id="flood_sensor" class="hexagon-info">
+            <svg width="120px" height="120px">
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+            </svg>
         </div>
     </div>
+
     <div class='info-item'>
         <div class='text-block'>
             <div class='title'>Мультисенсор</div> 
             <div class='description'>
                 Датчик движения, температуры, влажности, освещённости.
             </div>
-            <a href="fibi-logic.ru/shop"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
+            <a href="http://fibi-logic.ru/shop" target="_blank"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
         </div>
-        <div class="hexagon-info">
-            <a target="_blank" href="http://www.fibi-logic.ru/shop/">
-                <svg width="120px" height="120px">
-                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
-                </svg>
-            </a>
+        <div id="aeon_multisensor" class="hexagon-info">
+            <svg width="120px" height="120px">
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
+            </svg>
         </div>
     </div>
     <div class='info-item even'>
@@ -85,14 +103,12 @@
             <div class='description'>
                 Многофункциональный датчик открытия двери/окна, с поддержкой измерения температуры и возможностью подключения внешних устройств через дискретный вход. 
             </div>
-            <a href="fibi-logic.ru/shop"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
+            <a href="http://fibi-logic.ru/shop" target="_blank"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
         </div>
-        <div class="hexagon-info">
-            <a target="_blank" href="http://www.fibi-logic.ru/shop/">
-                <svg width="120px" height="120px">
-                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
-                </svg>
-            </a>
+        <div id="door_sensor" class="hexagon-info">
+            <svg width="120px" height="120px">
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
+            </svg>
         </div>
     </div>
     <div class='info-item'>
@@ -101,16 +117,80 @@
             <div class='description'>
                 Универсальный датчик Z-Wave c дискретными входами/выходами позволяет добавить датчик, который не поддерживает беспроводной протокол Z-Wave, в систему умного дома
             </div>
-            <a href="fibi-logic.ru/shop"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
+            <a href="http://fibi-logic.ru/shop" target="_blank"><i class="fa fa-arrow-circle-o-right fa-lg fa-fw"></i>Подробнее</a>
         </div>
-        <div class="hexagon-info">
-            <a target="_blank" href="http://www.fibi-logic.ru/shop/">
-                <svg width="120px" height="120px">
-                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
-                </svg>
-            </a>
+        <div id="universal_sensor" class="hexagon-info">
+            <svg width="120px" height="120px">
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
+            </svg>
         </div>
     </div>
-
 </div>
 
+<script>
+    function initMagnificPopup(selector, items) {
+        $(selector).magnificPopup({
+            items: items,
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+            zoom: { 
+                enabled: true, // By default it's false, so don't forget to enable it 
+                duration: 300, // duration of the effect, in milliseconds 
+                easing: 'ease-in-out', // CSS transition easing function  
+                opener: function(openerElement) { 
+                    return $(selector);
+                }   
+            }
+
+        });
+    }
+
+    initMagnificPopup(
+        '#multisensor', 
+        [
+            { src: 'content/menu/menu-c3/images/fibaro-motion-sensor.jpg' },
+            { src: 'content/menu/menu-c3/images/fgms_hand1.jpg' },
+            { src: 'content/menu/menu-c3/images/FIB_FGMS-001_c_en.png' },
+        ]
+    );
+
+    initMagnificPopup(
+        '#flood_sensor', 
+        [
+            { src: 'content/menu/menu-c3/images/FIB_FGFS-101.png' },
+        ]
+    );
+
+    initMagnificPopup(
+        '#aeon_multisensor', 
+        [
+            { src: 'content/menu/menu-c3/images/AEO_MULTISENS_side.jpg' },
+            { src: 'content/menu/menu-c3/images/AEO_MULTISENS_front.jpg' },
+            { src: 'content/menu/menu-c3/images/aeo_multisens_sensor-diagram.jpg' },
+        ]
+    );
+
+    initMagnificPopup(
+        '#door_sensor', 
+        [
+            { src: 'content/menu/menu-c3/images/FIB_FGK-101.jpg' },
+            { src: 'content/menu/menu-c3/images/door_sensor_1.jpg' },
+            { src: 'content/menu/menu-c3/images/door_sensor_2.jpg' },
+            { src: 'content/menu/menu-c3/images/door_sensor_3.jpg' },
+            { src: 'content/menu/menu-c3/images/door_sensor_4.jpg' },
+        ]
+    );
+
+    initMagnificPopup(
+        '#universal_sensor', 
+        [
+            { src: 'content/menu/menu-c3/images/FIB_FGBS-001.png' },
+            { src: 'content/menu/menu-c3/images/fbgs-001.jpg' },
+        ]
+    );
+
+
+</script>
