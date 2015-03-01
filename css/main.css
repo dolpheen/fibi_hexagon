@@ -392,7 +392,7 @@ footer,
  * FOOTER SCROLLER
  */
 #scroller {
-  background-image: url('/media/footer-scroller.svg');
+  background-image: url('../media/footer-scroller.svg');
   height: 124px;
   width: 100%;
   animation-duration: 120s;
