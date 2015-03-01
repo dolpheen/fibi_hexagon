@@ -1,11 +1,31 @@
 <style>
+/*
+ * clean up accordion
+ */
+    .panel {
+        background-color: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .panel-default > .panel-heading {
+        background-color: #FCFCFA;
+    }
+
+    .collapse {
+        background-color: #FCFCFA;
+    }
+
+    .panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+        border-top: none;
+    }
+
     .z-wave-info {
         margin-bottom: 10px;
     }
 
     .z-wave-info > a {
         text-decoration: none;
-
     }
     
     /* overlay at start */
