@@ -5,7 +5,7 @@ body {
   color: rgb(91,91,91);
   /*background-color: #f7fdfa;*/
   /*background-color: #f5f3e5;*/
-  background: url('/media/body.jpg') repeat scroll 0% 0% #F0EFE7;
+  /*background: url('/media/body.jpg') repeat scroll 0% 0% #F0EFE7;*/
   height: 100%;
 }
 
@@ -349,7 +349,6 @@ html {
 }
 
 .page-wrapper {
-  position: relative;
   width: 1300px;
   white-space: nowrap;
   margin-left: auto;
