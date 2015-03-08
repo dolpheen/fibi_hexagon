@@ -16,7 +16,7 @@ html {
 /* H E A D E R    S E T T I N G S */
 
 .header {
-  position: absolute;
+  position: fixed;
   left: 5%;
   height: 80px;
   font-size: 13px;
@@ -29,7 +29,7 @@ html {
 
 
 #backgroundg-hexagon {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 10px;
   width: 294px; height: 432px;
@@ -37,7 +37,7 @@ html {
 }
 
 #backgroundg-hexagon-2 {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 10px;
   width: 380px; height: 100px;
@@ -47,7 +47,7 @@ html {
 }
 
 #backgroundg-fabric {
-  position: absolute;
+  position: fixed;
   top: 150px;
   width: 600px; height: 499px;
   background-image: url("../media/transparent-fabric.png");
@@ -201,7 +201,8 @@ html {
 
 
 /* H E X G O N    M A I N    M E N U */
-.menu-container {
+#menu-container {
+  position: fixed;
   display: inline-block;
   vertical-align: top;
   margin-top: 70px;
@@ -217,6 +218,7 @@ html {
   display: inline-block;
   position: relative;
   width: 760px;
+  margin-left: 540px;
   white-space: normal;
   font-size: 13px;
   /*font-family: 'Oswald', sans-serif;*/
@@ -231,7 +233,6 @@ html {
   /*opacity: 0.6;*/
   background-color: #FCFCFA;
   border: 1px solid #E2E0D8;
-  padding: 0px 22px;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
 }
@@ -262,10 +263,6 @@ html {
 }
 
 #info-title {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  /*margin-bottom: 10px;*/
   /*font-family: 'Oswald', sans-serif;*/
   font-size: 18px;
   letter-spacing: 3px;
@@ -273,6 +270,7 @@ html {
   font-variant: small-caps;
   padding: 5px;
   color: white;
+  text-align: center;
   /*color: #ff0066;*/
   /*color: #520039;*/
   /*background-color: rgba(100, 100, 100, 0.1);*/
@@ -283,15 +281,18 @@ html {
 
 #info-description {
   margin-bottom: 30px;
-  margin-top: 40px;
   font-size: 14px;
   color: #3a9fcd;
   letter-spacing: 1px;
+  padding-left: 20px;
 }
 
 #info-content {
-  clear:both;
-  padding: 4px;
+}
+
+#info-content > .padding {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #info-content .info-item {

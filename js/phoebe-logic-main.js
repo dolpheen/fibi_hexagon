@@ -57,7 +57,7 @@ $('.menu-item').click( function () {
 					if( menu_item && menu_item.length > 1){
 					  if(menu_item.indexOf(selectedMenu) >= 0){
 					  	showMenuItem(i, j, selectedMenu); 
-					  	var item = $(".menu-container .hexagon-row")[i].children[j];
+					  	var item = $("#menu-container .hexagon-row")[i].children[j];
 					  	var selMenu =  menu_item.substr(menu_item.indexOf(selectedMainMenu), 2);
 
 						getHexMenuContent(selMenu, item);					  	
@@ -141,7 +141,7 @@ function getHexMenuContent(selMenu, item){
 	Makes Raw Cal item hide or show
 */
 function hideMenuItem (raw, col){
-	var item = $(".menu-container .hexagon-row")[raw].children[col];
+	var item = $("#menu-container .hexagon-row")[raw].children[col];
 	$(item).addClass("transparent");
 }
 
@@ -149,7 +149,7 @@ function hideMenuItem (raw, col){
 	Makes raw,col hexmenu visible
 */
 function showMenuItem (raw, col, menuItem){
-	var item = $(".menu-container .hexagon-row")[raw].children[col];
+	var item = $("#menu-container .hexagon-row")[raw].children[col];
 
 	item.style.animationName =      "show";
 	item.style.webkitAnimationName= "show";
