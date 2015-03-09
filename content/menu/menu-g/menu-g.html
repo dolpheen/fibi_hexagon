@@ -13,19 +13,19 @@
         -webkit-animation-fill-mode: forwards;
     }
 
-    .flexslider {
+    #top-slider {
         width: 760px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .slides h2 {
+    #top-slider > .slides h2 {
         bottom: 0px;
         font-size: 20px;
     }
 
-    .slides img,
-    .slides svg,
+    #top-slider > .slides img,
+    #top-slider > .slides svg,
     .show-after-outline{
         opacity: 0;
     }
@@ -46,17 +46,20 @@
         position:relative;
     }
 
-    #mobile-control div:first-child {
+    #mobile-control > div:first-child {
         width: 410px;
         height: 400px;
         position: absolute;
         top: 100px;
-        background: url('content/menu/menu-g/images/mobile-hexagons.svg') no-repeat center center;
     }
 
-    #mobile-control div:last-child {
+    #mobile-control > div:last-child {
         height:718px;
-        padding: 110px 30px 0px 450px;
+        padding: 80px 30px 0px 441px;
+    }
+
+    #iphone-slider {
+        width: 257px;
     }
 }
 </style>
@@ -83,7 +86,7 @@
         Нет пределов тому, что умный дом может сделать для вас.
 	</div>
 	<div id="info-content" >
-        <div class="flexslider">
+        <div id="top-slider" class="flexslider">
             <ul class="slides">
                 <li>
                     <a href="http://www.fibi-logic.ru/shop" target="_blank">
@@ -208,24 +211,24 @@
 
         <div id="mobile-control" class="padding">
             <div>
-                    <h4>
-                    Теперь безопасность и комфорт Вашего дома под контролем новейших технологий. Новейшие не значит сложные: вся система управляется со смартфона или планшета 
-                    </h4>
+                <h4>
+                Теперь безопасность и комфорт Вашего дома под контролем новейших технологий. Новейшие не значит сложные: вся система управляется со смартфона или планшета 
+                </h4>
+                Ваш дом в телефоне
+                Следите за происходящем, контролируйте потребление электроэнергии или просто удивляйте друзей невероятными возможностями.
+                Ваш смартфон может соединиться с вашим домом даже если вы далеко от него.
+                    Включайте отопление когда вы приближаетесь к дому
+                        Получайте сообщение когда, что-то идёт не так
+                            Контролируйте кто входит и выходит из вашего дома
+                                «Выключайте» ваш дом когда уходите
+
+                <img src="content/menu/menu-g/images/mobile-hexagons.svg"/>
             </div>
-                <!--<img src="content/menu/menu-g/images/mobile-hexagons.svg"/>-->
-            <div id="iphone">
-
-            Ваш дом в телефоне
-
-            Следите за происходящем, контролируйте потребление электроэнергии или просто удивляйте друзей невероятными возможностями.
-            Ваш смартфон может соединиться с вашим домом даже если вы далеко от него.
-
-                Включайте отопление когда вы приближаетесь к дому
-                    Получайте сообщение когда, что-то идёт не так
-                        Контролируйте кто входит и выходит из вашего дома
-                            «Выключайте» ваш дом когда уходите
-
-
+            <div>
+                <div id="iphone-slider" class="flexslider">
+                    <ul class="slides">
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -298,5 +301,18 @@
         }, 600);
     }
 
-    $('.flexslider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
+    $('#top-slider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
+
+
+    var fileNames = ['zway2.png', 'zway3.png', 'zway1.png',
+                     'fibaro1.jpeg', 'fibaro2.jpeg', 'fibaro3.jpeg', 'fibaro4.jpeg', 'fibaro5.jpeg', 
+                     'vera1.jpeg', 'vera2.jpeg', 'vera3.jpeg', 'vera4.jpeg', 'vera5.jpeg'];
+    var itemTemplate = '<li><img src="content/menu/menu-g/images/{fileName}"/></li>';
+
+    fileNames.forEach(function(fileName) {
+        var item = itemTemplate.replace('{fileName}', fileName);
+        $('#iphone-slider > .slides').append(item);
+    });
+
+    $('#iphone-slider').flexslider({animationSpeed: 600, animation: 'slide', controlNav: false});
 </script>
