@@ -2,7 +2,55 @@
     #map {
         display: block;
         margin: auto;
-        width: 400px;
+        width: 100%;
+        height: 200px;
+        background: url('content/menu/menu-b2/images/bg-content-1.jpg');
+        background-size: cover;
+    }
+
+    /******************
+    logo marquee
+    ******************/
+    #logo-marquee {
+        background-image: url('content/menu/menu-b2/images/logos.png');
+        height: 70px;
+        width: 100%;
+        animation-duration: 80s;
+        animation-delay: 1s;
+        animation-name: shift-left;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-duration: 80s;
+        -webkit-animation-delay: 1s;
+        -webkit-animation-name: shift-left;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        position: relative;
+    }
+
+    #logo-marquee::before {
+        content:'';
+        height: 123px;
+        position:absolute;
+        box-shadow: 0px 0px 20px 20px white;
+    }
+
+    #logo-marquee::after {
+        content:'';
+        height: 123px;
+        position: absolute;
+        right: 0px;
+        box-shadow: 0px 0px 10px 20px white;
+    }
+
+    @keyframes shift-left {
+        from {background-position: 0px;}
+        to {background-position: -1805px;}
+    }
+
+    @-webkit-keyframes shift-left {
+        from {background-position: 0px;}
+        to {background-position: -1805px;}
     }
 </style>
 <div id="info-title" >
@@ -28,123 +76,112 @@
                 </div> 
             </div>
             <div class="hexagon-info">
-                <a target="_blank" href="http://www.iridiummobile.ru/"><svg width="120px" height="120px">
-                                <defs>
-                                    <pattern id="img2" patternUnits="userSpaceOnUse" width="120" height="120">
-                                        <image xlink:href="media/fibi_symbol.jpg" x="10" y="-5" width="95" height="120" />
-                                    </pattern>
-                                </defs>
-                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
-                                
-                                </svg>
-                </a>
+                <svg width="120px" height="120px">
+                    <defs>
+                        <pattern id="img2" patternUnits="userSpaceOnUse" width="120" height="120">
+                            <image xlink:href="media/fibi_symbol.jpg" x="10" y="-5" width="95" height="120" />
+                        </pattern>
+                    </defs>
+                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img2)"/>
+                </svg>
             </div>
     </div>
     
+    <h2 class="text-center">Доступные способы доставки</h2>
     <div class='info-item even padding'>
-            <div class='text-block'>
-                <div class='title'><b>СПСР</b></div> 
-                <div class='description'>
-                Экспресс-доставка курьером или в пункт самовыоза по всей России. Доставка к определенному времени, SMS информирование.<br/>
+        <div class='text-block'>
+            <div class='title'>Курьером</div> 
+            <div class='description'>
+                Экспресс-доставка курьером по всей России. Доставка к определенному времени, SMS информирование.<br/>
                 <a target="_blank" href="http://www.spsr.ru/ru/service/monitoring">Мониторинг доставки</a>
-                </div>
             </div>
-            <div class="hexagon-info">
-                <a target="_blank" href="http://www.spsr.ru/"><svg width="120px" height="120px">
-                                <defs>
-                                    <pattern id="img3" patternUnits="userSpaceOnUse" width="120" height="120">
-                                        <image xlink:href="content/menu/menu-b2/images/spsr_logo.jpg" x="12" y="-5" width="90" height="120" />
-                                    </pattern>
-                                </defs>
-                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
-                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
-                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
-                                </svg>
-                </a>
-            </div>
+        </div>
+        <div class="hexagon-info">
+            <a target="_blank" href="http://www.spsr.ru/">
+                <svg width="110px" height="110px">
+                    <defs>
+                        <pattern id="img3" patternUnits="userSpaceOnUse" width="110" height="110">
+                            <image xlink:href="content/menu/menu-b2/images/courier.svg" x="0" y="0" width="110" height="110" />
+                        </pattern>
+                    </defs>
+                    <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img3)"/>
+                </svg>
+            </a>
+        </div>
     </div>
     
     <div class='info-item padding'>
-            <div class='text-block'>
-                <div class='title'><b>DPD</b></div> 
-                <div class='description'>Проффесиональная доставка курьером по всей России. Доставка к определенному времени, SMS информирование.</div>
+        <div class='text-block'>
+            <div class='title'>В постамат</div> 
+            <div class='description'>
+                Современный сопособ получения интернет-заказов. Альтернатива почте и курьерской доставке<br/>
+                Более 750 постаматов по всей России.<br/>
+                <a target="_blank" href="http://pickpoint.ru/faq/?category=5">Подробнее о PickPoint</a>
             </div>
-            <div class="hexagon-info">
-                <a target="_blank" href="http://www.dpd.ru/"><svg width="120px" height="120px">
-                                <defs>
-                                    <pattern id="img4" patternUnits="userSpaceOnUse" width="120" height="120">
-                                        <image xlink:href="content/menu/menu-b2/images/dpd_logo.jpg" x="13" y="-5" width="88" height="120" />
-                                    </pattern>
-                                </defs>
-                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
-                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
-                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
-                                </svg>
-                </a>
-            </div>
+        </div>
+        <div class="hexagon-info">
+            <svg width="110px" height="110px">
+                <defs>
+                    <pattern id="img4" patternUnits="userSpaceOnUse" width="110" height="110">
+                        <image xlink:href="content/menu/menu-b2/images/postomat.svg" x="0" y="0" width="110" height="110" />
+                    </pattern>
+                </defs>
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img4)"/>
+            </svg>
+        </div>
     </div>
 
     <div class='info-item even padding'>
-            <div class='text-block'>
-                <div class='title'><b>PickPoint</b></div> 
-                    <div class='description'>
-                        Современный сопособ получения интернет-заказов. Альтернатива почте и курьерской доставке<br/>
-                        Более 750 постаматов по всей России.<br/>
-                        <a target="_blank" href="http://pickpoint.ru/faq/?category=5">Подробнее о PickPoint</a>
-                    </div>
+        <div class='text-block'>
+            <div class='title'>В пункт выдачи</div> 
+            <div class='description'>
+                Экономный способ доставки без очередей, с гибким графиком работы и удобным расположением 
             </div>
-            <div class="hexagon-info">
-                <a target="_blank" href="http://www.pickpoint.ru/"><svg width="120px" height="120px">
-                                <defs>
-                                    <pattern id="img5" patternUnits="userSpaceOnUse" width="120" height="120">
-                                        <image xlink:href="content/menu/menu-b2/images/pickpoint_logo.jpg" x="14" y="-5" width="85" height="120" />
-                                    </pattern>
-                                </defs>
-                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
-                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
-                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
-                                </svg>
-                </a>
-            </div>
+        </div>
+        <div class="hexagon-info">
+            <svg width="110px" height="110px">
+                <defs>
+                    <pattern id="img5" patternUnits="userSpaceOnUse" width="110" height="110">
+                        <image xlink:href="content/menu/menu-b2/images/delivery_point.svg" x="0" y="0" width="110" height="110" />
+                    </pattern>
+                </defs>
+                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img5)"/>
+            </svg>
+        </div>
     </div>
+    <!--
     <div class='info-item padding'>
             <div class='text-block'>
-                <div class='title'><b>Checkout</b></div> 
+                <div class='title'>Checkout</div> 
                 <div class='description'>Мы работаем с компанией агрегатором служб доставки <a title="Checkout" href="http://www.checkout.ru/" target="_blank">«CheckOut»</a>.<br/>
-                Компания «CheckOut» предоставляет вам широкий выбор способов доставки. Сервис CheckOut надежный партнер в автоматизации и организации доставки в регионы.
+                Компания «CheckOut» предоставляет вам широкий выбор способов доставки. Сервис CheckOut надежный партнер в автоматизации и организации доставки.
                 </div>
             </div>
             <div class="hexagon-info">
-                <a target="_blank" href="http://www.checkout.ru/"><svg width="120px" height="120px">
-                                <defs>
-                                    <pattern id="img6" patternUnits="userSpaceOnUse" width="120" height="120">
-                                        <image xlink:href="content/menu/menu-b2/images/checkout_logo.jpg" x="13" y="0" width="90" height="120" />
-                                    </pattern>
-                                </defs>
-                                <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img6)"/>
-                                <!-- <polygon points="63,7 111,33 111,89 63,117 15,89 15,33" stroke="rgb(42, 143, 189)" fill="url(#img2)"/> -->
-                                <!-- 120px120 <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="black" fill="url(#img2)"/> -->
-                                </svg>
+                <a target="_blank" href="http://www.checkout.ru/">
+                    <svg width="120px" height="120px">
+                        <defs>
+                            <pattern id="img6" patternUnits="userSpaceOnUse" width="120" height="120">
+                                <image xlink:href="content/menu/menu-b2/images/checkout_logo.jpg" x="13" y="0" width="90" height="120" />
+                            </pattern>
+                        </defs>
+                        <polygon points="58,6 102,31 102,82 58,108 14,82 14,31" stroke="rgb(42, 143, 189)" fill="url(#img6)"/>
+                    </svg>
                 </a>
             </div>
     </div>
-</div>
-<!-- <div id="info-title" >
-    Доставка
-</div>
-<div id="info-description">
-    Выбрать наиболее подходящий способ доставки, Вы сможете в процессе формирования корзины покупок или  оформления заказа.
+    -->
+    <h3 class="text-center">Наши партнёры</h3>
+    <div id="logo-marquee">
+    </div>
+
+    <div class="padding" style="color: #aaa;">
+        <div class="text-block">
+            <div class="description">
+                Мы работаем с компанией агрегатором служб доставки <a title="Checkout" href="http://www.checkout.ru/" target="_blank">«CheckOut»</a>.<br/>
+                Компания «CheckOut» предоставляет вам широкий выбор способов доставки. Сервис CheckOut надежный партнер в автоматизации и организации доставки.
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="info-content" >
-    <ul>
-        <li>Axiomus</li>
-        <li>СДЭК</li>
-        <li>Pony Express</li>
-        <li>Почта России</li>
-        <li>B2C</li>
-        <li>КСЭ</li>
-        <li>Почтоматы PickPoint или QIWI</li>
-        <li>Самовывоз</li>
-    </ul>
-</div> -->

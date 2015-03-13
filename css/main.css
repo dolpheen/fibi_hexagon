@@ -280,9 +280,8 @@ html {
 }
 
 #info-description {
-  margin-bottom: 30px;
   font-size: 14px;
-  color: #3a9fcd;
+  color: white;
   letter-spacing: 1px;
   padding-left: 20px;
 }

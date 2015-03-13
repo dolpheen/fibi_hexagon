@@ -92,6 +92,7 @@ function loadMenuContent(menu) {
             $('#info-section').html(ajaxData).ready(function(evt) { 
                 var menuColor = $('.hexagon.menu-' + menu[0]).css('fill');
                 $('#info-title').css('background-color', menuColor); 
+                $('#info-description').css('background-color', menuColor); 
             });
             elem.style.animationName = 'info-show'; 
             elem.style.webkitAnimationName="info-show";
