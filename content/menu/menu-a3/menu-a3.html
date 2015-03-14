@@ -96,6 +96,7 @@
 </div>
 
 <div id="info-content" >
+    <!--
     <div class="z-wave-info">
         <a href="content/menu/menu-a3/images/z-wave-info1.jpg">
             <img height="70px" src="content/menu/menu-a3/images/z-wave-info1_thumb.jpg"></img>
@@ -107,6 +108,7 @@
             <img height="70px" src="content/menu/menu-a3/images/z-wave-info3_thumb.jpg"></img>
         </a>
     </div>
+    -->
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="heading1">
@@ -333,7 +335,6 @@
                 <div class="panel-body">
                     <ul>
                         <li><a href="http://z-wave.com/">Сайт владельца технологии Z-Wave</a></li>
-                        <li><a href="http://z-wave.com/">Сайт владельца технологии Z-Wave</a></li>
                     </ul>
                 </div>
             </div>
@@ -350,21 +351,21 @@
         },
         mainClass: 'mfp-with-zoom',
         //removalDelay: 300
-  zoom: {
-      enabled: true, // By default it's false, so don't forget to enable it
+        zoom: {
+            enabled: true, // By default it's false, so don't forget to enable it
 
-          duration: 300, // duration of the effect, in milliseconds
-              easing: 'ease-in-out', // CSS transition easing function 
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function 
 
-                  // The "opener" function should return the element from which popup will be zoomed in
-                      // and to which popup will be scaled down
-                          // By defailt it looks for an image tag:
-                              opener: function(openerElement) {
-                                    // openerElement is the element on which popup was initialized, in this case its <a> tag
-                                          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-                                                return openerElement.is('img') ? openerElement : openerElement.find('img');
-                                                    }
-                                                      }
+            // The "opener" function should return the element from which popup will be zoomed in
+            // and to which popup will be scaled down
+            // By defailt it looks for an image tag:
+            opener: function(openerElement) {
+                // openerElement is the element on which popup was initialized, in this case its <a> tag
+                // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+        }
 
     });
 </script>
