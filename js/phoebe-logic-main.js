@@ -194,6 +194,7 @@ function showMenuItem (raw, col, menuItem){
 /*
     Set up creeping line at the bottom
 */
+/*
 $(function(){
     var hours = (new Date()).getHours();
     var greeting = "";
@@ -247,6 +248,7 @@ $(function(){
 
     window.setTimeout(show_typed_string, 3000);
 });
+*/
 
 /*
     Set up menu arrows animation
