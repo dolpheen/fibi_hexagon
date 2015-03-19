@@ -1,3 +1,25 @@
+(function() {
+// f has signature f(val, callback)
+function promisify(f) {
+    return function(val) {
+        return new Promise(function(resolve, reject) {
+           f(val, function (data) {
+               resolve(data);
+           });
+        });
+    };
+}
+
+var get = promisify($.get);
+var getJSON = promisify($.getJSON);
+
+function animationEnd(elem) {
+    return new Promise(function(resolve, reject) {
+        elem.addEventListener('animationend', resolve);
+        elem.addEventListener('webkitAnimationEnd', resolve); 
+    });
+}
+
 var menu_table = new Array(5);
 for( var i = 0; i < 5; i++) menu_table[i] = new Array(5);
 
@@ -60,7 +82,7 @@ $('.menu-item').click( function () {
 					  	var item = $("#menu-container .hexagon-row")[i].children[j];
 					  	var selMenu =  menu_item.substr(menu_item.indexOf(selectedMainMenu), 2);
 
-						getHexMenuContent(selMenu, item);					  	
+                        selMenu = selMenu.toLowerCase();
 					  }
 					  else 
 					  	hideMenuItem(i, j);
@@ -78,64 +100,42 @@ $('.menu-item').click( function () {
         menu - menu designation
 */
 function loadMenuContent(menu) {
-        var hideReady;
-        var ajaxData;
-        var preloaderHtml = '<div class="sk-spinner sk-spinner-three-bounce"> \
-                                <div class="sk-bounce1"></div> \
-                                <div class="sk-bounce2"></div> \
-                                <div class="sk-bounce3"></div> \
-                             </div>';
+    var infoSection = $('#info-section')[0];
+    var preloaderHtml = '<div class="sk-spinner sk-spinner-three-bounce"> \
+                            <div class="sk-bounce1"></div> \
+                            <div class="sk-bounce2"></div> \
+                            <div class="sk-bounce3"></div> \
+                         </div>';
 
-        function onHideOrDataReady(){
-            if (!ajaxData || !hideReady) return;
+    function insertHtml(ajaxData){
+        $('#info-section').html(ajaxData).ready(function() { 
+            var menuColor = $('.hexagon.menu-' + menu[0]).css('fill');
+            $('#info-title').css('background-color', menuColor); 
+            $('#info-description').css('background-color', menuColor); 
+            $('#info-section').css('animation-name', 'info-show');
+        });
+    }
+    
+    function showPreloader() {
+        $('#info-section').html(preloaderHtml);
+        infoSection.removeEventListener('animationend', showPreloader);
+        infoSection.removeEventListener('webkitAnimationEnd', showPreloader);
+        $('#info-section').css('animation-name', '');
+        return infoSection;
+    }
 
-            $('#info-section').html(ajaxData).ready(function(evt) { 
-                var menuColor = $('.hexagon.menu-' + menu[0]).css('fill');
-                $('#info-title').css('background-color', menuColor); 
-                $('#info-description').css('background-color', menuColor); 
-            });
-            elem.style.animationName = 'info-show'; 
-            elem.style.webkitAnimationName="info-show";
-            elem.opacity = "1";
-        }
-        
-        function onHideReady(evt) {
-            hideReady = true; 
-            $('#info-section').html(preloaderHtml);
-            elem.opacity = "1";
-            elem.removeEventListener('animationend', onHideReady);
-            elem.removeEventListener('webkitAnimationEnd', onHideReady);
-            elem.style.animationName = ''; 
-            elem.style.webkitAnimationName='';
-            elem.opacity = "1";
-            onHideOrDataReady();
-        }
+    $('#info-section').css('animation-name', 'info-hide');
 
-        var elem = $('#info-section')[0];
-        elem.style.animationName="info-hide";
-        elem.style.webkitAnimationName="info-hide";
-        elem.opacity = "0";
-        elem.addEventListener('animationend', onHideReady);
-        elem.addEventListener('webkitAnimationEnd', onHideReady); 
+    pHide = animationEnd(infoSection).then(showPreloader);
 
-		//if(selectedMenu.length == 1){
-			$.getJSON( 'content/menu/menu-' + menu + '.json', function ( data ) {
-					//alert(data);
-					/*$('#info-title').html(data.title);*/
-					$.get(data.content, function ( data ) {
-                        ajaxData = data;
-                        onHideOrDataReady();
-					});
-			});
-		//}
-
-}
-
-function getHexMenuContent(selMenu, item){
-	selMenu = selMenu.toLowerCase();
-	//$('#fuckitem').css({display:'none'});
-
-	
+    pData = getJSON('content/menu/menu-' + menu + '.json')
+    .then(function(data) {
+        return get(data.content);
+    });
+    
+    Promise.all([pHide,pData]).then(function(vals) {
+        insertHtml(vals[1]);
+    });
 }
 
 /*
@@ -152,23 +152,19 @@ function hideMenuItem (raw, col){
 function showMenuItem (raw, col, menuItem){
 	var item = $("#menu-container .hexagon-row")[raw].children[col];
 
-	item.style.animationName =      "show";
-	item.style.webkitAnimationName= "show";
+	item.style.animationName =       "show";
+	item.style.webkitAnimationName = "show";
 	item.addEventListener('animationend',       function(){ this.style.animationName = ''; },       false);
 	item.addEventListener('webkitAnimationEnd', function(){ this.style.webkitAnimationName = ''; }, false);
 
     var anim = item.querySelectorAll('.anim');
-            for (var i=0; i < anim.length; i++)
-                        anim[i].beginElement();
+        for (var i=0; i < anim.length; i++)
+            anim[i].beginElement();
 
 	//Set class for selected hexmenu item
-	$(item).removeClass("menu-a"); 
-	$(item).removeClass("menu-b"); 
-	$(item).removeClass("menu-c"); 
-	$(item).removeClass("menu-d"); 
-	$(item).removeClass("menu-e"); 
-	$(item).removeClass("menu-f"); 
-	$(item).removeClass("menu-g"); 
+    'abcdefg'.split('').forEach(function(letter) {
+        $(item).removeClass("menu-"+letter); 
+    });
 	$(item).addClass("menu-"+menuItem.toLowerCase());
 	$(item).removeClass("transparent"); 
 
@@ -221,17 +217,13 @@ $(function(){
 
     function hide_typed_string() {
         window.setTimeout(function(){
-                var elem = $('#typing-line')[0];
-                elem.style.animationName       = 'typing-line-hide'; 
-                elem.style.webkitAnimationName = 'typing-line-hide';
+                $('#typing-line').css('animation-name', 'typing-line-hide');
             }, 
             5000);
     }
 
     function show_typed_string() {
-        var elem = $('#typing-line')[0];
-        elem.style.animationName       = 'typing-line-show';
-        elem.style.webkitAnimationName = 'typing-line-show';
+        $('#typing-line').css('animation-name', 'typing-line-show');
 
         $("#typing-line span").typed({
             strings: [greeting, 
@@ -278,3 +270,4 @@ $(function(){
     }, 15000);
     
 })();
+})(); //whole file wrapper
