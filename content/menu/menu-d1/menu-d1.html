@@ -128,7 +128,6 @@ function placeTag(args) {
     tag.style.left = args.x.toString() + 'px';
     tag.style.top = args.y.toString() + 'px';
     tag.style.backgroundImage = 'url("content/menu/menu-d1/images/'+args.image+'")';
-
     tag.setAttribute('title', args.title);
     tag.setAttribute('data-content', args.content);
     tag.setAttribute('data-placement', args.placement);
@@ -152,6 +151,53 @@ placeTag({
     content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
     placement: 'bottom'
 });
+
+placeTag({
+    x: 300, 
+    y: 300, 
+    image: 'exclamation.svg',
+    title: 'Monitor Your Home', 
+    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    placement: 'top'
+});
+
+placeTag({
+    x: 650, 
+    y: 350, 
+    image: 'temperature.svg',
+    title: 'Monitor Your Home', 
+    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    placement: 'left'
+});
+
+placeTag({
+    x: 300, 
+    y: 50, 
+    image: 'celsius.svg',
+    title: 'Monitor Your Home', 
+    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    placement: 'bottom'
+});
+
+placeTag({
+    x: 50, 
+    y: 350, 
+    image: 'door.svg',
+    title: 'Monitor Your Home', 
+    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    placement: 'right'
+});
+
+placeTag({
+    x: 650, 
+    y: 50, 
+    image: 'switch.svg',
+    title: 'Monitor Your Home', 
+    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    placement: 'left'
+});
+
+
 
 $(function () {
   $('[data-toggle="popover"]').popover();
