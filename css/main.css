@@ -108,33 +108,37 @@ html {
   position: relative;
  /* left: 15%;*/
   padding-left: 50px;
-  width: 280px;
+  width: 350px;
 }
 
 #header-phone {
   position: relative;
   left: 30px;
-  /*top: 10px;*/
 /* Text styling */
   font-family: 'Oswald', sans-serif;
   text-align: left;
   font-size: 20px;
-  /*font-weight: bold;*/
   letter-spacing: 4px;
-  color: #2a8fbd;
+  color: #C13832;
   float: left;
-  cursor: pointer;
+}
+
+#header-phone > h3 {
+  margin-top: 0px;
+}
+
+#header-phone > h5 {
+  padding-left: 30px;
 }
 
 #header-time {
+  clear: both;
   position: relative;
-  left: 50px;
-  /*top: -8px;*/
+  left: 60px;
 /* Text styling */
   font-family: 'Oswald', sans-serif;
   text-align: left;
   font-size: 15px;
-  /*font-weight: bold;*/
   letter-spacing: 3px;
   color: #520039;
   cursor: pointer;
