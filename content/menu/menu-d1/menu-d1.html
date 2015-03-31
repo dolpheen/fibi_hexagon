@@ -17,7 +17,6 @@
         height: 50px;
         border-radius: 100%;
         border: 0px solid rgba(255,255,255,0.3);
-        background: url("content/menu/menu-d1/images/lamp.svg") no-repeat;
         background-color: #2A8FBD;
         background-size: 100px 50px;
         transition: all 0.2s;
@@ -113,7 +112,7 @@
 
 <div id="info-content">
    <div id="image-map">
-       <img id="image" src="content/menu/menu-d1/images/room_lights.jpeg"> 
+       <img id="image" src="content/menu/menu-d1/images/room_lighting.jpg"> 
    </div>
 </div>
 
@@ -136,65 +135,38 @@ function placeTag(args) {
 
 placeTag({
     x: 100, 
-    y: 100, 
-    image: 'socket.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    y: 50, 
+    image: 'sun.svg',
+    title: 'Диммер', 
+    content: 'Регулирование яркости',
     placement: 'right'
 });
 
 placeTag({
-    x: 500, 
-    y: 150, 
+    x: 320, 
+    y: 90, 
     image: 'lamp.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
+    title: 'Управление светом', 
+    content: 'Сцены',
     placement: 'bottom'
 });
 
 placeTag({
-    x: 300, 
-    y: 300, 
-    image: 'exclamation.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
-    placement: 'top'
-});
-
-placeTag({
-    x: 650, 
-    y: 350, 
-    image: 'temperature.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
-    placement: 'left'
-});
-
-placeTag({
-    x: 300, 
-    y: 50, 
-    image: 'celsius.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
-    placement: 'bottom'
-});
-
-placeTag({
-    x: 50, 
-    y: 350, 
-    image: 'door.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
-    placement: 'right'
-});
-
-placeTag({
-    x: 650, 
-    y: 50, 
+    x: 200, 
+    y: 250, 
     image: 'switch.svg',
-    title: 'Monitor Your Home', 
-    content: 'Alerts notify you if dangerous or off-limit areas of your home are accessed',
-    placement: 'left'
+    title: 'Выключатель', 
+    content: 'В любом месте',
+    placement: 'bottom'
+});
+
+placeTag({
+    x: 570, 
+    y: 30, 
+    image: 'stars.svg',
+    title: 'RGB подсветка', 
+    content: 'создавайте настроение',
+    placement: 'bottom'
 });
 
 

@@ -123,6 +123,10 @@ html {
   float: left;
 }
 
+#header-phone > * {
+  margin-bottom: 0px;
+}
+
 #header-phone > h3 {
   margin-top: 0px;
 }
@@ -131,17 +135,17 @@ html {
   padding-left: 30px;
 }
 
-#header-time {
+#header-phone > p {
   clear: both;
-  position: relative;
-  left: 60px;
 /* Text styling */
   font-family: 'Oswald', sans-serif;
   text-align: left;
   font-size: 15px;
-  letter-spacing: 3px;
-  color: #520039;
-  cursor: pointer;
+  letter-spacing: 0px;
+}
+
+#header-phone > p:last-child {
+  color: #555;
 }
 
 #typing-line {
