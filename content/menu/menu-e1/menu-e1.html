@@ -4,19 +4,68 @@
         height: 122px;
         background: url("content/menu/menu-e1/images/table-top.jpg");
         background-size: cover;
+        margin-bottom: 10px;
     }   
+
+    #type-line {
+        background: url("content/menu/menu-e1/images/work-station-straight.jpg") no-repeat right;
+        color: white;
+        width: 100%;
+        height: 640px;
+        padding: 60px 210px 370px 190px;
+    }
+
+    #type-line span {
+        white-space: pre;
+    }
 </style>
 
 <div id="info-title" >
     Разработка 
 </div>
 <div id="info-description">
-    Мы предоставляем услуги по проектированию и разработке проектов умного дома.
+    Разработка систем  домашней автоматизации,  программирование сценариев и интерфейсов пользователя.
 </div>
 
 <div id="info-content" >
     <div id="image"></div>
-    <div class="padding">
-        Мы предоставляем услуги по проектированию и разработке проектов умного дома.
+    <div id="type-line"> 
+        <span></span>
+    </div>
+    <div>
+        <ul>
+            <li>
+                Программирование сценариев для контроллеров домашней автоматизации  - Vera, Fibaro, Razberry.
+            </li>
+            <li>
+                Созадние приложений и индивидуальных интерфейсов пользователя для мобильных устройств.
+            </li>
+            <li>
+                Разработка устройств автоматизации.
+            </li>
+        </ul>
     </div>
 </div>
+
+<script>
+$(function(){
+
+var string = "local light = 10;\n\
+while true do\n\
+    if (tonumber(fibaro:getValue(light, 'value')) == 99)\n\
+    then\n\
+        fibaro:debug('preparing to turn off your lights...');\n\
+        fibaro:sleep(1800000);\n\
+        fibaro:call(light, 'turnOff');\n\
+    end\n\
+    fibaro:sleep(900000);\n\
+end';";
+
+    console.log(string);
+
+    $("#type-line > span").typed({
+        strings: [string],
+        typeSpeed: 0
+    });
+});
+</script>

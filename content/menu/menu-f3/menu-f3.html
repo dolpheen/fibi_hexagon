@@ -4,16 +4,21 @@
         height: 122px;
         background: url("content/menu/menu-f3/images/hands.jpg");
         background-size: cover;
+        margin-bottom: 10px;
     }   
 
     .team-member > img {
         height: 120px;
     }
-    .team-member > strong {
-	vertical-align: top;
+    .team-member > div {
+        display: inline-block;
+        width: 60%;
+    }
+    .team-member > div > strong {
+        vertical-align: top;
     }
     .right {
-	text-align: right;
+        text-align: right;
     }
 </style>
 
@@ -27,26 +32,41 @@
 <div id="info-content" >
     <div id="image"></div>
     <div class="padding">
-        <p>Свяжитесь с нами, мы проконсультируем  и поможем выбрать наиболее подходящее оборудование для вас.</p>
         <div class="team-member">
-            <img src="content/menu/menu-f3/images/vadim.png"/>
-            <strong>Vadim</strong>
+            <img src="content/menu/menu-f3/images/alex.png"/>
+            <div>
+                <strong>Алексей</strong>
+                <p>Руководитель</p>
+            </div>
         </div>
         <div class="team-member right">
-            <strong>Denis</strong>
+            <div>
+                <strong>Денис</strong>
+                <p>Инженер-программист</p>
+            </div>
             <img src="content/menu/menu-f3/images/denis.png"/>
         </div>
         <div class="team-member">
-            <img src="content/menu/menu-f3/images/alex.png"/>
-            <strong>Alexey</strong>
+            <img src="content/menu/menu-f3/images/vadim.png"/>
+            <div>
+                <strong>Вадим</strong>
+                <p>Инженер по продажам</p>
+                <p>Поможет подобрать оборудование и проконсультирует по техническим вопросам.</p>
+            </div>
         </div>
         <div class="team-member right">
-            <strong>Irina</strong>
-            <img src="content/menu/menu-f3/images/ira.png"/>
+            <div>
+                <strong>Оксана</strong>
+                <p>Менеджер по продажам</p>
+            </div>
+            <img src="content/menu/menu-f3/images/oksana.png"/>
         </div>
         <div class="team-member">
-            <img src="content/menu/menu-f3/images/oksana.png"/>
-            <strong>Oksana</strong>
+            <img src="content/menu/menu-f3/images/ira.png"/>
+            <div>
+                <strong>Ирина</strong>
+                <p>Администратор</p>
+            </div>
         </div>
     </div>
 </div>
