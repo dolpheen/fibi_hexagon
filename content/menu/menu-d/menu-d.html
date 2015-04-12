@@ -13,19 +13,100 @@
         margin-bottom: 0px;
     }
 
-    .row img {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    
+/*
+    Calculator
+*/
     .row {
         color: white;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     .row > div {
-        height: 130px;
-        padding: 10px;
+        height: 250px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .row input[type=checkbox] {
+        display: none;
+    }
+
+    .row .background {
+        width: 100%; 
+        height: 100%; 
+        filter: grayscale(80%);
+        -webkit-filter: grayscale(80%);
+        transition: all 0.5s;
+    }
+
+    .row input[id]:checked ~ .background {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+    }
+
+    .row img {
+        position: absolute;
+        left: 70px;
+        top: 50px;
+        height: 100px;
+        width: 100px;
+        display: block;
+        transition: all 0.5s 0.7s;
+    }
+
+    .row input[id]:checked ~ img {
+        left: 0px;
+        top: 5px;
+        height: 50px;
+        width: 50px;
+        transition: all 0.5s;
+    }
+
+    .row h4 {
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        width: 250px;
+        text-align: center;
+        transition: all 0.5s 0.5s;
+    }
+    
+    .row input[id]:checked ~ h4 {
+        top: 0px;
+        left: 50px;
+        width: 200px;
+        transition: all 0.5s 0.2s;
+    }
+
+    .row .description {
+        position: absolute;
+        width: 250px;
+        height: 150px;
+        left: -250px;
+        top: 65px;
+        padding: 5px;
+        transition: all 0.5s;
+    }
+
+    .row input[id]:checked ~ .description {
+        left: 0px;
+        transition: all 0.5s 0.5s;
+    }
+
+    .row label {
+        position: absolute;
+        bottom:5px;
+        left: 5px;
+        transition: all 0.5s;
+    }
+    
+    .row label::after {
+        content: "Хочу!";
+    }
+
+    .row input[id]:checked ~ label::after {
+        content: "Нет, спасибо.";
     }
 </style>
 
@@ -77,50 +158,61 @@
     </div>
     <h2 class="text-center">Нет предела возможностям</h2> 
     <div class="row">
-        <div class="col-sm-6 col-md-4" style="background-color: #2A8FBD">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">климат-контроль</h4>
+        <div class="col-sm-6 col-md-4" style="">
+            <input id="hvac" type="checkbox" />
+            <div class="background" style="background-color: #2A8FBD;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>климат-контроль</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="hvac"></label>
         </div>
-        <div class="col-sm-6 col-md-4" style="background-color: #F44D27">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">управление освещением</h4>
+        <div class="col-sm-6 col-md-4">
+            <input id="light" type="checkbox" />
+            <div class="background" style="background-color: #F44D27;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>управление освещением</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="light"></label>
         </div>
-        <div class="col-sm-6 col-md-4" style="background-color: #7FAC1B">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">контроль доступа</h4>
+        <div class="col-sm-6 col-md-4">
+            <input id="security" type="checkbox" />
+            <div class="background" style="background-color: #7FAC1B;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>контроль доступа</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="security"></label>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 col-md-4" style="background-color: #44AA55">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">видео-наблюдение</h4>
+        <div class="col-sm-6 col-md-4">
+            <input id="video" type="checkbox" />
+            <div class="background" style="background-color: #44AA55;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>видео-наблюдение</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="video"></label>
         </div>
-        <div class="col-sm-6 col-md-4" style="background-color: #FBB829">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">управление аудио-видео оборудованием</h4>
+        <div class="col-sm-6 col-md-4">
+            <input id="media" type="checkbox" />
+            <div class="background" style="background-color: #FBB829;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>управление мультимедиа</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="media"></label>
         </div>
-        <div class="col-sm-6 col-md-4" style="background-color: #FF0066">
-            <img src="./content/menu/menu-d/images/idea-white.png">
-            <h4 class="text-center">защита от протечек</h4>
+        <div class="col-sm-6 col-md-4">
+            <input id="leakage" type="checkbox" />
+            <div class="background" style="background-color: #FF0066;"></div>
+            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <h4>защита от протечек</h4>
+            <div class="description">Управление кондиционерами</div>
+            <label for="leakage"></label>
         </div>
     </div>
 </div>
 
 <script src="./content/menu/menu-d/js/jquery.fitvids.js"></script>
 <script>
-    // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
-    /*
-    $(".flexslider")
-        .fitVids()
-        .flexslider({
-            animation: "slide",
-            useCSS: false,
-            animationLoop: false,
-            smoothHeight: true,
-            controlNav: "thumbnails",
-        });
-    */
-
     $('#carousel').flexslider({
         animation: "slide",
         controlNav: false,
@@ -139,5 +231,18 @@
             animationLoop: false,
             slideshow: false,
             sync: "#carousel"
-        });
+    });
+
+    /*
+    $(".row button").click(function(evt) {
+        var img =  $(this).siblings("img")[0];
+        var header =  $(this).siblings("h4")[0];
+        img.style.left = "0px";
+        header.style.top = "0px";
+        header.style.left = "50px";
+        header.style.textAlign = "left";
+    });
+    */
+
+
 </script>
