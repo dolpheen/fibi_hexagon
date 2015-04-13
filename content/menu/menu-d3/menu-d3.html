@@ -1,0 +1,185 @@
+<style>
+    #image-map {
+        position: relative;
+    }
+
+    #image-map > * {
+        box-sizing: content-box;
+    }
+
+    #image {
+        width: 100%;
+    }
+
+    .tag {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 0px solid rgba(255,255,255,0.3);
+        background-color: #2A8FBD;
+        background-size: 100px 50px;
+        transition: all 0.2s;
+    }
+
+    .tag:hover {
+        background-color: white;
+        background-position: -50px 0px;
+    }
+
+    .tag:before {
+        content: '';
+        position:absolute;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        border: 15px solid rgba(255,255,255,0.6);
+        border-radius: 100%;  
+    }
+
+    .tag:after {
+        content: '';
+        position:absolute;
+        border: 0px solid rgba(255,255,255,0);
+        border-radius: 100%;
+        animation-name: wave;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+
+        -webkit-animation-name: wave;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    @keyframes wave {
+        0% {
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 0px solid rgba(255,255,255,0.5);
+        }
+        50% {
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            border: 10px solid rgba(255,255,255,0);
+        }
+        100% {
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            border: 10px solid rgba(255,255,255,0);
+        }
+    }
+
+    @-webkit-keyframes wave {
+        0% {
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 0px solid rgba(255,255,255,0.5);
+        }
+        50% {
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            border: 10px solid rgba(255,255,255,0);
+        }
+        100% {
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            border: 10px solid rgba(255,255,255,0);
+        }
+    }
+</style>
+
+<div id="info-title" >
+    Управление системами
+</div>
+<div id="info-description">
+    Возможности поражают
+</div>
+
+<div id="info-content">
+   <div id="image-map">
+       <img id="image" src="content/menu/menu-d3/images/living-room.jpg"> 
+   </div>
+</div>
+
+<div id="tag-template" style="display:none">
+       <a class="tag" data-toggle="popover" data-trigger="hover focus click" role="button" data-trigger="focus" tabindex="0"></a>
+</div>
+
+<script>
+function placeTag(args) {
+    var tagTemplate = document.getElementById("tag-template").firstElementChild;
+    var tag = tagTemplate.cloneNode(true);
+    tag.style.left = args.x.toString() + 'px';
+    tag.style.top = args.y.toString() + 'px';
+    tag.style.backgroundImage = 'url("content/menu/menu-d3/images/'+args.image+'")';
+    tag.setAttribute('title', args.title);
+    tag.setAttribute('data-content', args.content);
+    tag.setAttribute('data-placement', args.placement);
+    document.getElementById("image-map").appendChild(tag);
+}
+
+placeTag({
+    x: 500, 
+    y: 200, 
+    image: 'multimedia.svg',
+    title: 'Мультимедиа', 
+    content: ' Домашний кинотеатр, ТВ, медиатека (фильмы, музыка, фотографии) - всё под рукой.',
+    placement: 'bottom'
+});
+
+placeTag({
+    x: 150, 
+    y: 50, 
+    image: 'video.svg',
+    title: 'Камера', 
+    content: 'Удаленное видеонаблюдение за квартирой, загородным домом, дачей!',
+    placement: 'right'
+});
+
+placeTag({
+    x: 280, 
+    y: 170, 
+    image: 'intercom.svg',
+    title: 'Видеодомофон', 
+    content: 'Отвечайте вашим гостям даже если Вас нет дома.',
+    placement: 'top'
+});
+
+placeTag({
+    x: 70, 
+    y: 160, 
+    image: 'safety.svg',
+    title: 'Безопасность', 
+    content: 'Датчики протечки, движения, открытия двери/окна, индикатор задымления - предупредят об опасности.',
+    placement: 'right'
+});
+
+placeTag({
+    x: 250, 
+    y: 330, 
+    image: 'time.svg',
+    title: 'Сцены', 
+    content: 'Просыпаетесь, смотрите кино или ложитесь спать всегда в уютной атмосфере благодаря заранее настроенным сценам.',
+    placement: 'bottom'
+});
+
+$(function () {
+  $('[data-toggle="popover"]').popover();
+})
+
+</script>
