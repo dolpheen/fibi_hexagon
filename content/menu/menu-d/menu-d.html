@@ -52,10 +52,10 @@
 
     .row img {
         position: absolute;
-        left: 70px;
-        top: 50px;
-        height: 100px;
-        width: 100px;
+        left: 60px;
+        top: 25px;
+        height: 130px;
+        width: 130px;
         display: block;
         transition: all 0.5s 0.7s;
     }
@@ -100,32 +100,32 @@
     }
 
     #hvac ~ .background,
-    #hvac ~ label { 
+    #hvac ~ label span { 
         background-color: #2A8FBD; 
     }
 
     #light ~ .background,
-    #light ~ label { 
+    #light ~ label span { 
         background-color: #F44D27;
     }
 
     #security ~ .background,
-    #security ~ label {
+    #security ~ label span {
         background-color: #7FAC1B; 
     }
 
     #video ~ .background,
-    #video ~ label { 
+    #video ~ label span { 
         background-color: #44AA55;
     }
 
     #media ~ .background,
-    #media ~ label { 
+    #media ~ label span { 
         background-color: #FBB829;
     }
 
     #leakage ~ .background,
-    #leakage ~ label { 
+    #leakage ~ label span { 
         background-color: #FF0066;
     }
 
@@ -135,26 +135,43 @@
         left: 0px;
         transition: all 0.5s;
         width: 100%;
-        padding: 5px;
+        padding: 10px;
         margin: 0px;
         text-align: center;
         font-size: 20px;
     }
 
     .row label:hover {
+        /*
         filter: brightness(80%);
+        */
     }
     
-    .row label::after {
+    .row label span::after {
         content: "Хочу!";
+    }
+
+    .row label span {
+        border: 2px solid white;
+        padding: 3px 30px;
+        border-radius: 30px;
+        transition: all 0.2s;
     }
 
     .row input[id]:checked ~ label {
         color: #EEE;
     }
 
-    .row input[id]:checked ~ label::after {
+    .row input[id]:checked ~ label span::after {
         content: "Нет, спасибо.";
+    }
+    
+    .row input[id]:checked ~ label span {
+        opacity: 0.3;
+    }
+
+    .row label span:hover {
+        opacity: 1 !important;
     }
 </style>
 
@@ -199,26 +216,26 @@
         <div class="col-sm-6 col-md-4">
             <input id="hvac" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/thermometer.svg">
             <h4>климат-контроль</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="hvac"></label>
+            <label for="hvac"><span></span></label>
         </div>
         <div class="col-sm-6 col-md-4">
             <input id="light" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/bulb-on.svg">
             <h4>управление освещением</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="light"></label>
+            <label for="light"><span></span></label>
         </div>
         <div class="col-sm-6 col-md-4">
             <input id="security" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/guard.svg">
             <h4>контроль доступа</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="security"></label>
+            <label for="security"><span></span></label>
         </div>
     </div>
     <div class="row">
@@ -228,15 +245,15 @@
             <img src="./content/menu/menu-d/images/idea-white.svg">
             <h4>видео-наблюдение</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="video"></label>
+            <label for="video"><span></span></label>
         </div>
         <div class="col-sm-6 col-md-4">
             <input id="media" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/multimedia.svg">
             <h4>управление мультимедиа</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="media"></label>
+            <label for="media"><span></span></label>
         </div>
         <div class="col-sm-6 col-md-4">
             <input id="leakage" type="checkbox" />
@@ -244,7 +261,7 @@
             <img src="./content/menu/menu-d/images/idea-white.svg">
             <h4>защита от протечек</h4>
             <div class="description">Управление кондиционерами</div>
-            <label for="leakage"></label>
+            <label for="leakage"><span></span></label>
         </div>
     </div>
 </div>
