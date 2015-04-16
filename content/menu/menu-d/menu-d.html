@@ -50,7 +50,7 @@
         -webkit-filter: grayscale(0%);
     }
 
-    .row img {
+    .row > div > img {
         position: absolute;
         left: 60px;
         top: 25px;
@@ -129,7 +129,7 @@
         background-color: #FF0066;
     }
 
-    .row label {
+    .row > div > label {
         position: absolute;
         bottom: 0px;
         left: 0px;
@@ -142,7 +142,7 @@
         font-size: 20px;
     }
     
-    .row label span {
+    .row > div > label span {
         padding: 3px 30px;
         border-radius: 5px;
         box-shadow: rgba(0,0,0,0.3) 1px 1px 5px 2px;
@@ -153,17 +153,102 @@
         overflow: hidden;
     }
 
-    .row input[id]:checked ~ label {
+    .row > div > input[id]:checked ~ label {
         color: #EEE;
         left: -290px;
     }
 
-    .row input[id]:checked ~ label span {
+    .row > div > input[id]:checked ~ label span {
         opacity: 0.5;
     }
 
-    .row label span:hover {
+    .row > div > label span:hover {
         opacity: 1 !important;
+    }
+
+/*******************
+    Checkbox
+*******************/
+    .description div { 
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    /* checkbox css */
+    label                  { cursor:pointer; }
+    .description label { 
+        padding-left: 40px;
+    }
+
+    .description label span { 
+        display:block; position:absolute; left:15px; 
+        -webkit-transition-duration:0.3s; -moz-transition-duration:0.3s; transition-duration:0.3s;
+    }
+
+    label .circle          {
+        background:#FFF;
+        left:-30px;
+        top:-30px;
+        height:80px;
+        width:80px;
+        z-index:-1;
+        border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;
+    }
+    label .box     {
+        border:2px solid white;
+        height:20px; 
+        width:20px;
+        z-index:888;
+        -webkit-transition-delay:0.2s; -moz-transition-delay:0.2s; transition-delay:0.2s;
+    }
+    label .check         {
+        top: -7px;
+        left: 6px;
+        width: 12px;
+        height: 24px;
+        border:2px solid white;  
+        border-top: none;
+        border-left: none;
+        opacity:0; 
+        z-index:888;
+        -webkit-transform:rotate(180deg); -moz-transform:rotate(180deg); transform:rotate(180deg);
+        -webkit-transition-delay:0.3s; -moz-transition-delay:0.3s; transition-delay:0.3s;
+    }
+
+    /* handling click events */
+
+    /* when checkbox is checked */
+    label .circle {
+        -webkit-animation   :growCircle 0.3s ease;
+        -moz-animation      :growCircle 0.3s ease;
+        animation           :growCircle 0.3s ease;
+    }
+    input[type=checkbox]:checked ~ label .box { 
+        opacity:0;
+        -webkit-transform   :scale(0) rotate(-180deg);
+        -moz-transform      :scale(0) rotate(-180deg);
+        transform                 :scale(0) rotate(-180deg);
+    }
+    input[type=checkbox]:checked ~ label .check {
+        opacity:1; 
+        -webkit-transform   :scale(1) rotate(45deg);
+        -moz-transform      :scale(1) rotate(45deg);
+        transform           :scale(1) rotate(45deg);
+    }
+
+    /* bubble animation */
+
+    @-webkit-keyframes growCircle {
+        0%, 100%   { -webkit-transform:scale(0); }
+        70%        { background:#DDD; -webkit-transform:scale(1.25); }
+    }
+    @-moz-keyframes growCircle {
+        0%, 100%   { -moz-transform:scale(0); }
+        70%        { background:#DDD; -moz-transform:scale(1.25); }
+    }
+    @keyframes growCircle {
+        0%, 100%   { transform:scale(0); }
+        70%        { background:#DDD; transform:scale(1.25); }
     }
 </style>
 
@@ -210,7 +295,35 @@
             <div class="background"></div>
             <img src="./content/menu/menu-d/images/thermometer.svg">
             <h4>климат-контроль</h4>
-            <div class="description">Управление кондиционерами</div>
+            <div class="description">
+                <div>
+                    <input id="hvac1" type="checkbox"/>
+                    <label for="hvac1">
+                        <span></span>
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        кондиционеры
+                    </label>
+                </div>
+                <div>
+                    <input id="hvac2" type="checkbox"/>
+                    <label for="hvac2">
+                        <span></span>
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        тёплые полы
+                    </label>
+                </div>
+                <div>
+                    <input id="hvac3" type="checkbox"/>
+                    <label for="hvac3">
+                        <span></span>
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        радиаторы отопления водяные
+                    </label>
+                </div>
+            </div>
             <label for="hvac"><span>Хочу!</span><span>Нет, спасибо.</span></label>
         </div>
         <div class="col-sm-6 col-md-4">
@@ -234,7 +347,7 @@
         <div class="col-sm-6 col-md-4">
             <input id="video" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/camera.svg">
             <h4>видео-наблюдение</h4>
             <div class="description">Управление кондиционерами</div>
             <label for="video"><span>Хочу!</span><span>Нет, спасибо.</span></label>
@@ -250,7 +363,7 @@
         <div class="col-sm-6 col-md-4">
             <input id="leakage" type="checkbox" />
             <div class="background"></div>
-            <img src="./content/menu/menu-d/images/idea-white.svg">
+            <img src="./content/menu/menu-d/images/drops.svg">
             <h4>защита от протечек</h4>
             <div class="description">Управление кондиционерами</div>
             <label for="leakage"><span>Хочу!</span><span>Нет, спасибо.</span></label>
