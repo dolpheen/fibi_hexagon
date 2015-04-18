@@ -16,6 +16,19 @@
 /*
     Calculator
 */
+    #calculator .btn-group > .btn {
+        line-height: 0.7;
+        font-size: 20px;
+    }
+
+    #rooms {
+        color: black;
+    }
+
+    #price i {
+        font-size: 18px;
+    }
+
     .row {
         color: white;
         margin-right: 0px;
@@ -253,8 +266,14 @@
     </div>
     <div id="calculator">
         <h2 class="text-center">Нет предела возможностям</h2> 
-        <h2 class="text-center">Количество комнат: <span id="rooms">2</span></h2>
-        <h2 class="text-center">Стоимость: <span id="price">Вибирете опции</span></h2>
+        <h3 class="text-center">Количество комнат:
+            <div class="btn-group" role="group">
+                <button id="btnDec" type="button" class="btn btn-default btn-primary">-</button>
+                <button id="rooms"  type="button" class="btn btn-default disabled">2</button>
+                <button id="btnInc" type="button" class="btn btn-default btn-primary">+</button>
+            </div>
+        </h3>
+        <h3 class="text-center">Стоимость: <span id="price">Выбирете опции</span></h3>
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <input id="hvac" type="checkbox" />
@@ -423,26 +442,27 @@ $('#slider')
         sync: "#carousel"
 });
 
-var roomsEl = $("#rooms")[0];
-var priceEl = $("#price")[0];
+/********************
+    Price Calculator
+*********************/
 
-$('#calculator > .row > div').change(function(evt) {
+function calcPrice() {
     // list of functions for calculation option price based on number of rooms selected
     var formulas = { 
-        hvac1:     function(r) { return r; },
-        hvac2:     function(r) { return r + 2; },
-        hvac3:     function(r) { return 3; },
-        hvac4:     function(r) { return r; },
-        light1:    function(r) { return r; },
-        light2:    function(r) { return r; },
-        light3:    function(r) { return r; },
-        security1: function(r) { return r; },
-        security2: function(r) { return r; },
-        security3: function(r) { return r; },
-        video1:    function(r) { return r; },
-        media1:    function(r) { return r; },
-        leakage1:  function(r) { return r; },
-        leakage2:  function(r) { return r; },
+        hvac1:     function(r) { return r*1000; },
+        hvac2:     function(r) { return (r + 2)*1000; },
+        hvac3:     function(r) { return 3*1000; },
+        hvac4:     function(r) { return r*1000; },
+        light1:    function(r) { return r*1000; },
+        light2:    function(r) { return r*1000; },
+        light3:    function(r) { return r*1000; },
+        security1: function(r) { return r*1000; },
+        security2: function(r) { return r*1000; },
+        security3: function(r) { return r*1000; },
+        video1:    function(r) { return r*1000; },
+        media1:    function(r) { return r*1000; },
+        leakage1:  function(r) { return r*1000; },
+        leakage2:  function(r) { return r*1000; },
     }
 
     // Get array of the selected options
@@ -458,6 +478,27 @@ $('#calculator > .row > div').change(function(evt) {
     var rooms = parseInt(roomsEl.textContent);
     opts.forEach(function(opt) { sum += formulas[opt](rooms); });
 
-    priceEl.textContent = sum;
+    //priceEl.textContent = sum == 0 ? "Выбирете опции" : sum;
+    priceEl.innerHTML = sum == 0 ? "Выбирете опции" : '<span>' + sum + '</span>' + '<i class="fa fa-fw fa-rub"></i>';
+}
+
+var roomsEl = $("#rooms")[0];
+var priceEl = $("#price")[0];
+
+// Setup increment/decrement rooms buttom
+$('#btnDec').click(function(){
+    var rooms = parseInt(roomsEl.textContent);
+    if (rooms == 1) return;
+        roomsEl.textContent = rooms - 1;
+    calcPrice();
 });
+
+$('#btnInc').click(function(){
+    var rooms = parseInt(roomsEl.textContent);
+    roomsEl.textContent = rooms + 1;
+    calcPrice();
+});
+
+// recalculate price on input fields change
+$('#calculator > .row > div').change(calcPrice);
 </script>
