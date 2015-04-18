@@ -140,7 +140,7 @@
         margin: 0px;
         text-align: center;
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: normal;
     }
     
     .row > div > label span {
@@ -178,7 +178,7 @@
         padding-left: 28px;
         margin: 0 1em 0 0;
         cursor: pointer;
-        font-weight: lighter;
+        font-weight: normal;
         opacity: 0.7;
         transition: all 0.5s;
     }
@@ -194,15 +194,20 @@
         height: 1em;
         border: 2px solid white;
         vertical-align: middle;
+        opacity: 0.3
     }
 
     input:checked ~ .checkbox::before {
         transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
         transform-origin: right 50%;
+        -webkit-transform-origin: right 50%;
         height: .5em;
+        width: 1em;
         border-color: white;
         border-top-style: none;
         border-right-style: none;
+        opacity: 1; 
     }
 
     input:checked ~ .checkbox {
@@ -246,172 +251,213 @@
             <li><img src="./content/menu/menu-d/images/smoke_thumb.png"/></li>
         </ul>
     </div>
-    <h2 class="text-center">Нет предела возможностям</h2> 
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <input id="hvac" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/thermometer.svg">
-            <h4>климат-контроль</h4>
-            <div class="description">
-                <div>
-                    <input id="hvac1" type="checkbox" checked/>
-                    <label class="checkbox" for="hvac1">
-                        кондиционеры
-                    </label>
-                </div>
-                <div>
-                    <input id="hvac2" type="checkbox" checked/>
-                    <label class="checkbox" for="hvac2">
-                        тёплые полы
-                    </label>
-                </div>
-                <div>
-                    <input id="hvac3" type="checkbox" checked/>
-                    <label class="checkbox" for="hvac3">
-                        радиаторы отопления водяные
-                    </label>
-                </div>
-                <div>
-                    <input id="hvac4" type="checkbox" checked/>
-                    <label class="checkbox" for="hvac4">
-                        вентиляция
-                    </label>
-                </div>
-             </div>
-            <label for="hvac"><span>Хочу!</span><span>Нет, спасибо.</span></label>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <input id="light" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/bulb-on.svg">
-            <h4>управление освещением</h4>
-            <div class="description">
-                <div>
-                    <input id="light1" type="checkbox" checked/>
-                    <label class="checkbox" for="light1">
-                        автоматическое включение света по движению
-                    </label>
-                </div>
-                <div>
-                    <input id="light2" type="checkbox" checked/>
-                    <label class="checkbox" for="light2">
-                        регулировка яркости
-                    </label>
-                </div>
-                <div>
-                    <input id="light3" type="checkbox" checked/>
-                    <label class="checkbox" for="light3">
-                        светодиодная подсветка
-                    </label>
-                </div>
+    <div id="calculator">
+        <h2 class="text-center">Нет предела возможностям</h2> 
+        <h2 class="text-center">Количество комнат: <span id="rooms">2</span></h2>
+        <h2 class="text-center">Стоимость: <span id="price">Вибирете опции</span></h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <input id="hvac" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/thermometer.svg">
+                <h4>климат-контроль</h4>
+                <div class="description">
+                    <div>
+                        <input id="hvac-1" type="checkbox" checked/>
+                        <label class="checkbox" for="hvac-1">
+                            кондиционеры
+                        </label>
+                    </div>
+                    <div>
+                        <input id="hvac-2" type="checkbox" checked/>
+                        <label class="checkbox" for="hvac-2">
+                            тёплые полы
+                        </label>
+                    </div>
+                    <div>
+                        <input id="hvac-3" type="checkbox" checked/>
+                        <label class="checkbox" for="hvac-3">
+                            радиаторы отопления водяные
+                        </label>
+                    </div>
+                    <div>
+                        <input id="hvac-4" type="checkbox" checked/>
+                        <label class="checkbox" for="hvac-4">
+                            вентиляция
+                        </label>
+                    </div>
+                 </div>
+                <label for="hvac"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
-            <label for="light"><span>Хочу!</span><span>Нет, спасибо.</span></label>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <input id="security" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/guard.svg">
-            <h4>контроль доступа</h4>
-            <div class="description">
-                <div>
-                    <input id="security1" type="checkbox" checked/>
-                    <label class="checkbox" for="security1">
-                        биометрический доступ
-                    </label>
+            <div class="col-sm-6 col-md-4">
+                <input id="light" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/bulb-on.svg">
+                <h4>управление освещением</h4>
+                <div class="description">
+                    <div>
+                        <input id="light-1" type="checkbox" checked/>
+                        <label class="checkbox" for="light-1">
+                            автоматическое включение света по движению
+                        </label>
+                    </div>
+                    <div>
+                        <input id="light-2" type="checkbox" checked/>
+                        <label class="checkbox" for="light-2">
+                            регулировка яркости
+                        </label>
+                    </div>
+                    <div>
+                        <input id="light-3" type="checkbox" checked/>
+                        <label class="checkbox" for="light-3">
+                            светодиодная подсветка
+                        </label>
+                    </div>
                 </div>
-                 <div>
-                    <input id="security2" type="checkbox" checked/>
-                    <label class="checkbox" for="security2">
-                        видео-домофон - отвечайте Вашим гостям даже если Вас нет дома
-                    </label>
-                </div>
-                 <div>
-                    <input id="security3" type="checkbox" checked/>
-                    <label class="checkbox" for="security3">
-                        контроль дверей/окон
-                    </label>
-                </div>
+                <label for="light"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
-            <label for="security"><span>Хочу!</span><span>Нет, спасибо.</span></label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <input id="video" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/camera.svg">
-            <h4>видео-наблюдение</h4>
-            <div class="description">
-                 <div>
-                    <input id="video1" type="checkbox" checked/>
-                    <label class="checkbox" for="video1">
-                        видео наблюдение
-                    </label>
+            <div class="col-sm-6 col-md-4">
+                <input id="security" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/guard.svg">
+                <h4>контроль доступа</h4>
+                <div class="description">
+                    <div>
+                        <input id="security-1" type="checkbox" checked/>
+                        <label class="checkbox" for="security-1">
+                            биометрический доступ
+                        </label>
+                    </div>
+                     <div>
+                        <input id="security-2" type="checkbox" checked/>
+                        <label class="checkbox" for="security-2">
+                            видео-домофон - отвечайте Вашим гостям даже если Вас нет дома
+                        </label>
+                    </div>
+                     <div>
+                        <input id="security-3" type="checkbox" checked/>
+                        <label class="checkbox" for="security-3">
+                            контроль дверей/окон
+                        </label>
+                    </div>
                 </div>
-             </div>
-            <label for="video"><span>Хочу!</span><span>Нет, спасибо.</span></label>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <input id="media" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/multimedia.svg">
-            <h4>управление мультимедиа</h4>
-            <div class="description">
-                 <div>
-                    <input id="media1" type="checkbox" checked/>
-                    <label class="checkbox" for="media1">
-                        управление мультимедиа   
-                    </label>
-                </div>
-             </div>
-            <label for="media"><span>Хочу!</span><span>Нет, спасибо.</span></label>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <input id="leakage" type="checkbox" />
-            <div class="background"></div>
-            <img src="./content/menu/menu-d/images/drops.svg">
-            <h4>защита от протечек</h4>
-            <div class="description">
-                 <div>
-                    <input id="leakage1" type="checkbox" checked/>
-                    <label class="checkbox" for="leakage1">
-                        датчики протечки
-                    </label>
-                </div>
-                <div>
-                    <input id="leakage2" type="checkbox" checked/>
-                    <label class="checkbox" for="leakage2">
-                        датчики задымления
-                    </label>
-                </div>
- 
+                <label for="security"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
-            <label for="leakage"><span>Хочу!</span><span>Нет, спасибо.</span></label>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <input id="video" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/camera.svg">
+                <h4>видео-наблюдение</h4>
+                <div class="description">
+                     <div>
+                        <input id="video-1" type="checkbox" checked/>
+                        <label class="checkbox" for="video-1">
+                            видео наблюдение
+                        </label>
+                    </div>
+                 </div>
+                <label for="video"><span>Хочу!</span><span>Нет, спасибо.</span></label>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <input id="media" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/multimedia.svg">
+                <h4>управление мультимедиа</h4>
+                <div class="description">
+                     <div>
+                        <input id="media-1" type="checkbox" checked/>
+                        <label class="checkbox" for="media-1">
+                            управление мультимедиа   
+                        </label>
+                    </div>
+                 </div>
+                <label for="media"><span>Хочу!</span><span>Нет, спасибо.</span></label>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <input id="leakage" type="checkbox" />
+                <div class="background"></div>
+                <img src="./content/menu/menu-d/images/drops.svg">
+                <h4>защита от протечек</h4>
+                <div class="description">
+                     <div>
+                        <input id="leakage-1" type="checkbox" checked/>
+                        <label class="checkbox" for="leakage-1">
+                            датчики протечки
+                        </label>
+                    </div>
+                    <div>
+                        <input id="leakage-2" type="checkbox" checked/>
+                        <label class="checkbox" for="leakage-2">
+                            датчики задымления
+                        </label>
+                    </div>
+     
+                </div>
+                <label for="leakage"><span>Хочу!</span><span>Нет, спасибо.</span></label>
+            </div>
         </div>
     </div>
 </div>
 
 <script src="./content/menu/menu-d/js/jquery.fitvids.js"></script>
 <script>
-    $('#carousel').flexslider({
+$('#carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    asNavFor: '#slider'
+});
+
+$('#slider')
+    .fitVids()
+    .flexslider({
         animation: "slide",
         controlNav: false,
         animationLoop: false,
         slideshow: false,
-        itemWidth: 210,
-        itemMargin: 5,
-        asNavFor: '#slider'
+        sync: "#carousel"
+});
+
+var roomsEl = $("#rooms")[0];
+var priceEl = $("#price")[0];
+
+$('#calculator > .row > div').change(function(evt) {
+    // list of functions for calculation option price based on number of rooms selected
+    var formulas = { 
+        hvac1:     function(r) { return r; },
+        hvac2:     function(r) { return r + 2; },
+        hvac3:     function(r) { return 3; },
+        hvac4:     function(r) { return r; },
+        light1:    function(r) { return r; },
+        light2:    function(r) { return r; },
+        light3:    function(r) { return r; },
+        security1: function(r) { return r; },
+        security2: function(r) { return r; },
+        security3: function(r) { return r; },
+        video1:    function(r) { return r; },
+        media1:    function(r) { return r; },
+        leakage1:  function(r) { return r; },
+        leakage2:  function(r) { return r; },
+    }
+
+    // Get array of the selected options
+    var opts = [];
+    $('#calculator > div > div > input:checked').each(function(i, el) {
+        $('[id^="' + el.id +  '-"]:checked').each(function(i, el) {
+            opts.push(el.id.replace('-',''));
+        });
     });
 
-    $('#slider')
-        .fitVids()
-        .flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            sync: "#carousel"
-    });
+    // calculate total price
+    var sum = 0;
+    var rooms = parseInt(roomsEl.textContent);
+    opts.forEach(function(opt) { sum += formulas[opt](rooms); });
 
+    priceEl.textContent = sum;
+});
 </script>
