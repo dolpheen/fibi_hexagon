@@ -19,14 +19,37 @@
     #calculator .btn-group > .btn {
         line-height: 0.7;
         font-size: 20px;
+        background-color: #FFF;
+        color: #C13832;
+        border: medium none;
+    }
+
+    #calculator .btn-group {
+        box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
     }
 
     #rooms {
         color: black;
+        opacity: 1;
     }
 
     #price i {
         font-size: 18px;
+    }
+
+    #calculator > h3 {
+        background-color: #C13832;
+        color: #FFF;
+        margin: 0px;
+        padding: 10px 40px;
+        text-align: right;
+    }
+    
+    #calculator > h3 > span > span {
+        font-weight: bold;
+    }
+
+    #calculator > h3 > *:last-child {
     }
 
     .row {
@@ -189,11 +212,18 @@
         font-size: 15px;
         top: -0.375em;
         padding-left: 28px;
-        margin: 0 1em 0 0;
+        margin: 0 1em 10px 0;
         cursor: pointer;
         font-weight: normal;
         opacity: 0.7;
         transition: all 0.5s;
+        line-height: 1;
+        text-shadow: none;
+    }
+
+    .checkbox:hover {
+        text-shadow: 1px 1px 2px black, 0px 0px 1em black;
+        color: #DDD;
     }
 
     .checkbox::before   {
@@ -206,8 +236,10 @@
         width: 1em;
         height: 1em;
         border: 2px solid white;
+        border-top-style: none;
+        border-right-style: none;
         vertical-align: middle;
-        opacity: 0.3
+        opacity: 0;
     }
 
     input:checked ~ .checkbox::before {
@@ -225,6 +257,7 @@
 
     input:checked ~ .checkbox {
        opacity: 1; 
+       text-shadow: 1px 1px 2px black, 0px 0px 1em rgb(0, 0, 0);
     }
 </style>
 
@@ -266,14 +299,14 @@
     </div>
     <div id="calculator">
         <h2 class="text-center">Нет предела возможностям</h2> 
-        <h3 class="text-center">Количество комнат:
+        <h3><span>Количество комнат</span>
             <div class="btn-group" role="group">
                 <button id="btnDec" type="button" class="btn btn-default btn-primary">-</button>
                 <button id="rooms"  type="button" class="btn btn-default disabled">2</button>
                 <button id="btnInc" type="button" class="btn btn-default btn-primary">+</button>
             </div>
         </h3>
-        <h3 class="text-center">Стоимость: <span id="price">Выбирете опции</span></h3>
+        <h3><span id="price">Выбирете опции</span></h3>
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <input id="hvac" type="checkbox" />
@@ -478,8 +511,8 @@ function calcPrice() {
     var rooms = parseInt(roomsEl.textContent);
     opts.forEach(function(opt) { sum += formulas[opt](rooms); });
 
-    //priceEl.textContent = sum == 0 ? "Выбирете опции" : sum;
-    priceEl.innerHTML = sum == 0 ? "Выбирете опции" : '<span>' + sum + '</span>' + '<i class="fa fa-fw fa-rub"></i>';
+    sum = Math.floor(sum / 1000);
+    priceEl.innerHTML = sum == 0 ? "Выбирете опции" : 'Установка под ключ за <span>' + sum + ' тыс.</span>' + '<i class="fa fa-fw fa-rub"></i>';
 }
 
 var roomsEl = $("#rooms")[0];
