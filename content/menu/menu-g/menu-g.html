@@ -5,12 +5,7 @@
         fill: none;
         stroke-width: 1;
         stroke: black;
-        animation-duration: 2s;
-        animation-timing-function: ease-in;
-        animation-fill-mode: forwards;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-timing-function: ease-in;
-        -webkit-animation-fill-mode: forwards;
+        transition: opacity 2s;
     }
 
     #top-slider {
@@ -22,24 +17,15 @@
     #top-slider > .slides h2 {
         bottom: 0px;
         font-size: 20px;
+        z-index: 1;
     }
 
     #top-slider > .slides img,
     #top-slider > .slides svg,
-    .show-after-outline{
+    .show-after-outline {
         opacity: 0;
+        transition: opacity 2s;
     }
-
-    @keyframes outline-hide {
-        from { filter: blur(0px);  opacity: 1; }
-        to   { filter: blur(20px); opacity: 0; }
-    }
-
-    @-webkit-keyframes outline-hide {
-        from { -webkit-filter: blur(0px);  opacity: 1; }
-        to   { -webkit-filter: blur(20px); opacity: 0; }
-    }
-
 
     #mobile-control {
         background: url("content/menu/menu-g/images/iphone_white_finger.png") no-repeat right;
@@ -88,7 +74,7 @@
 	<div id="info-content" >
         <div id="top-slider" class="flexslider">
             <ul class="slides">
-                <li>
+                <li data-first>
                     <a href="http://www.fibi-logic.ru/shop" target="_blank">
                         <h2 class="slider-description show-after-outline">Управление домом со смартфона</h2>
                         <svg id="mobile" class="svg-outline" viewBox="0 0 750 250">
@@ -160,7 +146,7 @@
                         <img class="show-after-outline" src="content/menu/menu-g/images/woman_phone.jpg"/>
                     </a>
                 </li>
-                <li>
+                <li data-second>
                     <a href="http://www.fibi-logic.ru/shop" target="_blank">
                         <h2 class="slider-description show-after-outline">Поддержка комфортной температуры</h2>
 
@@ -278,39 +264,34 @@
     /*************
         Slider
     *************/
-    function iterNodeList(ns, f) {
-        for (var i=0; i < ns.length; i++) 
-            f(ns[i]);
+    function showSlide() {
+        $('.next-slide .svg-outline').css('opacity', 0);
+        $('.next-slide .show-after-outline').css("opacity", 1).css("visibility", "visible");
+        $('.next-slide').removeClass('next-slide');
     }
 
-    function draw_outline(evt) {
+    function drawOutline(evt) {
+        var svg = $('.next-slide .svg-outline')[0];
+        var outline = new Vivus(svg, {start: 'manual', type: 'oneByOne', duration: 250}, showSlide);
 
-        function show_image() {
-            window.setTimeout(function(){
-                iterNodeList(ns, function(n) { console.log(n); $(n).fadeTo(1000, 1); });
-                svg.style.animationName = "outline-hide";
-                svg.style.webkitAnimationName = "outline-hide";
-            }, 500);
-        }
-
-        var slide_elm = evt.container[0].children[evt.animatingTo];
-        var svg = slide_elm.querySelector('.svg-outline');
-        var ns  = slide_elm.querySelectorAll('.show-after-outline');
-
-        iterNodeList(ns, function(n) { n.style.opacity = 0; });
-        svg.style.opacity = 1;
-        svg.style.animationName = "";
-        svg.style.webkitAnimationName = "";
-
-        var outline = new Vivus(svg, {start: 'manual', type: 'oneByOne', duration: 50}, show_image);
-        window.setTimeout(function() {
-            outline.play();
-        }, 600);
+        outline.play();
+        $('.next-slide .svg-outline').css('opacity', 1).css('visibility', 'visible');
     }
 
-    $('#top-slider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
+    function hideSlide(evt) {
+        var nextSlide = $(evt.container[0].children[evt.animatingTo]);
+        nextSlide.addClass("next-slide"); 
+
+        $('.next-slide .svg-outline').css("opacity", 1).css("visibility", "hidden");
+        $('.next-slide .show-after-outline').css("opacity", 0).css("visibility", "hidden");
+    }
+
+    $('#top-slider').flexslider({slideshowSpeed: 10000, animationSpeed: 700, after: drawOutline, before: hideSlide, start: function(evt) { hideSlide(evt); drawOutline(evt);}});
 
 
+    /*****************
+       iphone slider
+    *****************/
     var fileNames = ['zway2.png', 'zway3.png', 'zway1.png',
                      'fibaro1.jpeg', 'fibaro2.jpeg', 'fibaro3.jpeg', 'fibaro4.jpeg', 'fibaro5.jpeg', 
                      'vera1.jpeg', 'vera2.jpeg', 'vera3.jpeg', 'vera4.jpeg', 'vera5.jpeg'];
