@@ -5,12 +5,7 @@
         fill: none;
         stroke-width: 2;
         stroke: black;
-        animation-duration: 2s;
-        animation-timing-function: ease-in;
-        animation-fill-mode: forwards;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-timing-function: ease-in;
-        -webkit-animation-fill-mode: forwards;
+        transition: opacity 2s;
     }
 
     .flexslider {
@@ -21,32 +16,14 @@
 
     .slides h2 {
         font-size: 20px;
+         z-index: 1;
     }
 
     .slides img,
     .slides svg,
     .show-after-outline{
         opacity: 0;
-    }
-
-    @keyframes outline-hide {
-        from { filter: blur(0px);  opacity: 1; }
-        to   { filter: blur(20px); opacity: 0; }
-    }
-
-    @-webkit-keyframes outline-hide {
-        from { -webkit-filter: blur(0px);  opacity: 1; }
-        to   { -webkit-filter: blur(20px); opacity: 0; }
-    }
-
-    .brand {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 1;
-        width: 50px;
-        transition: transform 0.2s ease 0s;
-        transform: scale(1);
+        transition: opacity 2s;
     }
 
     /******************
@@ -220,9 +197,6 @@
 		<ul class="slides">
 			<li>
                 <a href="http://www.fibi-logic.ru/shop" target="_blank">
-                    <div class="brand">
-                        <img class="show-after-outline" src="http://fibi-logic.ru/wp-content/uploads/brand_logos/badge_fibaro_bw.svg">
-                    </div>
                     <h2 class="slider-description show-after-outline">Fibaro Home Center Lite</h2>
                     <div class="slider-price show-after-outline">
                         <h2>20000 <i class="fa fa-rub"></i></h2>
@@ -380,44 +354,37 @@
 
     $('[data-id^="desc"]').mouseenter(showOnlyOneDescription);
 
-    /*************
-        Product slider
-    *************/
-    function iterNodeList(ns, f) {
-        for (var i=0; i < ns.length; i++) 
-            f(ns[i]);
+    /***************
+      Product slider
+    ****************/
+    function showSlide() {
+        $('.next-slide .svg-outline').css('opacity', 0);
+        $('.next-slide .show-after-outline').css("opacity", 1).css("visibility", "visible");
+        $('.next-slide').removeClass('next-slide');
     }
 
-    function draw_outline(evt) {
+    function drawOutline(evt) {
+        var svg = $('.next-slide .svg-outline')[0];
+        var outline = new Vivus(svg, {start: 'manual', type: 'oneByOne', duration: 100}, showSlide);
 
-        function show_image() {
-            window.setTimeout(function(){
-                iterNodeList(ns, function(n) { $(n).fadeTo(1000, 1); });
-                svg.style.animationName = "outline-hide";
-                svg.style.webkitAnimationName = "outline-hide";
-            }, 500);
-        }
-
-        var slide_elm = evt.container[0].children[evt.animatingTo];
-        var svg = slide_elm.querySelector('.svg-outline');
-        var ns  = slide_elm.querySelectorAll('.show-after-outline');
-
-        iterNodeList(ns, function(n) { n.style.opacity = 0; });
-        svg.style.opacity = 1;
-        svg.style.animationName = "";
-        svg.style.webkitAnimationName = "";
-
-        var outline = new Vivus(svg, {start: 'manual', type: 'oneByOne', duration: 50}, show_image);
-        window.setTimeout(function() {
-            outline.play();
-        }, 600);
+        outline.play();
+        $('.next-slide .svg-outline').css('opacity', 1).css('visibility', 'visible');
     }
 
-    $('.flexslider').flexslider({animationSpeed: 600, before: draw_outline, start: draw_outline});
+    function hideSlide(evt) {
+        var nextSlide = $(evt.container[0].children[evt.animatingTo]);
+        nextSlide.addClass("next-slide");
 
-    /********
+        $('.next-slide .svg-outline').css("opacity", 1).css("visibility", "hidden");
+        $('.next-slide .show-after-outline').css("opacity", 0).css("visibility", "hidden");
+    }
+
+    $('.flexslider').flexslider({slideshowSpeed: 10000, animationSpeed: 700, after: drawOutline, before: hideSlide, start: function(evt) { hideSlide(evt); drawOutline(evt);}});
+
+
+    /****************
     Discount slider
-    ********/
+    ****************/
     // Instantiate a slider
     var mySlider = $("#order").slider({
         reversed: true,
