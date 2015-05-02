@@ -25,6 +25,10 @@
         opacity: 0;
         transition: opacity 2s;
     }
+    
+    .slider-price > h2 > i {
+        margin: 0px 10px;
+    }
 
     /******************
     Megaphone text 
@@ -294,12 +298,12 @@
     <div id="megaphone">
         <img src="content/menu/menu-b/images/megaphone3-128.png"/>
         <div id="mp-text">
-            <p data-id="desc1"><strong>Внимание, Внимание!</strong></p>
-            <p data-id="desc2"><strong>Акция - сенсация!</strong></p>
-            <p data-id="desc3"><strong>Подберём оборудование.</strong></p> 
-            <p data-id="desc4"><strong>Поможем настроить.</strong></p> 
-            <p data-id="desc5"><strong>Напишем скрипты.</strong></p> 
-            <p data-id="desc6"><strong style="letter-spacing: 7px;">БЕСПЛАТНО!</strong></p>
+            <p data-id="#desc1"><strong>Внимание, Внимание!</strong></p>
+            <p data-id="#desc2"><strong>Акция - сенсация!</strong></p>
+            <p data-id="#desc3"><strong>Подберём оборудование.</strong></p> 
+            <p data-id="#desc4"><strong>Поможем настроить.</strong></p> 
+            <p data-id="#desc5"><strong>Напишем скрипты.</strong></p> 
+            <p data-id="#desc6"><strong style="letter-spacing: 7px;">БЕСПЛАТНО!</strong></p>
         </div>
         <div id="desc1" style="opacity:1;">
             Уникальное предложение<br>
@@ -341,18 +345,13 @@
     ************/
     var descs = $('[id^="desc"]');
 
-    function showOnlyOneDescription(evt) {
-        var descId = evt.currentTarget.dataset.id;
-
-        descs.each(function(idx, elem) { 
-            if (elem.id != descId)
-                elem.style.opacity = '0';
-            else
-                elem.style.opacity = '1';
-        });
+    function showDescription() {
+        var descID = $(this).data("id");
+        descs.css("opacity", 0);
+        $(descID).css("opacity", 1);
     }
 
-    $('[data-id^="desc"]').mouseenter(showOnlyOneDescription);
+    $('#mp-text').on("mouseenter", "p", showDescription);
 
     /***************
       Product slider
