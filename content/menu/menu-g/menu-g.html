@@ -49,10 +49,42 @@
 
     #mobile-control > div:first-child > div > img {
         float: left;
+        margin: 10px 10px 0px 0px;
+        width: 40px;
+        height: 40px;
     }
 
     #mobile-control > div:first-child > div > p {
         margin-left: 50px;
+    }
+
+    #mobile-control h2, 
+    #mobile-control h3 {
+        font-weight: 300;
+    }
+
+    .jumbotron {
+        background-color: #005DA5;
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+    }
+
+    .jumbotron .btn {
+        border: 3px solid white;
+        border-radius: 0px;
+        color: white;
+        text-transform: uppercase;
+        transition: all 0.4s;
+    }
+
+    .jumbotron .btn:hover {
+        background-color: white;
+        color: #005DA5;
+    }
+
+    .jumbotron h3 {
+        margin: 20px;
     }
 }
 </style>
@@ -202,36 +234,34 @@
         </ul>
     </div> 
     <h2 class="text-center padding">
-        Теперь безопасность и комфорт Вашего дома под контролем новейших технологий.
+        Теперь безопасность и комфорт Вашего дома под контролем современных технологий.
     </h2>
     <div id="mobile-control" class="padding">
         <div>
             <h2 class="text-right">
-                Вся система управляется со смартфона или планшета 
+                Вся система управляется с телефона или планшета 
             </h2>
             <div>
-                <img src="content/menu/menu-g/images/idea.png"/>
-                <h3>Наблюдайте</h3>
-                <p>Следите за происходящем, контролируйте потребление электроэнергии или просто удивляйте друзей невероятными возможностями.</p>
+                <img src="content/menu/menu-g/images/control.svg"/>
+                <h3>Управляйте</h3>
+                <p>Управлять освещением, температурой, замками и электроприборами теперь легко как никогда раньше.</p>
             </div>
             <div>
-                <img src="content/menu/menu-g/images/idea.png"/>
+                <img src="content/menu/menu-g/images/phone.svg"/>
                 <h3>Контроллируйте</h3>
-                <p>Ваш смартфон может соединиться с вашим домом даже если вы далеко от него.</p>
+                <p>С системами видео-наблюдения Вы будте в курсе происходящего дома даже если вы далеко он него.</p>
             </div>
             <div>
-                <img src="content/menu/menu-g/images/idea.png"/>
+                <img src="content/menu/menu-g/images/attention.svg"/>
+                <h3>Получайте уведомления</h3>
+                <p>Датчики движения, протечки, задымления, открытия двери/окна предупредят Вас если, что-то пойдёт не так.</p>
+            </div>
+            <div>
+                <img src="content/menu/menu-g/images/chat.svg"/>
                 <h3>Общайтесь</h3>
-                <p>Ваш смартфон может соединиться с вашим домом даже если вы далеко от него.</p>
+                <p>Видео-домофон позволит ответить гостям даже если вас нет дома.</p>
             </div>
-            <div>
-                <img src="content/menu/menu-g/images/idea.png"/>
-                <h3>Настраивайте</h3>
-                <p>Ваш смартфон может соединиться с вашим домом даже если вы далеко от него.</p>
-            </div>
-
-
-            <img src="content/menu/menu-g/images/mobile-hexagons.svg"/>
+            <img src="content/menu/menu-g/images/mobile-hexagons2.svg"/>
         </div>
         <div>
             <div id="iphone-slider" class="flexslider">
@@ -241,13 +271,11 @@
         </div>
     </div>
 
-    <div class="panel panel-default" style="margin:30px 30px;">
-        <div class="panel-body">
-            <h3 class="text-center">Возможности безграничны</h3>
-            <button class="btn btn-primary btn-lg center-block" onclick="$('.even .menu-item.menu-d:not([id])').trigger('click');">Узнать стоимость</button>
+    <div class="jumbotron text-center" onclick="$('.even .menu-item.menu-d:not([id])').trigger('click');">
+        <div class="btn">
+            <h3>Возможности и стоимость</h3>
         </div>
     </div>
-
 </div>
 <script>
 

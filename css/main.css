@@ -1,7 +1,7 @@
 body {
   /*background-color: #51445f;*/
   /*background-color: #fcfbe3;*/
-  font-family: 'open sans', sans-serif;
+  font-family: 'roboto', sans-serif;
   color: rgb(91,91,91);
   /*background-color: #f7fdfa;*/
   /*background-color: #f5f3e5;*/
@@ -231,7 +231,7 @@ html {
   width: 760px;
   margin-left: 540px;
   white-space: normal;
-  font-size: 13px;
+  font-size: 15px;
   font-family: 'roboto', sans-serif;
   letter-spacing: 1px;
   overflow: hidden;
@@ -267,7 +267,7 @@ html {
 }
 
 #info-title {
-  font-family: 'open sans', sans-serif;
+  font-family: 'roboto', sans-serif;
   font-size: 18px;
   letter-spacing: 3px;
   font-weight: 400;
@@ -288,8 +288,8 @@ html {
 #info-content h1,
 #info-content h2,
 #info-content h3 {
-  font-family: "open sans";
-  font-weight: 300;
+  font-family: "roboto";
+  font-weight: 400;
 }
 
 #info-content > .padding {
