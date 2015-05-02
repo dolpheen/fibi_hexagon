@@ -33,6 +33,10 @@
     /******************
     Megaphone text 
     ******************/
+    #megaphone {
+        position: relative;
+    }
+
     #megaphone:after {
         content: "."; 
         visibility: hidden; 
@@ -58,10 +62,14 @@
     #megaphone > [id^="desc"] {
         color: rgba(0, 158, 230, 1);
         opacity: 0;
-        height: 0px;
+        width: 320px;
         transition: opacity 0.5s;
-        position: relative;
-        top: 50px;
+        position: absolute;
+        top: 30%;
+        left: 400px;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 16px;
     }
 
     #mp-text > p:hover {
@@ -298,31 +306,36 @@
     <div id="megaphone">
         <img src="content/menu/menu-b/images/megaphone3-128.png"/>
         <div id="mp-text">
-            <p data-id="#desc1"><strong>Внимание, Внимание!</strong></p>
-            <p data-id="#desc2"><strong>Акция - сенсация!</strong></p>
-            <p data-id="#desc3"><strong>Подберём оборудование.</strong></p> 
-            <p data-id="#desc4"><strong>Поможем настроить.</strong></p> 
-            <p data-id="#desc5"><strong>Напишем скрипты.</strong></p> 
-            <p data-id="#desc6"><strong style="letter-spacing: 7px;">БЕСПЛАТНО!</strong></p>
+            <p data-id="#desc1"><strong>Внимание, Внимание! </br> Акция - сенсация!</strong></p>
+            <p data-id="#desc2"><strong>Подберём оборудование.</strong></p> 
+            <p data-id="#desc3"><strong>Поможем настроить.</strong></p> 
+            <p data-id="#desc4"><strong>Напишем скрипты.</strong></p> 
+            <p data-id="#desc5"><strong style="letter-spacing: 7px;">БЕСПЛАТНО!</strong></p>
         </div>
         <div id="desc1" style="opacity:1;">
-            Уникальное предложение<br>
-            Только у нас
+            Уникальное предложение.</br>
+            Только у нас.</br>
+            И только этим летом. 
         </div>
         <div id="desc2">
-            Не тратьте свое время
+            Широкоий ассортимент оборудования сбивает с толку?</br>
+            Незнаете что выбрать?</br>
+            Не тратьте свое время. Звоните!</br>
+            Подберём оборудование под Ваши задачи.</br>
         </div>
         <div id="desc3">
-            Ваши задачи
+            Гибкость настроек и множество вариантов применения.</br>
+            Вы не запутаетесь в параметрах. Мы расскажем как всё устроено.
         </div>
         <div id="desc4">
-            Параменры
+            Есть отличная идея, но незнаете как реализовать?</br>
+            Скриптам это под силу.</br>
+            Но не надо изучать программирование. </br>
+            Дайте нам задачу - мы дамим решение! 
         </div>
         <div id="desc5">
-            На языке LUA
-        </div>
-        <div id="desc6">
-            При любой покупке
+            И всё это бесплатно!
+            Мы рады поделиться с Вами нашим опытом и профессионализмом.
         </div>
     </div>
     <div id="orderSliderContainer" style="display:none;">
