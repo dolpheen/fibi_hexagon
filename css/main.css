@@ -318,13 +318,11 @@ html {
 }
 
 #info-content .text-block .title {
-  font-size: 13px;
   font-style: bold;
   color: black;
 }
 
 #info-content .text-block .description {
-  font-size: 13px;
   letter-spacing: 0px;
 }
 

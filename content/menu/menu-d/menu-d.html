@@ -216,14 +216,9 @@
         cursor: pointer;
         font-weight: normal;
         opacity: 0.7;
-        transition: all 0.5s;
+        transition: all 0.2s;
         line-height: 1;
         text-shadow: none;
-    }
-
-    .checkbox:hover {
-        text-shadow: 1px 1px 2px black, 0px 0px 1em black;
-        color: #DDD;
     }
 
     .checkbox::before   {
@@ -257,7 +252,14 @@
 
     input:checked ~ .checkbox {
        opacity: 1; 
-       text-shadow: 1px 1px 2px black, 0px 0px 1em rgb(0, 0, 0);
+    }
+
+    .checkbox:hover {
+        opacity: 1 !important;
+    }
+
+    input:checked ~ .checkbox:hover {
+        opacity: 0.7 !important;
     }
 </style>
 
@@ -377,13 +379,13 @@
                     <div>
                         <input id="security-1" type="checkbox" checked/>
                         <label class="checkbox" for="security-1">
-                            биометрический доступ
+                            видео-домофон - отвечайте Вашим гостям даже если Вас нет дома
                         </label>
                     </div>
                      <div>
                         <input id="security-2" type="checkbox" checked/>
                         <label class="checkbox" for="security-2">
-                            видео-домофон - отвечайте Вашим гостям даже если Вас нет дома
+                            биометрический доступ
                         </label>
                     </div>
                      <div>
@@ -409,6 +411,12 @@
                             видео наблюдение
                         </label>
                     </div>
+                    <div>
+                        <input id="video-2" type="checkbox" checked/>
+                        <label class="checkbox" for="video-2">
+                           хранение видео 1 месяц 
+                        </label>
+                    </div>
                  </div>
                 <label for="video"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
@@ -416,12 +424,18 @@
                 <input id="media" type="checkbox" />
                 <div class="background"></div>
                 <img src="./content/menu/menu-d/images/multimedia.svg">
-                <h4>управление мультимедиа</h4>
+                <h4>мультимедиа</h4>
                 <div class="description">
-                     <div>
+                    <div>
                         <input id="media-1" type="checkbox" checked/>
                         <label class="checkbox" for="media-1">
-                            управление мультимедиа   
+                            управление аудио/видео   
+                        </label>
+                    </div>
+                    <div>
+                        <input id="media-1" type="checkbox" checked/>
+                        <label class="checkbox" for="media-1">
+                            медиацентр   
                         </label>
                     </div>
                  </div>
