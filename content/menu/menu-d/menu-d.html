@@ -160,8 +160,8 @@
         background-color: #FBB829;
     }
 
-    #leakage ~ .background,
-    #leakage ~ label span { 
+    #safety ~ .background,
+    #safety ~ label span { 
         background-color: #FF0066;
     }
 
@@ -211,7 +211,7 @@
         position: relative;
         font-size: 15px;
         top: -0.375em;
-        padding-left: 28px;
+        padding-left: 20px;
         margin: 0 1em 10px 0;
         cursor: pointer;
         font-weight: normal;
@@ -331,7 +331,7 @@
                     <div>
                         <input id="hvac-3" type="checkbox" checked/>
                         <label class="checkbox" for="hvac-3">
-                            радиаторы отопления водяные
+                            радиаторы отопления водяные/электрические
                         </label>
                     </div>
                     <div>
@@ -352,7 +352,7 @@
                     <div>
                         <input id="light-1" type="checkbox" checked/>
                         <label class="checkbox" for="light-1">
-                            автоматическое включение света по движению
+                            включение света по движению
                         </label>
                     </div>
                     <div>
@@ -365,6 +365,12 @@
                         <input id="light-3" type="checkbox" checked/>
                         <label class="checkbox" for="light-3">
                             светодиодная подсветка
+                        </label>
+                    </div>
+                    <div>
+                        <input id="light-4" type="checkbox" checked/>
+                        <label class="checkbox" for="light-4">
+                            световые сцены
                         </label>
                     </div>
                 </div>
@@ -391,7 +397,7 @@
                      <div>
                         <input id="security-3" type="checkbox" checked/>
                         <label class="checkbox" for="security-3">
-                            контроль дверей/окон
+                            контроль дверей/окон, движения
                         </label>
                     </div>
                 </div>
@@ -408,13 +414,13 @@
                      <div>
                         <input id="video-1" type="checkbox" checked/>
                         <label class="checkbox" for="video-1">
-                            видео наблюдение
+                            многофункциональные видеокамеры
                         </label>
                     </div>
                     <div>
                         <input id="video-2" type="checkbox" checked/>
                         <label class="checkbox" for="video-2">
-                           хранение видео 1 месяц 
+                            видео-архив
                         </label>
                     </div>
                  </div>
@@ -429,12 +435,18 @@
                     <div>
                         <input id="media-1" type="checkbox" checked/>
                         <label class="checkbox" for="media-1">
-                            управление аудио/видео   
+                            управление аудио/видео оборудованием
                         </label>
                     </div>
                     <div>
-                        <input id="media-1" type="checkbox" checked/>
-                        <label class="checkbox" for="media-1">
+                        <input id="media-2" type="checkbox" checked/>
+                        <label class="checkbox" for="media-2">
+                            универсальный пульт управления мультимедиа и домашними системами
+                        </label>
+                    </div>
+                    <div>
+                        <input id="media-3" type="checkbox" checked/>
+                        <label class="checkbox" for="media-3">
                             медиацентр   
                         </label>
                     </div>
@@ -442,26 +454,31 @@
                 <label for="media"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
             <div class="col-sm-6 col-md-4">
-                <input id="leakage" type="checkbox" />
+                <input id="safety" type="checkbox" />
                 <div class="background"></div>
                 <img src="./content/menu/menu-d/images/drops.svg">
-                <h4>защита от протечек</h4>
+                <h4>Безопасность</h4>
                 <div class="description">
                      <div>
-                        <input id="leakage-1" type="checkbox" checked/>
-                        <label class="checkbox" for="leakage-1">
-                            датчики протечки
+                        <input id="safety-1" type="checkbox" checked/>
+                        <label class="checkbox" for="safety-1">
+                            защита от протечки
                         </label>
                     </div>
                     <div>
-                        <input id="leakage-2" type="checkbox" checked/>
-                        <label class="checkbox" for="leakage-2">
+                        <input id="safety-2" type="checkbox" checked/>
+                        <label class="checkbox" for="safety-2">
                             датчики задымления
                         </label>
                     </div>
-     
+                    <div>
+                        <input id="safety-3" type="checkbox" checked/>
+                        <label class="checkbox" for="safety-3">
+                            интеграция с охранной или противопожарной системой
+                        </label>
+                    </div>
                 </div>
-                <label for="leakage"><span>Хочу!</span><span>Нет, спасибо.</span></label>
+                <label for="safety"><span>Хочу!</span><span>Нет, спасибо.</span></label>
             </div>
         </div>
     </div>
@@ -494,22 +511,34 @@ $('#slider')
 *********************/
 
 function calcPrice() {
+    // Installation cost factor
+    f = 1.2;
     // list of functions for calculation option price based on number of rooms selected
     var formulas = { 
-        hvac1:     function(r) { return r*1000; },
-        hvac2:     function(r) { return (r + 2)*1000; },
-        hvac3:     function(r) { return 3*1000; },
-        hvac4:     function(r) { return r*1000; },
-        light1:    function(r) { return r*1000; },
-        light2:    function(r) { return r*1000; },
-        light3:    function(r) { return r*1000; },
-        security1: function(r) { return r*1000; },
-        security2: function(r) { return r*1000; },
-        security3: function(r) { return r*1000; },
-        video1:    function(r) { return r*1000; },
-        media1:    function(r) { return r*1000; },
-        leakage1:  function(r) { return r*1000; },
-        leakage2:  function(r) { return r*1000; },
+        hvac1:     function(r) { return r*7350*f; },
+        hvac2:     function(r) { return 3*6850*f; },
+        hvac3:     function(r) { return (r+1)*9000*f; },
+        hvac4:     function(r) { return (r+1)*4300*f; },
+
+        light1:    function(r) { return 4*(4300+4960)*f; },
+        light2:    function(r) { return r*4300*f; },
+        light3:    function(r) { return (r+1)*4640*f; },
+        light4:    function(r) { return 4300*f+6000; },
+
+        security1: function(r) { return 19000*f; },
+        security2: function(r) { return 15000*f; },
+        security3: function(r) { return (4960+4260+(r+1)*4260)*f; },
+
+        video1:    function(r) { return 20000; },
+        video2:    function(r) { return 1200*f; },
+
+        media1:    function(r) { return r*7350*f; },
+        media2:    function(r) { return 11000*f; },
+        media3:    function(r) { return 23000*f; },
+
+        safety1:  function(r) { return (2*4990+4300+6000)*f; },
+        safety2:  function(r) { return (r+1)*5700*f; },
+        safety3:  function(r) { return 2900*f; },
     }
 
     // Get array of the selected options
