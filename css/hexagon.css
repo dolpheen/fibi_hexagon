@@ -90,14 +90,9 @@
 .hexagon-info {
     position: absolute;
     right: -5px;
-    cursor: pointer;
     margin-top: -35px;
     /*margin-bottom: -30px;*/
     transition: transform 0.3s;
-}
-
-.info-item:hover .hexagon-info {
-    transform: scale(1.3);
 }
 
 .info-item.even .hexagon-info{
