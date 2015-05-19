@@ -33,6 +33,10 @@
         opacity: 1;
     }
 
+    #price {
+        display: none;
+    }
+
     #price i {
         font-size: 18px;
     }
@@ -262,6 +266,7 @@
         opacity: 0.7 !important;
     }
 </style>
+<link rel="stylesheet" href="./content/menu/menu-d/css/odometer-theme-minimal.css" />
 
 <div id="info-title" >
     Решения
@@ -308,7 +313,10 @@
                 <button id="btnInc" type="button" class="btn btn-default btn-primary">+</button>
             </div>
         </h3>
-        <h3><span id="price">Выбирете опции</span></h3>
+        <h3>
+            <span id="price_stub">Выбирете опции</span>
+            <span id="price">Установка под ключ за <span class="odometer">' + sum + '</span> тыс.<i class="fa fa-fw fa-rub"></i></span>
+        </h3>
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <input id="hvac" type="checkbox" />
@@ -542,7 +550,9 @@
 </div>
 
 <script src="./content/menu/menu-d/js/jquery.fitvids.js"></script>
+<script src="./content/menu/menu-d/js/odometer.min.js"></script>
 <script>
+
 $('#carousel').flexslider({
     animation: "slide",
     controlNav: false,
@@ -566,6 +576,14 @@ $('#slider')
 /********************
     Price Calculator
 *********************/
+
+var el = document.querySelector('.odometer');
+od = new Odometer({
+    el: el,
+    duration: 500,
+    format: '',
+    theme: 'minimal'
+});
 
 function calcPrice() {
     // Installation cost factor
@@ -612,7 +630,15 @@ function calcPrice() {
     opts.forEach(function(opt) { sum += formulas[opt](rooms); });
 
     sum = Math.floor(sum / 1000);
-    priceEl.innerHTML = sum == 0 ? "Выбирете опции" : 'Установка под ключ за <span>' + sum + ' тыс.</span>' + '<i class="fa fa-fw fa-rub"></i>';
+
+    if (sum == 0) {
+        $('#price').hide();
+        $('#price_stub').show();
+    } else {
+        $('#price_stub').hide();
+        $('#price').show();
+    }
+    $('.odometer').text(sum);
 }
 
 var roomsEl = $("#rooms")[0];
