@@ -21,6 +21,14 @@ function animationEnd(elem) {
     });
 }
 
+function remapAnchors() {
+    $('#info-section a').each(function() {
+        console.log(this.hostname);
+        if (this.hostname === "shop.fi-bi.ru")
+            this.hostname = "shop." + document.domain;
+    });
+}
+
 var menu_table = new Array(5);
 for( var i = 0; i < 5; i++) menu_table[i] = new Array(5);
 
@@ -114,6 +122,7 @@ function loadMenuContent(menu) {
             $('#info-title').css('background-color', menuColor); 
             $('#info-description').css('background-color', menuColor); 
             $('#info-section').css('animation-name', 'info-show');
+            remapAnchors();
         });
     }
     
