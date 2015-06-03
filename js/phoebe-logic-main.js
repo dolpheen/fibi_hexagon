@@ -22,11 +22,12 @@ function animationEnd(elem) {
 }
 
 function remapAnchors() {
-    $('#info-section a').each(function() {
-        console.log(this.hostname);
-        if (this.hostname === "shop.fi-bi.ru")
-            this.hostname = "shop." + document.domain;
-    });
+    if (document.domain.indexOf('fibi-logic.ru') != -1) {                           // if we are on the fibi-logic.ru 
+        $('#info-section a').each(function() {                                      // find all anchor tags
+            if (this.hostname.indexOf('fi-bi.ru') != -1)                            // if tag contains fi-bi.ru
+                this.hostname = this.hostname.replace('fi-bi.ru', 'fibi-logic.ru'); // replace with fibi-logic.ru
+        });
+    }
 }
 
 var menu_table = new Array(5);
