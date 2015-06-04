@@ -25,6 +25,7 @@ html {
   /*background-image: url("../media/hex_bg_header.png");*/
   background-position: right;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
 
