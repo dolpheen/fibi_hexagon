@@ -65,7 +65,13 @@ var selectedMainMenu = null;
     Load info section at startup
 */
 $(document).ready(function() {
-    loadMenuContent('g');
+    var re = /\?.*/i;
+    var menu = document.URL.match(re);
+    
+    if (menu)
+        loadMenuContent(menu[0].replace("?", "")); 
+    else
+        loadMenuContent('g');
 });
 
 /*
