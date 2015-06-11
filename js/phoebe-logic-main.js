@@ -153,6 +153,9 @@ function loadMenuContent(menu) {
     Promise.all([pHide,pData]).then(function(vals) {
         insertHtml(vals[1]);
     });
+
+    ga('set', 'page', '/' + menu);
+    ga('send', 'pageview');
 }
 
 /*
